@@ -1,11 +1,18 @@
-import './App.css';
+import { Router, useHistory } from "react-router-dom";
+import "./App.css";
+import Routes from "./Routes";
 
 function App() {
+  const history = useHistory();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>sava project</h1>
-      </header>
+      <Router history={history}>
+        {/* <Auth> */}
+
+        <Routes />
+        {/* </Auth> */}
+      </Router>
     </div>
   );
 }
