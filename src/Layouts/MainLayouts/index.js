@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 const theme = createTheme({
   mixins: {
     denseToolbar: {
-      minHeight: 48,
+      minHeight: 80,
     },
   },
 });

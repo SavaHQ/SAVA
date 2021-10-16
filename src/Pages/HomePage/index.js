@@ -1,11 +1,18 @@
+import { Box, makeStyles } from "@material-ui/core";
 import React from "react";
+import HeroSection from "../../Components/HomeComponents/heroSection";
 
 function HomePage() {
+  const classes = useStyles();
   return (
-    <div>
-      <h2>Sava Home Screen</h2>
-    </div>
+    <Box className={classes.root}>
+      <HeroSection />
+    </Box>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+}));
 
 export default HomePage;

@@ -5,7 +5,7 @@ function NavBarComponent() {
   const classes = useStyles();
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className={classes.appBar} elevation={0}>
         <Toolbar></Toolbar>
       </AppBar>
       <div className={classes.offset} />
@@ -15,6 +15,10 @@ function NavBarComponent() {
 
 const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.denseToolbar,
+  appBar: {
+    background: "#FFFFFF",
+    height: "80px",
+  },
 }));
 
 export default NavBarComponent;
