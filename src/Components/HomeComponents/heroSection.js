@@ -1,4 +1,4 @@
-import { Box, makeStyles } from "@material-ui/core";
+import { Box, Button, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
 function HeroSection() {
@@ -6,7 +6,22 @@ function HeroSection() {
   return (
     <Box className={classes.root}>
       <Box className={classes.wrapper}>
-        <Box className={classes.leftContainer}></Box>
+        <Box className={classes.leftContainer}>
+          <Box className={classes.infoContainer}>
+            <Typography>Join Our Community</Typography>
+            <Typography>EASILY LAND AN INTERNSHIP</Typography>
+            <Box pt={5} pb={10}>
+              <Typography>
+                We source micro-influencers to startups in need of Creative Talent.
+              </Typography>
+            </Box>
+
+            <Box className={classes.buttonWrapper}>
+              <Button>One</Button>
+              <Button>Two</Button>
+            </Box>
+          </Box>
+        </Box>
         <Box className={classes.rightContainer}></Box>
       </Box>
     </Box>
@@ -19,12 +34,25 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     display: "flex",
-    height: "50px",
+    height: "88vh",
+  },
+  infoContainer: {
+    height: "88vh",
+    display: "flex",
+    flexDirection: "column",
+    background: "yellow",
+    justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
+    alignItems: "flex-start", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
+  },
+  buttonWrapper: {
+    display: "flex",
+    flexDirection: "row",
   },
   leftContainer: {
     display: "flex",
-    flex: 2,
     background: "red",
+    flex: 2,
+    justifyContent: "center",
   },
   rightContainer: {
     flex: 2,
