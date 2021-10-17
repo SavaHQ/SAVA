@@ -2,10 +2,10 @@ import React from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import * as ROUTES from "../Constants/routesEndpoints";
 import MainLayout from "../Layouts/MainLayouts";
-import CommunityPage from "../pages/CommunityPage";
-import ForStartupPage from "../pages/ForStartupPage";
-import HomePage from "../pages/HomePage";
-import OpeningsPage from "../pages/OpeningsPage";
+import CommunityPage from "../Pages/CommunityPage/index";
+import ForStartupPage from "../Pages/ForStartupPage";
+import HomePage from "../Pages/HomePage";
+import OpeningsPage from "../Pages/OpeningsPage";
 
 function Routes() {
   return (
