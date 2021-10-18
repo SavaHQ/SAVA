@@ -22,7 +22,9 @@ function HeroSection() {
             </Box>
           </Box>
         </Box>
-        <Box className={classes.rightContainer}></Box>
+        <Box className={classes.rightContainer}>
+          <img src="assests/images/heroImage.png" alt="heroImage" />
+        </Box>
       </Box>
     </Box>
   );
@@ -40,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     height: "88vh",
     display: "flex",
     flexDirection: "column",
-    background: "yellow",
+    background: "#ffff",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "flex-start", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
   },
@@ -56,7 +58,11 @@ const useStyles = makeStyles((theme) => ({
   },
   rightContainer: {
     flex: 2,
-    background: "yellow",
+    background: "#ffff",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
+    alignItems: "center", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
   },
 }));
 

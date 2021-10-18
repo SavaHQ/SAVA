@@ -13,13 +13,15 @@ function NavBarComponent() {
   ];
 
   return (
-    <div>
-      <AppBar position="static">
-        <Toolbar className={classes.appBar}>
-          <Typography className={classes.logo} onClick={() => history.push("/home")}>
-            <img src="/logo.svg" alt="logo" />
-          </Typography>
-          <Box className={classes.listContainer}>
+    <AppBar position="static">
+      <Toolbar className={classes.appBar}>
+        <Box className={classes.wrapper}>
+          <Box className={classes.leftSection}>
+            <Typography className={classes.logo} onClick={() => history.push("/home")}>
+              <img src="assests/images/logo.svg" alt="logo" />
+            </Typography>
+          </Box>
+          <Box className={classes.midSection}>
             {navItemsLists.map((item, index) => {
               return (
                 <Button key={index}>
@@ -30,50 +32,56 @@ function NavBarComponent() {
               );
             })}
           </Box>
-          <Box className={classes.buttonContainer}>
+          <Box className={classes.rightSection}>
             <Button className={classes.buttonOne}>SignIn</Button>
             <Button className={classes.button2}>LogIn</Button>
           </Box>
-        </Toolbar>
-      </AppBar>
-    </div>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
 
 const useStyles = makeStyles({
   appBar: {
     backgroundColor: "#ffff",
-    justifyContent: "space-between",
   },
-
+  wrapper: {
+    display: "flex",
+    width: "100%",
+  },
+  leftSection: {
+    flex: 3,
+  },
   logo: {
-    width: "150px",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "25px",
+    lineHeight: "50px",
     color: "#4751F1",
     cursor: "pointer",
   },
-  listContainer: {},
-  textStyle: {
-    textDecoration: "none",
+  midSection: {
+    flex: 6,
+    justifyContent: "space-between",
   },
   listTitle: {
-    color: "#4751F1",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "15px",
+    lineHeight: "35px",
+    letterSpacing: "3.6px",
+    color: "#666E78",
+    paddingRight: "30px",
+  },
+  rightSection: {
+    flex: 3,
     justifyContent: "space-between",
   },
-  buttonOne: {
-    background: "#4751F1",
-    borderRadius: "5px",
-    color: "#FFFFFF",
-  },
-  button2: {
-    background: "#FFFFFF",
-    border: "1px solid #4751F1",
-    boxSizing: "border-box",
-    borderRadius: "5px",
-    color: "#4751F1",
-  },
-  buttonContainer: {
-    width: "200px",
-    justifyContent: "space-between",
+  textStyle: {
+    textDecoration: "none",
   },
 });
 
