@@ -18,8 +18,10 @@ function NavBarComponent() {
       <Toolbar className={classes.appBar}>
         <Box className={classes.wrapper}>
           <Box className={classes.leftSection}>
-            <Typography className={classes.logo} onClick={() => history.push("/home")}>
-              <img src="assests/images/logo.svg" alt="logo" />
+            <Typography className={classes.logo}>
+              <Link to="/home">
+                <img src="assests/images/logo.svg" alt="logo" />
+              </Link>
             </Typography>
           </Box>
           <Box className={classes.midSection}>
