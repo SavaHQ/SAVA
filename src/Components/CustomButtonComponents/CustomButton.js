@@ -24,6 +24,9 @@ function CustomButton({ name, onButtonClick, borderRadius, isRadius, background,
 const useStyles = makeStyles({
   button: {
     marginRight: 11,
+    width: 128,
+    height: 44,
+    top: 3
   },
 });
 
