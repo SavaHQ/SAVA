@@ -9,7 +9,9 @@ function HeroSection() {
         <Box className={classes.leftContainer}>
           <Box className={classes.infoContainer}>
             <Typography>Join Our Community</Typography>
-            <Typography>EASILY LAND AN INTERNSHIP</Typography>
+            <Typography variant="h1" className={classes.title}>
+              EASILY LAND AN INTERNSHIP
+            </Typography>
             <Box pt={5} pb={10}>
               <Typography>
                 We source micro-influencers to startups in need of Creative Talent.
@@ -39,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     height: "88vh",
   },
   infoContainer: {
+    textAlign: "left",
     height: "88vh",
     display: "flex",
     flexDirection: "column",

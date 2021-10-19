@@ -1,22 +1,15 @@
 import { makeStyles } from "@material-ui/core";
 import NavBarComponent from "../../Components/NavBarComponents/navBarComponent";
 
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-
-const theme = createTheme({
-  mixins: {
-    denseToolbar: {
-      minHeight: 80,
-    },
-  },
-});
+import { ThemeProvider } from "@material-ui/core/styles";
+import { createThemes } from "../../Theme";
 
 function MainLayout({ children }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={createThemes()}>
         <NavBarComponent />
         <div className={classes.wrapper}>
           <div className={classes.contentContainer}>
