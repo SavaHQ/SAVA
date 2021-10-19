@@ -8,7 +8,12 @@ function CustomButton({ name, onButtonClick, borderRadius, isRadius, background,
   return (
     <Button
       onClick={onButtonClick}
-      style={{ borderRadius: isRadius ? borderRadius : 0, background: background, color: color, border:border }}
+      style={{
+        borderRadius: isRadius ? borderRadius : 0,
+        background: background,
+        color: color,
+        border: border,
+      }}
       className={classes.button}
     >
       {name}
