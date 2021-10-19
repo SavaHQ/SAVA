@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, makeStyles, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Box, makeStyles, List, Toolbar, Typography } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../Constants/routesEndpoints";
@@ -25,11 +25,11 @@ function NavBarComponent() {
           <Box className={classes.midSection}>
             {navItemsLists.map((item, index) => {
               return (
-                <Button key={index}>
+                <List key={index}>
                   <Link smooth to={item.link} className={classes.textStyle}>
                     <Typography className={classes.listTitle}>{item.title}</Typography>
                   </Link>
-                </Button>
+                </List>
               );
             })}
           </Box>
@@ -44,9 +44,10 @@ function NavBarComponent() {
             />
             <CustomButton
               name="Login"
-              color="#ffffff"
-              background="#666E78"
+              color="#666E78"
+              background="#FFFFFF"
               onButtonClick={() => console.log("Login")}
+              border=" 1px solid #666E78"
               borderRadius={5}
               isRadius={true}
             />
@@ -67,6 +68,7 @@ const useStyles = makeStyles({
   },
   leftSection: {
     flex: 3,
+    justifyContent: "flex-start",
   },
   logo: {
     fontFamily: "Montserrat",
@@ -78,8 +80,10 @@ const useStyles = makeStyles({
     cursor: "pointer",
   },
   midSection: {
-    flex: 6,
+    flex: 4,
     justifyContent: "space-between",
+    display: "flex",
+    flexDirection: "row",
   },
   listTitle: {
     fontFamily: "Montserrat",
@@ -89,7 +93,6 @@ const useStyles = makeStyles({
     lineHeight: "35px",
     letterSpacing: "3.6px",
     color: "#666E78",
-    paddingRight: "30px",
   },
   rightSection: {
     flex: 3,
