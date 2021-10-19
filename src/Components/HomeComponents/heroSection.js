@@ -8,12 +8,14 @@ function HeroSection() {
       <Box className={classes.wrapper}>
         <Box className={classes.leftContainer}>
           <Box className={classes.infoContainer}>
-            <Typography>Join Our Community</Typography>
+            <Typography variant="h5" className={classes.subtitle}>
+              Join Our Community
+            </Typography>
             <Typography variant="h1" className={classes.title}>
               EASILY LAND AN INTERNSHIP
             </Typography>
             <Box pt={5} pb={10}>
-              <Typography>
+              <Typography display="block" variant="h3" className={classes.subtitle2}>
                 We source micro-influencers to startups in need of Creative Talent.
               </Typography>
             </Box>
@@ -40,6 +42,25 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     height: "88vh",
   },
+  title: {
+    fontSize: 58,
+    letterSpacing: 0.2,
+    color: "#252B42",
+    lineHeight: 1.4,
+    marginLeft: 60,
+  },
+  subtitle: {
+    fontSize: 16,
+    letterSpacing: 0.1,
+    lineHeight: 4,
+    color: "#222222",
+    fontWeight: 700,
+    marginLeft: 65,
+  },
+  subtitle2: {
+    letterSpacing: 0.1,
+    marginLeft: 65,
+  },
   infoContainer: {
     textAlign: "left",
     height: "88vh",
@@ -52,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
   buttonWrapper: {
     display: "flex",
     flexDirection: "row",
+    marginLeft: 65,
   },
   leftContainer: {
     display: "flex",
