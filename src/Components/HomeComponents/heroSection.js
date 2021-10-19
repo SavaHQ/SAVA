@@ -1,5 +1,6 @@
-import { Box, Button, makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import CustomButton from "../CustomButtonComponents/CustomButton";
 
 function HeroSection() {
   const classes = useStyles();
@@ -19,10 +20,24 @@ function HeroSection() {
                 We source micro-influencers to startups in need of Creative Talent.
               </Typography>
             </Box>
-
             <Box className={classes.buttonWrapper}>
-              <Button>One</Button>
-              <Button>Two</Button>
+              <CustomButton
+                name="Join Us"
+                color="#ffffff"
+                background="#666E78"
+                onButtonClick={() => console.log("Join Us")}
+                borderRadius={5}
+                isRadius={true}
+              />
+              <CustomButton
+                name="Learn More"
+                color="#666E78"
+                background="#FFFFFF"
+                onButtonClick={() => console.log("Learn More")}
+                border=" 1px solid #666E78"
+                borderRadius={5}
+                isRadius={true}
+              />
             </Box>
           </Box>
         </Box>
