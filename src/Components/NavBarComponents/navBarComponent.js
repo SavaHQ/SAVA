@@ -2,6 +2,7 @@ import { AppBar, Box, Button, makeStyles, Toolbar, Typography } from "@material-
 import React from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../Constants/routesEndpoints";
+import CustomButton from "../CustomButtonComponents/CustomButton";
 
 function NavBarComponent() {
   const classes = useStyles();
@@ -33,8 +34,22 @@ function NavBarComponent() {
             })}
           </Box>
           <Box className={classes.rightSection}>
-            <Button className={classes.buttonOne}>SignIn</Button>
-            <Button className={classes.button2}>LogIn</Button>
+            <CustomButton
+              name="Sign In"
+              color="#ffffff"
+              background="#666E78"
+              onButtonClick={() => console.log("Sign In")}
+              borderRadius={5}
+              isRadius={true}
+            />
+            <CustomButton
+              name="Login"
+              color="#ffffff"
+              background="#666E78"
+              onButtonClick={() => console.log("Login")}
+              borderRadius={5}
+              isRadius={true}
+            />
           </Box>
         </Box>
       </Toolbar>
