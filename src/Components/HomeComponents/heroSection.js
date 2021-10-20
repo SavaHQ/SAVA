@@ -62,7 +62,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.2,
     color: "#252B42",
     lineHeight: 1.4,
-    marginLeft: 60,
+    marginLeft: 75,
+    inlineSize: "600px",
+    overflowWrap: "break-word",
   },
   subtitle: {
     fontSize: 16,
@@ -70,11 +72,14 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 4,
     color: "#222222",
     fontWeight: 700,
-    marginLeft: 65,
+    marginLeft: 80,
   },
   subtitle2: {
     letterSpacing: 0.1,
-    marginLeft: 65,
+    marginLeft: 80,
+    inlineSize: "500px",
+    overflowWrap: "break-word",
+    color: "#737373",
   },
   infoContainer: {
     textAlign: "left",
@@ -88,11 +93,11 @@ const useStyles = makeStyles((theme) => ({
   buttonWrapper: {
     display: "flex",
     flexDirection: "row",
-    marginLeft: 65,
+    marginLeft: 80,
+    marginTop: "-40px",
   },
   leftContainer: {
     display: "flex",
-    background: "red",
     flex: 2,
     justifyContent: "center",
   },
