@@ -2,10 +2,12 @@ import React from "react";
 import { Box, makeStyles, List, Typography, Container } from "@material-ui/core";
 
 const companiesList = [
-  { imageSrc: "assests/images/google.png", companyName: "google" },
-  { imageSrc: "assests/images/tiket.png", companyName: "tickt" },
-  { imageSrc: "assests/images/toko.png", companyName: "toko" },
-  { imageSrc: "assests/images/microsoft.png", companyName: "microsoft" },
+  { imageSrc: "assests/images/ai.jpeg", companyName: "AICrowd" },
+  { imageSrc: "assests/images/all.jpeg", companyName: "tickt" },
+  { imageSrc: "assests/images/angel.jpeg", companyName: "toko" },
+  { imageSrc: "assests/images/rippl.jpeg", companyName: "microsoft" },
+  { imageSrc: "assests/images/tummoc.jpeg", companyName: "toko" },
+  { imageSrc: "assests/images/tyke.jpeg", companyName: "microsoft" },
 ];
 
 function CompanyWrapper() {
@@ -54,6 +56,7 @@ const useStyles = makeStyles({
   },
   companyImage: {
     width: "140px",
+    margin: 10,
   },
   title: {
     height: "42px",
