@@ -15,11 +15,10 @@ function HeroSection() {
               EASILY LAND AN INTERNSHIP
             </Typography>
             <Box pt={5} pb={10}>
-              <Typography display="block" variant="h3" className={classes.subtitle2}>
+              <Typography variant="h3" className={classes.subtitle2}>
                 We source micro-influencers to startups in need of Creative Talent.
               </Typography>
             </Box>
-
             <Box className={classes.buttonWrapper}>
               <Button>One</Button>
               <Button>Two</Button>
