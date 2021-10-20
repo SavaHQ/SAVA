@@ -1,13 +1,13 @@
 import React from "react";
-import { Box, makeStyles, List, Typography, Container } from "@material-ui/core";
+import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
 const companiesList = [
-  { imageSrc: "assests/images/ai.jpeg", companyName: "AICrowd" },
-  { imageSrc: "assests/images/all.jpeg", companyName: "tickt" },
-  { imageSrc: "assests/images/angel.jpeg", companyName: "toko" },
-  { imageSrc: "assests/images/rippl.jpeg", companyName: "microsoft" },
-  { imageSrc: "assests/images/tummoc.jpeg", companyName: "toko" },
-  { imageSrc: "assests/images/tyke.jpeg", companyName: "microsoft" },
+  { imageSrc: "assests/images/ai.png", companyName: "AICrowd" },
+  { imageSrc: "assests/images/all.png", companyName: "Alliance" },
+  { imageSrc: "assests/images/angel.png", companyName: "AngelOne" },
+  { imageSrc: "assests/images/rippl.png", companyName: "Rippl" },
+  { imageSrc: "assests/images/tummoc.png", companyName: "Tummoc" },
+  { imageSrc: "assests/images/tyke.png", companyName: "Tyke" },
 ];
 
 function CompanyWrapper() {
@@ -18,7 +18,7 @@ function CompanyWrapper() {
         <Typography variant="h5" className={classes.title}>
           Some of our trusted company
         </Typography>
-        <Container>
+        <Box className={classes.company}>
           <Box className={classes.companiesSection}>
             {companiesList.map((item, index) => {
               return (
@@ -32,7 +32,7 @@ function CompanyWrapper() {
               );
             })}
           </Box>
-        </Container>
+        </Box>
       </Box>
     </Box>
   );
@@ -57,6 +57,10 @@ const useStyles = makeStyles({
   companyImage: {
     width: "140px",
     margin: 10,
+  },
+  company:{
+    width: "1250px",
+    margin: "auto"
   },
   title: {
     height: "42px",
