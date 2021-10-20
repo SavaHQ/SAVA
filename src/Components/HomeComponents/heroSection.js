@@ -1,5 +1,6 @@
-import { Box, Button, makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import CustomButton from "../CustomButtonComponents/CustomButton";
 
 function HeroSection() {
   const classes = useStyles();
@@ -20,8 +21,23 @@ function HeroSection() {
               </Typography>
             </Box>
             <Box className={classes.buttonWrapper}>
-              <Button>One</Button>
-              <Button>Two</Button>
+              <CustomButton
+                name="Join Us"
+                color="#ffffff"
+                background="#666E78"
+                onButtonClick={() => console.log("Join Us")}
+                borderRadius={5}
+                isRadius={true}
+              />
+              <CustomButton
+                name="Learn More"
+                color="#666E78"
+                background="#FFFFFF"
+                onButtonClick={() => console.log("Learn More")}
+                border=" 1px solid #666E78"
+                borderRadius={5}
+                isRadius={true}
+              />
             </Box>
           </Box>
         </Box>
@@ -46,7 +62,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.2,
     color: "#252B42",
     lineHeight: 1.4,
-    marginLeft: 60,
+    marginLeft: 75,
+    inlineSize: "600px",
+    overflowWrap: "break-word",
   },
   subtitle: {
     fontSize: 16,
@@ -54,11 +72,14 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 4,
     color: "#222222",
     fontWeight: 700,
-    marginLeft: 65,
+    marginLeft: 80,
   },
   subtitle2: {
     letterSpacing: 0.1,
-    marginLeft: 65,
+    marginLeft: 80,
+    inlineSize: "500px",
+    overflowWrap: "break-word",
+    color: "#737373",
   },
   infoContainer: {
     textAlign: "left",
@@ -72,11 +93,11 @@ const useStyles = makeStyles((theme) => ({
   buttonWrapper: {
     display: "flex",
     flexDirection: "row",
-    marginLeft: 65,
+    marginLeft: 80,
+    marginTop: "-40px",
   },
   leftContainer: {
     display: "flex",
-    background: "red",
     flex: 2,
     justifyContent: "center",
   },

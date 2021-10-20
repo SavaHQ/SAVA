@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     marginRight: 11,
     width: 128,
     height: 44,
-    top: 3
+    top: 3,
   },
 });
 
