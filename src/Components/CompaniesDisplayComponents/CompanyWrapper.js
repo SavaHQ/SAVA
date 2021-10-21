@@ -59,7 +59,7 @@ const useStyles = makeStyles({
     margin: 10,
   },
   company: {
-    width: "1250px",
+    width: "1180px",
     margin: "auto",
   },
   title: {
