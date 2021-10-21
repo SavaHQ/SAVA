@@ -51,17 +51,17 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: "58px",
     letterSpacing: "0.01em",
-    lineHeight: 1.4,
-    marginLeft: 75,
-    inlineSize: "700px",
+    marginLeft: 25,
+    inlineSize: "800px",
     overflowWrap: "break-word",
     fontStyle: "normal",
     fontWeight: "bold",
     textTransform: "capitalize",
     color: "#252B42",
+    paddingBottom: "20px",
   },
   mainContainer: {
-    width: "90%",
+    width: "80%",
     maxWidth: " 1000px",
     margin: " 50px auto",
     display: "flex",
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   subContent: {
-    marginLeft: 80,
+    marginLeft: 30,
     inlineSize: "700px",
     overflowWrap: "break-word",
     fontStyle: "normal",
@@ -78,11 +78,12 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "34px",
     letterSpacing: "0.01em",
     color: " #4B4B4B",
+    paddingBottom: "10px",
   },
   buttonWrapper: {
     display: "flex",
     flexDirection: "row",
-    marginLeft: 80,
+    marginLeft: 30,
     paddingTop: "40px",
   },
   leftContainer: {
@@ -95,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
     background: "rgba(248, 248, 248, 0.77)",
     backdropFilter: "blur(9px)",
     borderRadius: "16px",
-    minHeight: "390px",
+    minHeight: "350px",
     padding: " 30px",
   },
   rightContainer: {
