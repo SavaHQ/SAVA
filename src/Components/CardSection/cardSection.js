@@ -11,7 +11,7 @@ function HeroSection() {
           <CardComponent
             image="assests/images/cardOne.png"
             title="What are we trying to do?"
-            content="Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt overtime"
+            content="Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt"
             buttonTitle="Find out more"
           />
         </Box>
@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
   leftContainer: {
     display: "flex",
     flex: 2,
+    marginLeft: 120,
     flexDirection: "column",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "center",
@@ -79,6 +80,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 2,
     background: "#ffff",
     display: "flex",
+    marginRight: 120,
     flexDirection: "column",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "center", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)

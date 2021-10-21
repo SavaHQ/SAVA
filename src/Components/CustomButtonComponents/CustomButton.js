@@ -2,7 +2,7 @@
 import { Button, makeStyles } from "@material-ui/core";
 import React from "react";
 
-function CustomButton({ name, onButtonClick, borderRadius, isRadius, background, color, border }) {
+function CustomButton({ name, onButtonClick, borderRadius, isRadius, background, color, border, width,top, height, left }) {
   const classes = useStyles();
 
   return (
@@ -13,6 +13,10 @@ function CustomButton({ name, onButtonClick, borderRadius, isRadius, background,
         background: background,
         color: color,
         border: border,
+        width: width,
+        top: top,
+        height: height,
+        left: left
       }}
       className={classes.button}
     >
