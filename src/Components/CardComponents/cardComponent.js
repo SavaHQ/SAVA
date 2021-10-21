@@ -13,7 +13,7 @@ function CardComponent({ title, content, image, buttonTitle }) {
       <Card className={classes.cardStyles}>
         <CardMedia
           component="img"
-          height="450"
+          height="525"
           image={image}
           alt="green iguana"
           background="#ffffff"
@@ -25,17 +25,17 @@ function CardComponent({ title, content, image, buttonTitle }) {
           <Typography className={classes.contentText} color="textSecondary">
             {content}
           </Typography>
-          <CustomButton
-            name={buttonTitle}
-            color="#ffffff"
-            left="110px"
-            width="188px"
-            top="100px"
-            background="#666E78"
-            onButtonClick={() => console.log("Join Us")}
-            borderRadius={5}
-            isRadius={true}
-          />
+          <Box className={classes.Button}>
+            <CustomButton
+              name={buttonTitle}
+              color="#ffffff"
+              width="188px"
+              background="#666E78"
+              onButtonClick={() => console.log({ buttonTitle })}
+              borderRadius={5}
+              isRadius={true}
+            />
+          </Box>
         </CardContent>
       </Card>
     </Box>
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyles: {
     position: "relative",
-    width: "475px",
+    width: "425px",
   },
   overlay: {
     position: "absolute",
@@ -58,16 +58,33 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     backgroundColor: "transparent",
   },
-  cardImage: {},
+  cardImage: {
+    background: "linear-gradient(0deg, rgba(34, 34, 34, 0.96) 1.34%, rgba(7, 7, 7, 0.11) 100%)",
+  },
   titleText: {
     height: "44px",
     fontWeight: "bold",
-    fontSize: "24px",
+    fontSize: "20px",
     color: "#FFFFFF",
-    marginBottom: 20,
+    padding: "15px 15px 0px 15px;",
   },
   contentText: {
     color: "#ffffff",
+    inlineSize: "350px",
+    overflowWrap: "break-word",
+    display: "flex",
+    padding: "0px 15px 15px 15px;",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "16px",
+    lineHeight: " 22px",
+    letterSpacing: "0.2px",
+  },
+  Button: {
+    flexDirection: " column",
+    alignItems: "center",
+    display: "flex",
+    marginTop: "40%",
   },
 }));
 

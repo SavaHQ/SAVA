@@ -13,7 +13,7 @@ function Stats() {
             {statsList.map((item, index) => {
               return (
                 <List key={index}>
-                  <Typography variant="h5" className={classes.title}>
+                  <Typography variant="h5" className={classes.statsBox}>
                     {item.stats}
                   </Typography>
                 </List>
@@ -46,8 +46,7 @@ const useStyles = makeStyles({
     width: "1180px",
     margin: "auto",
   },
-  title: {
-    height: "42px",
+  statsBox: {
     fontStyle: " normal",
     fontWeight: " bold",
     fontSize: " 20px",
@@ -57,6 +56,10 @@ const useStyles = makeStyles({
     color: " #4B4B4B",
     padding: "35px",
     opacity: 0.6,
+    width: "200px",
+    height: "20px",
+    background: "#FFFFFF",
+    borderRadius: "20px",
   },
 });
 
