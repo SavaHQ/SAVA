@@ -58,9 +58,9 @@ const useStyles = makeStyles({
     width: "140px",
     margin: 10,
   },
-  company:{
+  company: {
     width: "1250px",
-    margin: "auto"
+    margin: "auto",
   },
   title: {
     height: "42px",
