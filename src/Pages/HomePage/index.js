@@ -3,6 +3,7 @@ import React from "react";
 import HeroSection from "../../Components/HomeComponents/heroSection";
 import CompanyWrapper from "../../Components/CompaniesDisplayComponents/CompanyWrapper";
 import CardSection from "../../Components/CardSection/cardSection";
+import Stats from "../../Components/StatsComponent/stats";
 
 function HomePage() {
   const classes = useStyles();
@@ -11,6 +12,7 @@ function HomePage() {
       <HeroSection />
       <CompanyWrapper />
       <CardSection />
+      <Stats />
     </Box>
   );
 }
