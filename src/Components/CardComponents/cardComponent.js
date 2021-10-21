@@ -16,7 +16,7 @@ function CardComponent({ title, content, image, buttonTitle }) {
           height="450"
           image={image}
           alt="green iguana"
-          className={classes.cardImage}
+          background="#ffffff"
         />
         <CardContent className={classes.overlay}>
           <Typography className={classes.titleText} color="textSecondary" gutterBottom>
@@ -28,6 +28,9 @@ function CardComponent({ title, content, image, buttonTitle }) {
           <CustomButton
             name={buttonTitle}
             color="#ffffff"
+            left="110px"
+            width="188px"
+            top="100px"
             background="#666E78"
             onButtonClick={() => console.log("Join Us")}
             borderRadius={5}
@@ -45,26 +48,26 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyles: {
     position: "relative",
+    width: "475px",
   },
   overlay: {
     position: "absolute",
-    top: "20px",
-    left: "20px",
+    top: "90px",
+    left: "10px",
     color: "black",
+    textAlign: "left",
     backgroundColor: "transparent",
   },
-  cardImage: {
-    background: "linear-gradient(0deg, #222222 1.34%, rgba(7, 7, 7, 0.58) 100%)",
-  },
+  cardImage: {},
   titleText: {
-    width: "341px",
     height: "44px",
-    left: "252px",
-    top: "400px",
     fontWeight: "bold",
     fontSize: "24px",
-    textAlign: "center",
     color: "#FFFFFF",
+    marginBottom: 20,
+  },
+  contentText: {
+    color: "#ffffff",
   },
 }));
 
