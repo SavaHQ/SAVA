@@ -4,6 +4,7 @@ import HeroSection from "../../Components/HomeComponents/heroSection";
 import CompanyWrapper from "../../Components/CompaniesDisplayComponents/CompanyWrapper";
 import CardSection from "../../Components/CardSection/cardSection";
 import Stats from "../../Components/StatsComponent/stats";
+import GlassCard from "../../Components/HomeComponents/glassCard";
 
 function HomePage() {
   const classes = useStyles();
@@ -13,6 +14,7 @@ function HomePage() {
       <CompanyWrapper />
       <CardSection />
       <Stats />
+      <GlassCard />
     </Box>
   );
 }
