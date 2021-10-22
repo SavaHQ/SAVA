@@ -3,18 +3,18 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 
-function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, paddingRight, paddingLeft }) {
+function InfoBanner({ isTextRight, isBackgroundColor, color, paddingRight, paddingLeft }) {
   const classes = useStyles();
   return (
     <Box
       style={{
         display: "flex",
+        height: "100%",
         padding: "100px",
         flexDirection: isTextRight ? "row-reverse" : "row",
         backgroundColor: isBackgroundColor,
         justifyContent: "space-between",
-        // clipPath: isPolygon ? "polygon(0 11%, 100% 0, 100% 50%, 100% 88%, 0 100%, 0% 50%)" : "none",
-
+        color: color,
         textAlign: "left",
       }}
     >
@@ -69,7 +69,6 @@ const useStyles = makeStyles((theme) => ({
     background: "yellow",
   },
   subtitle: {
-    color: theme.palette.text.secondary,
     paddingBottom: "70px",
   },
   image: {

@@ -19,8 +19,8 @@ function HomePage() {
       <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
       <InfoBanner
         isTextRight={true}
-        isBackgroundColor="#F7FAFE"
-        isPolygon={true}
+        isBackgroundColor="#222222"
+        color="#ffffff"
         paddingLeft="20%"
         paddingRight="0px"
       />
