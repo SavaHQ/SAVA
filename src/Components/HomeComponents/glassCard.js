@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   title: {
-    fontSize: "58px",
+    fontSize: "48px",
     letterSpacing: "0.01em",
     marginLeft: 25,
     inlineSize: "800px",
@@ -70,13 +70,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subContent: {
     marginLeft: 30,
-    inlineSize: "700px",
-    overflowWrap: "break-word",
-    fontStyle: "normal",
-    fontWeight: " normal",
     fontSize: "20px",
-    lineHeight: "34px",
-    letterSpacing: "0.01em",
     color: " #4B4B4B",
     paddingBottom: "10px",
   },

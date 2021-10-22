@@ -5,6 +5,7 @@ import CompanyWrapper from "../../Components/CompaniesDisplayComponents/CompanyW
 import CardSection from "../../Components/CardSection/cardSection";
 import Stats from "../../Components/StatsComponent/stats";
 import GlassCard from "../../Components/HomeComponents/glassCard";
+import InfoBanner from "../../Components/InfoBanner/infoBanner";
 
 function HomePage() {
   const classes = useStyles();
@@ -15,6 +16,13 @@ function HomePage() {
       <CardSection />
       <Stats />
       <GlassCard />
+      <InfoBanner isBackgroundColor="#ffffff" alignItems="start" />
+      <InfoBanner
+        isTextRight={true}
+        isBackgroundColor="#F7FAFE"
+        isPolygon={true}
+        // alignItems="end"
+      />
     </Box>
   );
 }

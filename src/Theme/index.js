@@ -74,7 +74,7 @@ const themeConfig = {
     },
     text: {
       primary: "#2D303F",
-      secondary: "#5C6C8D",
+      secondary: "#808080",
     },
   },
 };
