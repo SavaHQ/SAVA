@@ -1,4 +1,4 @@
-import { Box, Container, makeStyles } from "@material-ui/core";
+import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CardComponent from "../CardComponents/cardComponent";
 
@@ -6,6 +6,16 @@ function HeroSection() {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
+      <Typography variant="h5" className={classes.subtitle}>
+        Practice Advice
+      </Typography>
+      <Typography variant="h2" className={classes.title}>
+        What is Lorem Ipsum
+      </Typography>
+      <Typography variant="h5" className={classes.subtitle2}>
+        Problems trying to resolve the conflict between the two major realms of Classical physics:
+        Newtonian mechanics
+      </Typography>
       <Container>
         <Box className={classes.wrapper}>
           <Box className={classes.leftContainer}>
@@ -36,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     display: "flex",
-    height: "120vh",
+    height: "100vh",
     width: "100%",
   },
   leftContainer: {
@@ -54,6 +64,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "center", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
   },
+  title: {
+    height: "45px",
+    fontWeight: " bold",
+    fontSize: " 34px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  subtitle: {
+    color: "#96BB7C",
+    marginTop: "120px",
+    fontWeight: "bold",
+  },
+  subtitle2: {},
 }));
 
 export default HeroSection;
