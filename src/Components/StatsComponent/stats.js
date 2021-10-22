@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
-const statsList = [{ stats: "3235" }, { stats: "43456" }, { stats: "26757" }];
+const statsList = [{ stats: "3235+" }, { stats: "43456+" }, { stats: "26757+" }];
 
 function Stats() {
   const classes = useStyles();

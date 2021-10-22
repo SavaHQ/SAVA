@@ -10,7 +10,7 @@ function HeroSection() {
         <Box className={classes.wrapper}>
           <Box className={classes.leftContainer}>
             <CardComponent
-              image="assests/images/cardOne.png"
+              image="assests/images/cardOne.gif"
               title="What are we trying to do?"
               content="Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt"
               buttonTitle="Find out more"
@@ -18,7 +18,7 @@ function HeroSection() {
           </Box>
           <Box className={classes.rightContainer}>
             <CardComponent
-              image="assests/images/cardTwo.png"
+              image="assests/images/cardTwo.gif"
               title="What's the catch for Startups?"
               content="Sava sources these brilliant Content Creators to startups who are looking for Creative Talent as interns"
               buttonTitle="Get in Touch"
