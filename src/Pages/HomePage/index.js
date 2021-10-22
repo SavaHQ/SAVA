@@ -16,7 +16,7 @@ function HomePage() {
       <CardSection />
       <Stats />
       <GlassCard />
-      <InfoBanner isBackgroundColor="#ffffff" paddingRight="15%" paddingLeft="0px" />
+      <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
       <InfoBanner
         isTextRight={true}
         isBackgroundColor="#F7FAFE"

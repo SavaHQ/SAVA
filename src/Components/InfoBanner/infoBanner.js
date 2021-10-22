@@ -13,7 +13,7 @@ function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, paddingRight, p
         flexDirection: isTextRight ? "row-reverse" : "row",
         backgroundColor: isBackgroundColor,
         justifyContent: "space-between",
-        clipPath: isPolygon ? "polygon(0 11%, 100% 0, 100% 50%, 100% 88%, 0 100%, 0% 50%)" : "none",
+        // clipPath: isPolygon ? "polygon(0 11%, 100% 0, 100% 50%, 100% 88%, 0 100%, 0% 50%)" : "none",
 
         textAlign: "left",
       }}
