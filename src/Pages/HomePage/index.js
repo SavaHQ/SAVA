@@ -16,12 +16,13 @@ function HomePage() {
       <CardSection />
       <Stats />
       <GlassCard />
-      <InfoBanner isBackgroundColor="#ffffff" alignItems="start" />
+      <InfoBanner isBackgroundColor="#ffffff" paddingRight="15%" paddingLeft="0px" />
       <InfoBanner
         isTextRight={true}
         isBackgroundColor="#F7FAFE"
         isPolygon={true}
-        // alignItems="end"
+        paddingLeft="20%"
+        paddingRight="0px"
       />
     </Box>
   );

@@ -3,7 +3,7 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 
-function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, alignItems, textAlign }) {
+function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, paddingRight, paddingLeft }) {
   const classes = useStyles();
   return (
     <Box
@@ -12,12 +12,19 @@ function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, alignItems, tex
         padding: "100px",
         flexDirection: isTextRight ? "row-reverse" : "row",
         backgroundColor: isBackgroundColor,
+        justifyContent: "space-between",
         clipPath: isPolygon ? "polygon(0 11%, 100% 0, 100% 50%, 100% 88%, 0 100%, 0% 50%)" : "none",
-        alignItems: alignItems,
+
         textAlign: "left",
       }}
     >
-      <Box className={classes.infoContainer}>
+      <Box
+        className={classes.infoContainer}
+        style={{
+          marginRight: paddingRight,
+          marginLeft: paddingLeft,
+        }}
+      >
         <Typography variant="h1" className={classes.title}>
           Lorem ipsum dolor sit amet
         </Typography>
@@ -39,6 +46,7 @@ function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, alignItems, tex
           isRadius={true}
         />
       </Box>
+
       <Box className={classes.imageContainer}>
         <Box className={classes.image} />
       </Box>
@@ -49,7 +57,6 @@ function InfoBanner({ isTextRight, isBackgroundColor, isPolygon, alignItems, tex
 const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: "50px",
-    width: "66%",
     paddingBottom: "20px",
   },
 
@@ -57,10 +64,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  imageContainer: {},
+  imageContainer: {
+    display: "flex",
+    background: "yellow",
+  },
   subtitle: {
     color: theme.palette.text.secondary,
-    width: "66%",
     paddingBottom: "70px",
   },
   image: {
