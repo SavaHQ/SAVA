@@ -6,16 +6,18 @@ function HeroSection() {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Typography variant="h5" className={classes.subtitle}>
-        Practice Advice
-      </Typography>
-      <Typography variant="h2" className={classes.title}>
-        What is Lorem Ipsum
-      </Typography>
-      <Typography variant="h5" className={classes.subtitle2}>
-        Problems trying to resolve the conflict between the two major realms of Classical physics:
-        Newtonian mechanics
-      </Typography>
+      <Box className={classes.textWrapper}>
+        <Typography variant="h5" className={classes.subtitle}>
+          Practice Advice
+        </Typography>
+        <Typography variant="h2" className={classes.title}>
+          What is Lorem Ipsum
+        </Typography>
+        <Typography variant="h5" className={classes.subtitle2}>
+          Problems trying to resolve the conflict between the two major realms of Classical physics:
+          Newtonian mechanics
+        </Typography>
+      </Box>
       <Container>
         <Box className={classes.wrapper}>
           <Box className={classes.leftContainer}>
@@ -68,16 +70,22 @@ const useStyles = makeStyles((theme) => ({
     height: "45px",
     fontWeight: " bold",
     fontSize: " 34px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
   },
   subtitle: {
     color: "#96BB7C",
     marginTop: "120px",
     fontWeight: "bold",
   },
-  subtitle2: {},
+  textWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  subtitle2: {
+    inlineSize: "600px",
+    overflowWrap: "break-word",
+  },
 }));
 
 export default HeroSection;
