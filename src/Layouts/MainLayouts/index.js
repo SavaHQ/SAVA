@@ -1,8 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import NavBarComponent from "../../Components/NavBarComponents/navBarComponent";
-
 import { ThemeProvider } from "@material-ui/core/styles";
 import { createThemes } from "../../Theme";
+import FooterSection from "../../Components/FooterComponents/footerSection";
 
 function MainLayout({ children }) {
   const classes = useStyles();
@@ -16,7 +16,7 @@ function MainLayout({ children }) {
             <div className={classes.content}>{children}</div>
           </div>
         </div>
-        {/* footer component */}
+        <FooterSection />
       </ThemeProvider>
     </div>
   );
