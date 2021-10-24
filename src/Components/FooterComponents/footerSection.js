@@ -10,9 +10,9 @@ import {
 } from "@material-ui/core";
 import Brightness5Icon from "@material-ui/icons/Brightness5";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+// import YouTubeIcon from "@material-ui/icons/YouTube";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
+// import TwitterIcon from "@material-ui/icons/Twitter";
 import React, { useState } from "react";
 
 function Copyright() {
@@ -42,7 +42,7 @@ function FooterSection() {
         <Grid container spacing={5}>
           <Grid item xs={12} lg={4} md={12}>
             <Box>
-              <Typography variant="h4">
+              <Typography variant="h4" align="left">
                 <img src="assests/images/logo.svg" />{" "}
               </Typography>
               <Typography variant="h5" className={classes.description}>
@@ -51,23 +51,23 @@ function FooterSection() {
                 took a galley of type and scrambled it to make a type specimen book.
               </Typography>
               <Box className={classes.buttonContainer}>
-                <IconButton className={classes.socialButtons}>
+                {/* <IconButton className={classes.socialButtons}>
                   <TwitterIcon />
-                </IconButton>
+                </IconButton> */}
                 <IconButton className={classes.socialButtons}>
                   <LinkedInIcon />
                 </IconButton>
                 <IconButton className={classes.socialButtons}>
                   <GitHubIcon />
                 </IconButton>
-                <IconButton className={classes.socialButtons}>
+                {/* <IconButton className={classes.socialButtons}>
                   <YouTubeIcon />
-                </IconButton>
+                </IconButton> */}
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box>
+            <Box align="left">
               <Typography variant="h4">Explore</Typography>
               <Box mt={3} className={classes.exploreLinks}>
                 <Typography gutterBottom variant="h5">
@@ -84,7 +84,7 @@ function FooterSection() {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box>
+            <Box align="left">
               <Typography variant="h4">About</Typography>
               <Box mt={3} className={classes.AboutLinks}>
                 <Typography gutterBottom variant="h5">
@@ -101,7 +101,7 @@ function FooterSection() {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box>
+            <Box align="left">
               <Typography variant="h4">Community</Typography>
               <Box mt={3} className={classes.communityLinks}>
                 <Typography gutterBottom variant="h5">
@@ -150,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
         width: "max-content",
       },
     },
-    paddingBottom: theme.spacing(12),
+    paddingBottom: theme.spacing(2),
   },
   footerContainer: {
     maxWidth: "85%",
