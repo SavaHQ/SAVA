@@ -6,12 +6,21 @@ import CardSection from "../../Components/CardSection/cardSection";
 import Stats from "../../Components/StatsComponent/stats";
 import GlassCard from "../../Components/HomeComponents/glassCard";
 import InfoBanner from "../../Components/InfoBanner/infoBanner";
+import sampleData from "../../Data/sampleData.json";
 
 function HomePage() {
   const classes = useStyles();
+  const objectData = sampleData;
+
   return (
     <Box className={classes.root}>
-      <HeroSection />
+      <HeroSection
+        title={objectData.title}
+        content={objectData.content}
+        image={objectData.image}
+        buttonTitleLeft={objectData.buttonTitleLeft}
+        buttonTitleRight={objectData.buttonTitleRight}
+      />
       <CompanyWrapper />
       <CardSection />
       <Stats />

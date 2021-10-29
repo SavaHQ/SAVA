@@ -73,11 +73,7 @@ const useStyles = makeStyles({
     justifyContent: "flex-start",
   },
   logo: {
-    fontFamily: "Montserrat",
-    fontStyle: "normal",
-    fontWeight: "300",
-    fontSize: "25px",
-    lineHeight: "50px",
+    paddingTop: "15px",
     color: "#4751F1",
     cursor: "pointer",
   },

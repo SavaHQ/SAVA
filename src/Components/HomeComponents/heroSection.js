@@ -2,27 +2,24 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 
-function HeroSection() {
+function HeroSection({ title, content, image, buttonTitleLeft, buttonTitleRight }) {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
       <Box className={classes.wrapper}>
         <Box className={classes.leftContainer}>
           <Box className={classes.infoContainer}>
-            <Typography variant="h5" className={classes.subtitle}>
-              Join Our Community
-            </Typography>
             <Typography variant="h1" className={classes.title}>
-              EASILY LAND AN INTERNSHIP
+              {title}
             </Typography>
             <Box pt={5} pb={10}>
               <Typography variant="h3" className={classes.subtitle2}>
-                We source micro-influencers to startups in need of Creative Talent.
+                {content}
               </Typography>
             </Box>
             <Box className={classes.buttonWrapper}>
               <CustomButton
-                name="Join Us"
+                name={buttonTitleLeft}
                 color="#ffffff"
                 background="#666E78"
                 onButtonClick={() => console.log("Join Us")}
@@ -30,7 +27,7 @@ function HeroSection() {
                 isRadius={true}
               />
               <CustomButton
-                name="Learn More"
+                name={buttonTitleRight}
                 color="#666E78"
                 background="#FFFFFF"
                 onButtonClick={() => console.log("Learn More")}
@@ -42,7 +39,7 @@ function HeroSection() {
           </Box>
         </Box>
         <Box className={classes.rightContainer}>
-          <img src="assests/images/heroImage.png" alt="heroImage" />
+          <img src={image} alt="heroImage" />
         </Box>
       </Box>
     </Box>
@@ -63,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#252B42",
     lineHeight: 1.4,
     marginLeft: 75,
-    inlineSize: "600px",
+    inlineSize: "800px",
     overflowWrap: "break-word",
   },
   subtitle: {

@@ -7,15 +7,12 @@ function HeroSection() {
   return (
     <Box className={classes.root}>
       <Box className={classes.textWrapper}>
-        <Typography variant="h5" className={classes.subtitle}>
-          Practice Advice
-        </Typography>
         <Typography variant="h2" className={classes.title}>
-          What is Lorem Ipsum
+          What are we upto?
         </Typography>
         <Typography variant="h5" className={classes.subtitle2}>
-          Problems trying to resolve the conflict between the two major realms of Classical physics:
-          Newtonian mechanics
+          We are not just a crazy fast end-to-end hiring service, we are also a community. We are a
+          pro-labour movement and believe that stipends must start at ₹10k/month.
         </Typography>
       </Box>
       <Container>

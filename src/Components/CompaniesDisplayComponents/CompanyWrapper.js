@@ -3,10 +3,7 @@ import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
 const companiesList = [
   { imageSrc: "assests/images/ai.png", companyName: "AICrowd" },
-  { imageSrc: "assests/images/all.png", companyName: "Alliance" },
   { imageSrc: "assests/images/angel.png", companyName: "AngelOne" },
-  { imageSrc: "assests/images/rippl.png", companyName: "Rippl" },
-  { imageSrc: "assests/images/tummoc.png", companyName: "Tummoc" },
   { imageSrc: "assests/images/tyke.png", companyName: "Tyke" },
 ];
 
@@ -16,7 +13,7 @@ function CompanyWrapper() {
     <Box className={classes.root}>
       <Box className={classes.wrapper}>
         <Typography variant="h5" className={classes.title}>
-          Some of our trusted company
+          Some of our users…
         </Typography>
         <Box className={classes.company}>
           <Box className={classes.companiesSection}>

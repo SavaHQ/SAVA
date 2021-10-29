@@ -61,7 +61,7 @@ const themeConfig = {
         },
       },
       footer: {
-        background: "#F9FCFF",
+        background: "#000000",
       },
     },
     secondary: {
