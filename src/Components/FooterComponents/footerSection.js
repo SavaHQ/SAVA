@@ -23,8 +23,8 @@ function FooterSection() {
       <Container className={classes.footerContainer}>
         <Grid container spacing={5} mt={3}>
           <Grid item xs={12} lg={4} md={12}>
-            <Box mt={12}>
-              <Typography >
+            <Box mt={12} align="left">
+              <Typography>
                 <img src="assests/images/SAVA.png" />
               </Typography>
               <Typography variant="h5" className={classes.description}>
@@ -74,25 +74,6 @@ function FooterSection() {
               </Box>
             </Box>
           </Grid>
-          {/* <Hidden smDown>
-            <Grid item xs={12} md={2}>
-              <Box>
-                <Typography variant="h4">Download App</Typography>
-                <Box mt={3}>
-                  <Typography variant="h5">
-                    <img
-                      src="/assets/icon/social icons/google_play.svg"
-                      className={classes.googlePlay}
-                    />
-                    <img
-                      src="/assets/icon/social icons/appleStore.svg"
-                      className={classes.appleStore}
-                    />
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-          </Hidden> */}
         </Grid>
         <Box mt={6} align="left">
           <Copyright className={classes.Copyright} />
@@ -124,14 +105,14 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "34px",
     textAlign: "left",
     fontFamily: "Inter",
-    fontSize: "16px",
+    fontSize: "14px",
     color: "#E6E6E6",
   },
   TextLinks: {
-    lineHeight: "34px",
+    lineHeight: "64px",
     textAlign: "left",
     fontFamily: "Inter",
-    fontSize: "16px",
+    fontSize: "14px",
     color: "#E6E6E6",
   },
   buttonContainer: {

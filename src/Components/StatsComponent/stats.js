@@ -21,7 +21,7 @@ function Stats() {
                   <Typography variant="h1" className={classes.statsBox}>
                     {item.stats}
                   </Typography>
-                  <Typography variant="h5" className={classes.statsText}>
+                  <Typography variant="subtitle2" className={classes.statsText}>
                     {item.subContent}
                   </Typography>
                 </List>
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
     borderRadius: "16px",
   },
   statsSection: {
-    flex: 4,
+    flex: 6,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
@@ -54,14 +54,15 @@ const useStyles = makeStyles({
     margin: "auto",
   },
   statsBox: {
-    width: "78px",
-    height: " 88px",
     textAlign: "center",
     color: "#FFFFFF",
+    flex: 1,
+    fontSize: "64px",
   },
   statsText: {
     textAlign: "center",
     color: "#FFFFFF",
+    flex: 1,
   },
 });
 
