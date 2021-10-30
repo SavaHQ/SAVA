@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#252B42",
     lineHeight: 1.4,
     marginLeft: 75,
-    inlineSize: "800px",
+    inlineSize: "720px",
     overflowWrap: "break-word",
   },
   subtitle: {

@@ -69,7 +69,7 @@ const useStyles = makeStyles({
     width: "100%",
   },
   leftSection: {
-    flex: 3,
+    flex: 1,
     justifyContent: "flex-start",
   },
   logo: {
@@ -78,23 +78,22 @@ const useStyles = makeStyles({
     cursor: "pointer",
   },
   midSection: {
-    flex: 4,
+    flex: 1,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
   },
   listTitle: {
-    fontFamily: "Montserrat",
     fontStyle: "normal",
-    fontWeight: "300",
-    fontSize: "15px",
+    fontWeight: "400",
+    fontSize: "13px",
     lineHeight: "35px",
     letterSpacing: "3.6px",
     color: "#666E78",
   },
   rightSection: {
-    flex: 3,
-    justifyContent: "space-between",
+    flex: 1,
+    justifyContent: "flex-end",
   },
   textStyle: {
     textDecoration: "none",

@@ -1,7 +1,12 @@
 import React from "react";
 import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
-const statsList = [{ stats: "3235+" }, { stats: "43456+" }, { stats: "26757+" }];
+const statsList = [
+  { stats: "2k", subContent: "Web Installed" },
+  { stats: "20M+", subContent: "Active Users on Hostingan Web" },
+  { stats: "1k", subContent: "New User Sign up everyday" },
+  { stats: "20K", subContent: "Happy User" },
+];
 
 function Stats() {
   const classes = useStyles();
@@ -13,8 +18,11 @@ function Stats() {
             {statsList.map((item, index) => {
               return (
                 <List key={index}>
-                  <Typography variant="h5" className={classes.statsBox}>
+                  <Typography variant="h1" className={classes.statsBox}>
                     {item.stats}
+                  </Typography>
+                  <Typography variant="h5" className={classes.statsText}>
+                    {item.subContent}
                   </Typography>
                 </List>
               );
@@ -30,11 +38,11 @@ const useStyles = makeStyles({
   wrapper: {
     display: "flex",
     flexDirection: "column",
-    background: " #F7FAFE",
-    width: "100%",
     height: "220px",
-    left: " 0px",
-    top: "808px",
+    justifyContent: "center",
+    margin: "0px 150px 0px 150px",
+    background: "#666E78",
+    borderRadius: "16px",
   },
   statsSection: {
     flex: 4,
@@ -43,23 +51,17 @@ const useStyles = makeStyles({
     flexDirection: "row",
   },
   stats: {
-    width: "1080px",
     margin: "auto",
   },
   statsBox: {
-    fontStyle: " normal",
-    fontWeight: " 800",
-    fontSize: " 30px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: " #222222",
-    padding: "35px",
-    opacity: 0.6,
-    width: "200px",
-    height: "20px",
-    background: "#FFFFFF",
-    borderRadius: "20px",
+    width: "78px",
+    height: " 88px",
+    textAlign: "center",
+    color: "#FFFFFF",
+  },
+  statsText: {
+    textAlign: "center",
+    color: "#FFFFFF",
   },
 });
 
