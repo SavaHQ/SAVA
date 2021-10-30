@@ -5,6 +5,7 @@ const companiesList = [
   { imageSrc: "assests/images/ai.png", companyName: "AICrowd" },
   { imageSrc: "assests/images/angel.png", companyName: "AngelOne" },
   { imageSrc: "assests/images/tyke.png", companyName: "Tyke" },
+  { imageSrc: "assests/images/rippl.png", companyName: "Rippl" },
 ];
 
 function CompanyWrapper() {

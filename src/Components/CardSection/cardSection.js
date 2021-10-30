@@ -7,10 +7,10 @@ function HeroSection() {
   return (
     <Box className={classes.root}>
       <Box className={classes.textWrapper}>
-        <Typography variant="h2" className={classes.title}>
-          What are we upto?
+        <Typography variant="h1" className={classes.title}>
+          Choose Your Hosting Package
         </Typography>
-        <Typography variant="h5" className={classes.subtitle2}>
+        <Typography variant="h7" className={classes.subtitle2}>
           We are not just a crazy fast end-to-end hiring service, we are also a community. We are a
           pro-labour movement and believe that stipends must start at ₹10k/month.
         </Typography>
@@ -41,7 +41,7 @@ function HeroSection() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: "#ffffff",
+    background: "#F7FAFE",
   },
   wrapper: {
     display: "flex",
@@ -64,9 +64,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
   },
   title: {
-    height: "45px",
+    padding: "20px",
     fontWeight: " bold",
-    fontSize: " 34px",
+    fontSize: " 60px",
   },
   subtitle: {
     color: "#96BB7C",
@@ -80,8 +80,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   subtitle2: {
-    inlineSize: "600px",
+    inlineSize: "700px",
     overflowWrap: "break-word",
+    color: "#808080",
+    fontSize: "14px",
+    lineHeight: "32px",
   },
 }));
 
