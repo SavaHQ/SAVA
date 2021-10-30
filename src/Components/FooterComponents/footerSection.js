@@ -109,10 +109,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#E6E6E6",
   },
   TextLinks: {
-    lineHeight: "64px",
     textAlign: "left",
-    fontFamily: "Inter",
-    fontSize: "14px",
     color: "#E6E6E6",
   },
   buttonContainer: {

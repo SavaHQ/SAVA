@@ -1,111 +1,123 @@
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { makeStyles, Box, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
-
-function HeroSection({ title, content, image, buttonTitleLeft, buttonTitleRight }) {
+function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight }) {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
-      <Box className={classes.wrapper}>
-        <Box className={classes.leftContainer}>
-          <Box className={classes.infoContainer}>
-            <Typography variant="h1" className={classes.title}>
-              {title}
-            </Typography>
-            <Box pt={5} pb={10}>
-              <Typography variant="h3" className={classes.subtitle2}>
-                {content}
-              </Typography>
-            </Box>
-            <Box className={classes.buttonWrapper}>
-              <CustomButton
-                name={buttonTitleLeft}
-                color="#ffffff"
-                background="#666E78"
-                onButtonClick={() => console.log("Join Us")}
-                borderRadius={5}
-                isRadius={true}
-              />
-              <CustomButton
-                name={buttonTitleRight}
-                color="#666E78"
-                background="#FFFFFF"
-                onButtonClick={() => console.log("Learn More")}
-                border=" 1px solid #666E78"
-                borderRadius={5}
-                isRadius={true}
-              />
-            </Box>
-          </Box>
+    <Box className={classes.container}>
+      <Box className={classes.infoContainer}>
+        <Typography gutterBottom variant="h1" className={classes.title}>
+          {title}
+        </Typography>
+        <Typography gutterBottom variant="h5" component="p" className={classes.paragraph}>
+          {content}
+        </Typography>
+        <Box className={classes.buttonContainer}>
+          <CustomButton
+            name={buttonTitleLeft}
+            color="#ffffff"
+            background="#666E78"
+            onButtonClick={() => console.log("Join Us")}
+            borderRadius={5}
+            isRadius={true}
+          />
+          <CustomButton
+            name={buttonTitleRight}
+            color="#666E78"
+            background="#FFFFFF"
+            onButtonClick={() => console.log("Learn More")}
+            border=" 1px solid #666E78"
+            borderRadius={5}
+            isRadius={true}
+          />
         </Box>
-        <Box className={classes.rightContainer}>
-          <img src={image} alt="heroImage" />
-        </Box>
+      </Box>
+      <Box className={classes.imageContainer}>
+        <img src={image} className={classes.image} />
       </Box>
     </Box>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    background: "#ffffff",
-  },
-  wrapper: {
+  container: {
     display: "flex",
-    height: "88vh",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      height: "100%",
+    },
+    [theme.breakpoints.down("lg")]: {
+      display: "block",
+      height: "100%",
+    },
   },
   title: {
     fontSize: 58,
     letterSpacing: 0.2,
     color: "#252B42",
     lineHeight: 1.4,
-    marginLeft: 75,
-    inlineSize: "720px",
     overflowWrap: "break-word",
-  },
-  subtitle: {
-    fontSize: 16,
-    letterSpacing: 0.1,
-    lineHeight: 4,
-    color: "#222222",
-    fontWeight: 700,
-    marginLeft: 80,
-  },
-  subtitle2: {
-    letterSpacing: 0.1,
-    marginLeft: 80,
-    inlineSize: "500px",
-    overflowWrap: "break-word",
-    color: "#737373",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 38,
+    },
   },
   infoContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "left",
     textAlign: "left",
-    height: "88vh",
-    display: "flex",
-    flexDirection: "column",
-    background: "#ffff",
-    justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
-    alignItems: "flex-start", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
-  },
-  buttonWrapper: {
-    display: "flex",
-    flexDirection: "row",
-    marginLeft: 80,
-    marginTop: "-40px",
-  },
-  leftContainer: {
-    display: "flex",
-    flex: 2,
     justifyContent: "center",
+    flex: 5,
+    margin: theme.spacing(15),
+    [theme.breakpoints.down("lg")]: {
+      margin: theme.spacing(8),
+      marginTop: theme.spacing(12),
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(4),
+      marginTop: theme.spacing(10),
+    },
   },
-  rightContainer: {
-    flex: 2,
-    background: "#ffff",
+  imageContainer: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
-    alignItems: "center", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
+    justifyContent: "center",
+    flex: 6,
+  },
+  image: {
+    height: "90%",
+    width: "90%",
+    [theme.breakpoints.down("lg")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.down("md")]: {
+      height: "300px",
+      width: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "300px",
+      width: "100%",
+    },
+  },
+  buttonContainer: {
+    marginTop: theme.spacing(5),
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+  },
+  paragraph: {
+    marginTop: theme.spacing(2),
+    lineHeight: theme.spacing(0.2),
+  },
+  topTitle: {
+    color: theme.palette.primary.main,
+    [theme.breakpoints.down("md")]: {
+      marginBottom: theme.spacing(4),
+    },
   },
 }));
 
-export default HeroSection;
+export default heroSection;
