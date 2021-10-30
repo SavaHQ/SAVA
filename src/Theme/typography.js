@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 export default {
-  fontFamily: ['"Montserrat"'].join(","),
+  fontFamily: ['"Inter"'].join(","),
 
   h1: {
     fontWeight: 700,

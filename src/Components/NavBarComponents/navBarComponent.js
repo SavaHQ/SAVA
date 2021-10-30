@@ -84,7 +84,6 @@ const useStyles = makeStyles({
     flexDirection: "row",
   },
   listTitle: {
-    fontFamily: "Montserrat",
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "15px",
