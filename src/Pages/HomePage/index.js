@@ -24,15 +24,15 @@ function HomePage() {
       <CompanyWrapper />
       <CardSection />
       <Stats />
-      <GlassCard />
       <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
       <InfoBanner
         isTextRight={true}
-        isBackgroundColor="#222222"
-        color="#ffffff"
+        isBackgroundColor="F7FAFE"
+        // color="#ffffff"
         paddingLeft="20%"
         paddingRight="0px"
       />
+      <GlassCard />
     </Box>
   );
 }
