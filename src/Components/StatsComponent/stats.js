@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "#FFFFFF",
     flex: 4,
-    display:"flex",
+    display: "flex",
     fontSize: "64px",
     paddingRight: "50px",
     paddingLeft: "50px",

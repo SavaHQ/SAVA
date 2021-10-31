@@ -125,12 +125,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     lineHeight: theme.spacing(0.2),
   },
-  topTitle: {
-    color: theme.palette.primary.main,
-    [theme.breakpoints.down("md")]: {
-      marginBottom: theme.spacing(4),
-    },
-  },
 }));
 
 export default heroSection;
