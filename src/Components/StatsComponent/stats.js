@@ -39,14 +39,12 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     height: "220px",
-    justifyContent: "center",
     margin: "0px 150px 0px 150px",
     background: "#666E78",
     borderRadius: "16px",
   },
   statsSection: {
-    flex: 6,
-    justifyContent: "space-between",
+    flex: 1,
     display: "flex",
     flexDirection: "row",
   },
@@ -56,7 +54,8 @@ const useStyles = makeStyles({
   statsBox: {
     textAlign: "center",
     color: "#FFFFFF",
-    flex: 1,
+    flex: 4,
+    display:"flex",
     fontSize: "64px",
   },
   statsText: {
