@@ -16,6 +16,7 @@ function HomePage() {
     <Box className={classes.root}>
       <HeroSection
         title={objectData.title}
+        subtitle={objectData.subtitle}
         content={objectData.content}
         image={objectData.image}
         buttonTitleLeft={objectData.buttonTitleLeft}
