@@ -1,11 +1,14 @@
 import { makeStyles, Box, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
-function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight }) {
+function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight, subtitle }) {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
       <Box className={classes.infoContainer}>
+        <Typography gutterBottom variant="h1" className={classes.subtitle}>
+          {subtitle}
+        </Typography>
         <Typography gutterBottom variant="h1" className={classes.title}>
           {title}
         </Typography>
@@ -54,13 +57,23 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    fontSize: 58,
+    fontSize: 48,
     letterSpacing: 0.2,
     color: "#252B42",
     lineHeight: 1.4,
     overflowWrap: "break-word",
     [theme.breakpoints.down("sm")]: {
       fontSize: 38,
+    },
+  },
+  subtitle: {
+    fontSize: 18,
+    letterSpacing: 0.2,
+    color: "#666E78",
+    lineHeight: 1.6,
+    overflowWrap: "break-word",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 15,
     },
   },
   infoContainer: {

@@ -2,10 +2,10 @@ import React from "react";
 import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
 const statsList = [
-  { stats: "2k", subContent: "Web Installed" },
-  { stats: "20M+", subContent: "Active Users on Hostingan Web" },
-  { stats: "1k", subContent: "New User Sign up everyday" },
-  { stats: "20K", subContent: "Happy User" },
+  { stats: "2600+", subContent: "Creators" },
+  // { stats: "20M+", subContent: "Active Users on Hostingan Web" },
+  // { stats: "1k", subContent: "New User Sign up everyday" },
+  { stats: "75+", subContent: "Startups Served" },
 ];
 
 function Stats() {
@@ -58,6 +58,8 @@ const useStyles = makeStyles({
     color: "#FFFFFF",
     flex: 1,
     fontSize: "64px",
+    paddingRight: "50px",
+    paddingLeft: "50px",
   },
   statsText: {
     textAlign: "center",

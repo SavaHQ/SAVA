@@ -8,7 +8,7 @@ function HeroSection() {
     <Box className={classes.root}>
       <Box className={classes.textWrapper}>
         <Typography variant="h1" className={classes.title}>
-          Choose Your Hosting Package
+          What we are upto?
         </Typography>
         <Typography variant="h7" className={classes.subtitle2}>
           We are not just a crazy fast end-to-end hiring service, we are also a community. We are a
@@ -20,17 +20,17 @@ function HeroSection() {
           <Box className={classes.leftContainer}>
             <CardComponent
               image="assests/images/cardOne.gif"
-              title="What are we trying to do?"
-              content="Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt"
-              buttonTitle="Find out more"
+              title="Should you join our community?"
+              content="Sava is not just about highly paid internships that we offer. It’s about a movement against unpaid work and also tons of challenges + giveaways + upskill banter."
+              buttonTitle="Join our Community"
             />
           </Box>
           <Box className={classes.rightContainer}>
             <CardComponent
               image="assests/images/cardTwo.gif"
               title="What's the catch for Startups?"
-              content="Sava sources these brilliant Content Creators to startups who are looking for Creative Talent as interns"
-              buttonTitle="Get in Touch"
+              content="Having a massive niche-oriented talent pool ensures a quick response to your needs. We don’t throw a gazillion resumes at your face. We share our top three picks."
+              buttonTitle="Learn More"
             />
           </Box>
         </Box>
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     inlineSize: "700px",
     overflowWrap: "break-word",
     color: "#808080",
-    fontSize: "14px",
+    fontSize: "18px",
     lineHeight: "32px",
   },
 }));
