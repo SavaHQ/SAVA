@@ -6,20 +6,22 @@ function CommunityComponent() {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Box className={classes.wrapper}>
-        <Box className={classes.textWrapper}>
-          <Typography variant="h1" className={classes.title}>
-            Start the success of your website with us
-          </Typography>
-          <CustomButton
-            name="join us"
-            color="#ffffff"
-            width="188px"
-            background="#666E78"
-            onButtonClick={() => console.log("join us")}
-            borderRadius={5}
-            isRadius={true}
-          />
+      <Box className={classes.contain}>
+        <Box className={classes.wrapper}>
+          <Box className={classes.textWrapper}>
+            <Typography variant="h1" className={classes.title}>
+              Start the success of your website with us
+            </Typography>
+            <CustomButton
+              name="join us"
+              color="#ffffff"
+              width="188px"
+              background="#666E78"
+              onButtonClick={() => console.log("join us")}
+              borderRadius={5}
+              isRadius={true}
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -31,11 +33,18 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     height: "400px",
-    wdith: "300px",
+    width: "100%",
+    backgroundRepeat: "no-repeat",
     justifyContent: "center",
     alignItems: "center",
-    margin: "70px 150px 70px 150px",
+    marginTop: "70px",
+    marginBottom: "70px",
     backgroundImage: `url(${"assests/images/CTA.svg"})`,
+    backgroundSize: "cover",
+  },
+  contain: {
+    maxWidth: "1300px",
+    margin: "auto",
   },
   title: {
     fontWeight: "bold",

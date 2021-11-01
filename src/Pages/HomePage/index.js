@@ -35,7 +35,7 @@ function HomePage() {
         paddingRight="0px"
       />
       <GlassCard />
-      <ConnectBanner/>
+      <ConnectBanner />
     </Box>
   );
 }
