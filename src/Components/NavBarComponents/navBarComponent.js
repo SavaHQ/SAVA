@@ -1,41 +1,64 @@
-import { AppBar, Box, makeStyles, List, Toolbar, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  Box,
+  makeStyles,
+  List,
+  Toolbar,
+  Typography,
+  Hidden,
+  // IconButton,
+} from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../Constants/routesEndpoints";
 import CustomButton from "../CustomButtonComponents/CustomButton";
+// import MenuIcon from "@mui/icons-material/Menu";
 
 function NavBarComponent() {
   const classes = useStyles();
+
+  const pathname = window.location.pathname;
+
+  console.log(pathname);
+
   const navItemsLists = [
-    { title: "Home", link: "/" },
+    { title: "Home", link: "/home" },
     { title: "For Startups", link: ROUTES.FORSTARTUP },
     { title: "Community", link: ROUTES.COMMUNITY },
     { title: "Contact us", link: ROUTES.CONTACTUS },
   ];
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" elevation={0}>
       <Toolbar className={classes.appBar}>
-        <Box className={classes.wrapper}>
-          <Box className={classes.leftSection}>
-            <Typography className={classes.logo}>
-              <Link to="/home">
-                <img src="assests/images/logo.svg" alt="logo" />
-              </Link>
-            </Typography>
-          </Box>
+        <Typography className={classes.logo}>
+          <Link to="/home">
+            <img src="assests/images/logo.svg" alt="logo" />
+          </Link>
+        </Typography>
+        <Hidden mdDown>
           <Box className={classes.midSection}>
             {navItemsLists.map((item, index) => {
               return (
                 <List key={index}>
                   <Link smooth to={item.link} className={classes.textStyle}>
-                    <Typography className={classes.listTitle}>{item.title}</Typography>
+                    <Typography
+                      variant="body1"
+                      style={{
+                        color: "#222222",
+                        fontWeight: pathname === navItemsLists[index].link ? "bold" : "400",
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
                   </Link>
                 </List>
               );
             })}
           </Box>
-          <Box className={classes.rightSection}>
+        </Hidden>
+        <Hidden mdDown>
+          <Box className={classes.button}>
             <CustomButton
               name="Sign In"
               color="#ffffff"
@@ -54,23 +77,31 @@ function NavBarComponent() {
               isRadius={true}
             />
           </Box>
-        </Box>
+        </Hidden>
+
+        <Hidden mdDown>
+          <Box className={classes.menue}>
+            {/* <IconButton>
+              <MenuIcon />
+            </IconButton> */}
+          </Box>
+        </Hidden>
       </Toolbar>
     </AppBar>
   );
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: "#ffff",
-  },
-  wrapper: {
     display: "flex",
-    width: "100%",
-  },
-  leftSection: {
-    flex: 1,
-    justifyContent: "flex-start",
+    backgroundColor: "#ffff",
+    paddingLeft: "120px",
+    paddingRight: "120px",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "20px",
+      paddingRight: "20px",
+    },
   },
   logo: {
     paddingTop: "15px",
@@ -78,26 +109,18 @@ const useStyles = makeStyles({
     cursor: "pointer",
   },
   midSection: {
-    flex: 1,
+    flex: 0.6,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
   },
-  listTitle: {
-    fontStyle: "normal",
-    fontWeight: "400",
-    fontSize: "13px",
-    lineHeight: "35px",
-    letterSpacing: "3.6px",
-    color: "#666E78",
-  },
-  rightSection: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
   textStyle: {
     textDecoration: "none",
   },
-});
+  button: {
+    display: "flex",
+    flexDirection: "row",
+  },
+}));
 
 export default NavBarComponent;
