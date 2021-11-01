@@ -122,7 +122,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-75px",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "flex-start", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
-
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       display: "none",

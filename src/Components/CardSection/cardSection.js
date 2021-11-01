@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
   },
   rightContainer: {
     flex: 4,
-    background: "#ffff",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
