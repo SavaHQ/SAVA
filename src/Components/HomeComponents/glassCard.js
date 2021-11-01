@@ -60,6 +60,13 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
     color: "#252B42",
     paddingBottom: "20px",
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "28px",
+      inlineSize: "400px",
+      overflowWrap: "break-word",
+      paddingBottom: "20px",
+    },
   },
   mainContainer: {
     width: "80%",
@@ -80,6 +87,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     marginLeft: 30,
     paddingTop: "40px",
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
   },
   leftContainer: {
     textAlign: "left",
@@ -93,6 +102,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "16px",
     minHeight: "350px",
     padding: " 30px",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      height: "200px",
+      width: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: " 350px",
+      backdropFilter: "blur(9px)",
+      borderRadius: "16px",
+      minHeight: "350px",
+      padding: " 30px",
+    },
   },
   rightContainer: {
     width: "50%",
@@ -101,6 +122,11 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-75px",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "flex-start", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
+
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 }));
 
