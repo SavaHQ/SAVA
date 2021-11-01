@@ -1,7 +1,13 @@
+import { Box, makeStyles } from "@material-ui/core";
 import React from "react";
 
 function Banner() {
-  return <div></div>;
+  const classes = useStyles();
+  return <Box className={classes.root}></Box>;
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+}));
 
 export default Banner;
