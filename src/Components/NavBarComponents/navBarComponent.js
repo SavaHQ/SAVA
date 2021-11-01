@@ -10,7 +10,7 @@ function NavBarComponent() {
     { title: "Home", link: "/" },
     { title: "For Startups", link: ROUTES.FORSTARTUP },
     { title: "Community", link: ROUTES.COMMUNITY },
-    { title: "Openings", link: ROUTES.OPENINGS },
+    { title: "Contact us", link: ROUTES.CONTACTUS },
   ];
 
   return (
