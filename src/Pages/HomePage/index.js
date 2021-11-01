@@ -8,6 +8,7 @@ import GlassCard from "../../Components/HomeComponents/glassCard";
 import InfoBanner from "../../Components/InfoBanner/infoBanner";
 import sampleData from "../../Data/sampleData.json";
 import CommunityComponent from "../../Components/CommunityComponent/CommunityComponent";
+import ConnectBanner from "../../Components/ConnectBannerComponent/connectBanner";
 function HomePage() {
   const classes = useStyles();
   const objectData = sampleData;
@@ -34,6 +35,7 @@ function HomePage() {
         paddingRight="0px"
       />
       <GlassCard />
+      <ConnectBanner/>
     </Box>
   );
 }

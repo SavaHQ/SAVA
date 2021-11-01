@@ -100,8 +100,8 @@ const useStyles = makeStyles((theme) => ({
     flex: 6,
   },
   image: {
-    height: "90%",
-    width: "90%",
+    height: "80%",
+    width: "80%",
     [theme.breakpoints.down("lg")]: {
       width: "100%",
     },

@@ -3,8 +3,8 @@ import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
 const statsList = [
   { stats: "2600+", subContent: "Creators" },
-  // { stats: "20M+", subContent: "Active Users on Hostingan Web" },
-  // { stats: "1k", subContent: "New User Sign up everyday" },
+  { stats: "20M+", subContent: "Active Users on Hostingan Web" },
+  { stats: "1k", subContent: "New User Sign up everyday" },
   { stats: "75+", subContent: "Startups Served" },
 ];
 
