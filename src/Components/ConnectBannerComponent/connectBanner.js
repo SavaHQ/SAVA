@@ -30,6 +30,9 @@ const useStyle = makeStyles((theme) => ({
     padding: "100px",
     height: "100%",
     background: "#F7FAFE",
+    [theme.breakpoints.down("sm")]: {
+      padding: "50px",
+    },
   },
   title: {
     color: "#ffffff",
