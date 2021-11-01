@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   title: {
-    fontSize: "48px",
+    fontSize: "2.3565rem",
     letterSpacing: "0.01em",
     marginLeft: 25,
     inlineSize: "800px",
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subContent: {
     marginLeft: 30,
-    fontSize: "20px",
+    fontSize: "16px",
     color: " #4B4B4B",
     paddingBottom: "10px",
   },

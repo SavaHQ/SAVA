@@ -56,7 +56,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontWeight: "bold",
-    fontSize: "60px",
+    fontSize: "2.3565rem",
     textAlign: " center",
     color: "#FFFFFF",
   },
@@ -64,7 +64,7 @@ const useStyles = makeStyles({
     color: "#E6E6E6",
     inlineSize: "100px",
     overflowWrap: "break-word",
-    fontSize: "14px",
+    fontSize: "16px",
     lineHeight: "32px",
   },
 

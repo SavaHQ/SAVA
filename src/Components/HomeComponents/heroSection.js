@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    fontSize: 48,
+    fontSize: "2.3565rem",
     letterSpacing: 0.2,
     color: "#252B42",
     lineHeight: 1.4,
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 16,
     letterSpacing: 0.2,
     color: "#666E78",
     lineHeight: 1.6,
@@ -122,8 +122,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paragraph: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
     lineHeight: theme.spacing(0.2),
+    fontSize: "16px",
   },
 }));
 

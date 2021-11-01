@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     letterSpacing: 0.2,
-    fontSize: "50px",
-    paddingBottom: "20px",
+    fontSize: "2.3565rem",
+    paddingBottom: "10px",
     color: "#252B42",
     lineHeight: 1.4,
     overflowWrap: "break-word",
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: "16px",
     paddingBottom: "70px",
     overflowWrap: "break-word",
     [theme.breakpoints.down("sm")]: {

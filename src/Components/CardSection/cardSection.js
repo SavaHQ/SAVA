@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     padding: "20px",
     fontWeight: " bold",
-    fontSize: " 60px",
+    fontSize: "2.3565rem",
   },
   subtitle: {
     color: "#96BB7C",
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     inlineSize: "700px",
     overflowWrap: "break-word",
     color: "#808080",
-    fontSize: "18px",
+    fontSize: "16px",
     lineHeight: "32px",
   },
 }));
