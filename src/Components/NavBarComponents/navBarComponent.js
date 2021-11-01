@@ -29,65 +29,68 @@ function NavBarComponent() {
   ];
 
   return (
-    <AppBar position="fixed" elevation={0}>
-      <Toolbar className={classes.appBar}>
-        <Typography className={classes.logo}>
-          <Link to="/home">
-            <img src="assests/images/logo.svg" alt="logo" />
-          </Link>
-        </Typography>
-        <Hidden mdDown>
-          <Box className={classes.midSection}>
-            {navItemsLists.map((item, index) => {
-              return (
-                <List key={index}>
-                  <Link smooth to={item.link} className={classes.textStyle}>
-                    <Typography
-                      variant="body1"
-                      style={{
-                        color: "#222222",
-                        fontWeight: pathname === navItemsLists[index].link ? "bold" : "400",
-                      }}
-                    >
-                      {item.title}
-                    </Typography>
-                  </Link>
-                </List>
-              );
-            })}
-          </Box>
-        </Hidden>
-        <Hidden mdDown>
-          <Box className={classes.button}>
-            <CustomButton
-              name="Sign In"
-              color="#ffffff"
-              background="#666E78"
-              onButtonClick={() => console.log("Sign In")}
-              borderRadius={5}
-              isRadius={true}
-            />
-            <CustomButton
-              name="Login"
-              color="#666E78"
-              background="#FFFFFF"
-              onButtonClick={() => console.log("Login")}
-              border=" 1px solid #666E78"
-              borderRadius={5}
-              isRadius={true}
-            />
-          </Box>
-        </Hidden>
+    <>
+      <AppBar position="fixed" elevation={0}>
+        <Toolbar className={classes.appBar}>
+          <Typography className={classes.logo}>
+            <Link to="/home">
+              <img src="assests/images/logo.svg" alt="logo" />
+            </Link>
+          </Typography>
+          <Hidden mdDown>
+            <Box className={classes.midSection}>
+              {navItemsLists.map((item, index) => {
+                return (
+                  <List key={index}>
+                    <Link smooth to={item.link} className={classes.textStyle}>
+                      <Typography
+                        variant="body1"
+                        style={{
+                          color: "#222222",
+                          fontWeight: pathname === navItemsLists[index].link ? "bold" : "400",
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+                    </Link>
+                  </List>
+                );
+              })}
+            </Box>
+          </Hidden>
+          <Hidden mdDown>
+            <Box className={classes.button}>
+              <CustomButton
+                name="Sign In"
+                color="#ffffff"
+                background="#666E78"
+                onButtonClick={() => console.log("Sign In")}
+                borderRadius={5}
+                isRadius={true}
+              />
+              <CustomButton
+                name="Login"
+                color="#666E78"
+                background="#FFFFFF"
+                onButtonClick={() => console.log("Login")}
+                border=" 1px solid #666E78"
+                borderRadius={5}
+                isRadius={true}
+              />
+            </Box>
+          </Hidden>
 
-        <Hidden mdDown>
-          <Box className={classes.menue}>
-            {/* <IconButton>
+          <Hidden mdDown>
+            <Box className={classes.menue}>
+              {/* <IconButton>
               <MenuIcon />
             </IconButton> */}
-          </Box>
-        </Hidden>
-      </Toolbar>
-    </AppBar>
+            </Box>
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+      <div className={classes.offset} />
+    </>
   );
 }
 
@@ -121,6 +124,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
   },
+  offset: theme.mixins.denseToolbar,
 }));
 
 export default NavBarComponent;
