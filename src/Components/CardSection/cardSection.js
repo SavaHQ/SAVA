@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     padding: "20px",
+    paddingTop: "110px",
     fontWeight: " bold",
     fontSize: "2.3565rem",
   },
