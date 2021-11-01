@@ -7,7 +7,6 @@ import Stats from "../../Components/StatsComponent/stats";
 import GlassCard from "../../Components/HomeComponents/glassCard";
 import InfoBanner from "../../Components/InfoBanner/infoBanner";
 import sampleData from "../../Data/sampleData.json";
-import CommunityComponent from "../../Components/CommunityComponent/CommunityComponent";
 import ConnectBanner from "../../Components/ConnectBannerComponent/connectBanner";
 function HomePage() {
   const classes = useStyles();
@@ -24,7 +23,6 @@ function HomePage() {
         buttonTitleRight={objectData.buttonTitleRight}
       />
       <CompanyWrapper />
-      <CommunityComponent />
       <CardSection />
       <Stats />
       <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
