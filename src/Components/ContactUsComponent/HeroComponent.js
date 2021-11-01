@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   infoBox: {
     display: "flex",
+    textAlign: "left",
     flexDirection: "column",
     alignItems: "flex-start",
   },
