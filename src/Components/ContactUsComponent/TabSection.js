@@ -17,7 +17,7 @@ function TabSection() {
             </Typography>
           </AccordionSummary>
           <AccordionDetails className={classes.detailsSection}>
-            <Typography variant="body2" className={classes.subtitle}>
+            <Typography variant="body1" className={classes.subtitle}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur dui eu sit
               interdum. Ut pellentesque tincidunt justo eu quam nisl etiam. Integer eget enim,
               pulvinar sit turpis in. Tortor morbi tempus amet in volutpat amet convallis.
@@ -32,6 +32,9 @@ function TabSection() {
 const useStyle = makeStyles((theme) => ({
   root: {
     padding: "100px",
+    [theme.breakpoints.down("md")]: {
+      padding: "10px",
+    },
   },
   tileContainer: {
     padding: 0,
@@ -45,6 +48,10 @@ const useStyle = makeStyles((theme) => ({
   title: {
     fontWeight: 800,
     padding: "40px",
+    textAlign: "left",
+    [theme.breakpoints.down("md")]: {
+      padding: "10px",
+    },
   },
   subtitle: {
     fontSize: "16px",
