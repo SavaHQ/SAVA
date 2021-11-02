@@ -36,29 +36,45 @@ function CompanyWrapper() {
   );
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     flexDirection: "column",
     background: " #F7FAFE",
     width: "100%",
     height: "220px",
-    left: " 0px",
-    top: "808px",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      height: "420px",
+    },
   },
   companiesSection: {
     flex: 4,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
   companyImage: {
     width: "140px",
     margin: 10,
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      wdith: "120px",
+    },
   },
   company: {
-    width: "1180px",
+    width: "80%",
     margin: "auto",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
   },
   title: {
     height: "42px",
@@ -71,7 +87,12 @@ const useStyles = makeStyles({
     color: " #4B4B4B",
     padding: "35px",
     opacity: 0.6,
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
-});
+}));
 
 export default CompanyWrapper;
