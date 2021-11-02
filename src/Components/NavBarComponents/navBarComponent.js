@@ -102,7 +102,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
     paddingLeft: "120px",
     paddingRight: "120px",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    alignItems: "center",
+
     [theme.breakpoints.down("md")]: {
       paddingLeft: "20px",
       paddingRight: "20px",
