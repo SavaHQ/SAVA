@@ -34,7 +34,7 @@ function Stats() {
   );
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     flexDirection: "column",
@@ -42,11 +42,27 @@ const useStyles = makeStyles({
     margin: "0px 150px 0px 150px",
     background: "#666E78",
     borderRadius: "16px",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "row",
+      height: "100%",
+      margin: "0",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "row",
+      height: "100%",
+      margin: "0",
+    },
   },
   statsSection: {
     flex: 1,
     display: "flex",
     flexDirection: "row",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
   stats: {
     margin: "auto",
@@ -59,12 +75,34 @@ const useStyles = makeStyles({
     fontSize: "64px",
     paddingRight: "50px",
     paddingLeft: "50px",
+    [theme.breakpoints.down("lg")]: {
+      display: "block",
+      height: "100%",
+    },
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      height: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(4),
+      marginTop: theme.spacing(6),
+    },
   },
   statsText: {
     textAlign: "center",
     color: "#FFFFFF",
     flex: 1,
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      height: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(4),
+      fontSize: "18px",
+      marginTop: theme.spacing(2),
+    },
   },
-});
+}));
 
 export default Stats;
