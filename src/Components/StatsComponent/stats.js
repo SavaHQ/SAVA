@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(4),
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(6),
     },
   },
   statsText: {
@@ -99,7 +99,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(4),
-      marginTop: theme.spacing(10),
+      fontSize: "18px",
+      marginTop: theme.spacing(2),
     },
   },
 }));
