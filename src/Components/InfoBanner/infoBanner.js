@@ -30,7 +30,7 @@ function InfoBanner({ isTextRight, isBackgroundColor, color, buttonTitleLeft, im
         </Typography>
         <Box className={classes.buttonContainer}>
           <CustomButton
-            name={buttonTitleLeft}
+            name="Learn More"
             color="#ffffff"
             background="#666E78"
             onButtonClick={() => console.log("Join Us")}
