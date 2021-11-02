@@ -23,6 +23,8 @@ function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight,
             onButtonClick={() => console.log("Join Us")}
             borderRadius={5}
             isRadius={true}
+            width="128px"
+            height="44px"
           />
           <CustomButton
             name={buttonTitleRight}
@@ -32,6 +34,8 @@ function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight,
             border=" 1px solid #666E78"
             borderRadius={5}
             isRadius={true}
+            width="128px"
+            height="44px"
           />
         </Box>
       </Box>
