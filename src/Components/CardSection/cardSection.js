@@ -78,6 +78,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      height: "100%",
+    },
   },
   subtitle2: {
     inlineSize: "700px",
