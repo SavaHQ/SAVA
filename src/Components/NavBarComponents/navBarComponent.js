@@ -6,13 +6,13 @@ import {
   Toolbar,
   Typography,
   Hidden,
-  // IconButton,
+  IconButton,
 } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../Constants/routesEndpoints";
 import CustomButton from "../CustomButtonComponents/CustomButton";
-// import MenuIcon from "@mui/icons-material/Menu";
+import { FiAlignJustify } from "react-icons/fi";
 
 function NavBarComponent() {
   const classes = useStyles();
@@ -37,6 +37,7 @@ function NavBarComponent() {
               <img src="assests/images/logo.svg" alt="logo" />
             </Link>
           </Typography>
+          <Box flexGrow={1} />
           <Hidden mdDown>
             <Box className={classes.midSection}>
               {navItemsLists.map((item, index) => {
@@ -58,6 +59,7 @@ function NavBarComponent() {
               })}
             </Box>
           </Hidden>
+          <Box flexGrow={1} />
           <Hidden mdDown>
             <Box className={classes.button}>
               <CustomButton
@@ -80,11 +82,11 @@ function NavBarComponent() {
             </Box>
           </Hidden>
 
-          <Hidden mdDown>
+          <Hidden xlUp>
             <Box className={classes.menue}>
-              {/* <IconButton>
-              <MenuIcon />
-            </IconButton> */}
+              <IconButton>
+                <FiAlignJustify />
+              </IconButton>
             </Box>
           </Hidden>
         </Toolbar>
@@ -97,7 +99,7 @@ function NavBarComponent() {
 const useStyles = makeStyles((theme) => ({
   appBar: {
     display: "flex",
-    backgroundColor: "#ffff",
+    backgroundColor: "#ffffff",
     paddingLeft: "120px",
     paddingRight: "120px",
     justifyContent: "space-between",
@@ -112,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   midSection: {
-    flex: 0.5,
+    flex: 3,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
@@ -122,6 +124,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     display: "flex",
+
     flexDirection: "row",
   },
   offset: theme.mixins.denseToolbar,
