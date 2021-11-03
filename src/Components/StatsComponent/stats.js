@@ -73,8 +73,6 @@ const useStyles = makeStyles((theme) => ({
     flex: 4,
     display: "flex",
     fontSize: "64px",
-    paddingRight: "50px",
-    paddingLeft: "50px",
     [theme.breakpoints.down("lg")]: {
       display: "block",
       height: "100%",
