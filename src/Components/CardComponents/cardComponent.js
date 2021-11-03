@@ -49,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
   cardStyles: {
     position: "relative",
     width: "425px",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      width: "300px",
+    },
   },
   overlay: {
     position: "absolute",
@@ -67,6 +72,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     color: "#FFFFFF",
     padding: "15px 15px 0px 15px;",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      height: "44px",
+      fontWeight: "bold",
+      fontSize: "15px",
+      color: "#FFFFFF",
+      padding: "0",
+    },
   },
   contentText: {
     color: "#ffffff",
@@ -79,6 +93,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     lineHeight: " 22px",
     letterSpacing: "0.2px",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      color: "#ffffff",
+      inlineSize: "250px",
+      overflowWrap: "break-word",
+      display: "flex",
+      padding: "0",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      fontSize: "16px",
+      lineHeight: " 22px",
+      letterSpacing: "0.2px",
+    },
   },
   Button: {
     flexDirection: " column",

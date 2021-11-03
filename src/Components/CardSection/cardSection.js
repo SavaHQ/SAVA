@@ -47,6 +47,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     height: "100vh",
     width: "100%",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      height: "100%",
+    },
   },
   leftContainer: {
     display: "flex",
@@ -54,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "center",
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      padding: "20px",
+    },
   },
   rightContainer: {
     flex: 4,
@@ -61,6 +72,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center", // main Access alignment(vertical ) (y  axis)    &&   flexDirection: "row",   (x  axis)
     alignItems: "center", // cross access alignment(Horizontal)(x  axis)  && flexDirection: "row",   (y  axis)
+    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      padding: "20px",
+    },
   },
   title: {
     padding: "20px",
