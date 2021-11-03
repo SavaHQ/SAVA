@@ -5,7 +5,7 @@ import CompanyWrapper from "../../Components/CompaniesDisplayComponents/CompanyW
 import CardSection from "../../Components/CardSection/cardSection";
 import Stats from "../../Components/StatsComponent/stats";
 import GlassCard from "../../Components/HomeComponents/glassCard";
-import InfoBanner from "../../Components/InfoBanner/infoBanner";
+// import InfoBanner from "../../Components/InfoBanner/infoBanner";
 import sampleData from "../../Data/sampleData.json";
 import ConnectBanner from "../../Components/ConnectBannerComponent/connectBanner";
 function HomePage() {
@@ -25,13 +25,13 @@ function HomePage() {
       <CompanyWrapper />
       <CardSection />
       <Stats />
-      <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
+      {/* <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
       <InfoBanner
         isTextRight={true}
         isBackgroundColor="F7FAFE"
         paddingLeft="20%"
         paddingRight="0px"
-      />
+      /> */}
       <GlassCard />
       <ConnectBanner />
     </Box>

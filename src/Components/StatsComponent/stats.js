@@ -2,9 +2,9 @@ import React from "react";
 import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
 const statsList = [
-  { stats: "2600+", subContent: "Creators" },
-  { stats: "20M+", subContent: "Active Users on Hostingan Web" },
-  { stats: "1k", subContent: "New User Sign up everyday" },
+  { stats: "2800+", subContent: "Community Members" },
+  // { stats: "20M+", subContent: "Active Users on Hostingan Web" },
+  { stats: "520+", subContent: "Vetted Sava Creators" },
   { stats: "75+", subContent: "Startups Served" },
 ];
 
