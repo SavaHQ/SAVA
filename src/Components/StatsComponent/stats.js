@@ -73,6 +73,8 @@ const useStyles = makeStyles((theme) => ({
     flex: 4,
     display: "flex",
     fontSize: "64px",
+    paddingRight: "50px",
+    paddingLeft: "50px",
     [theme.breakpoints.down("lg")]: {
       display: "block",
       height: "100%",
@@ -80,6 +82,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       display: "block",
       height: "100%",
+      paddingRight: "0px",
+      paddingLeft: "0px",
     },
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(4),
