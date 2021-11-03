@@ -62,8 +62,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "20px",
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
-      fontSize: "28px",
-      inlineSize: "400px",
+      fontSize: "24px",
+      inlineSize: "250px",
       overflowWrap: "break-word",
       paddingBottom: "20px",
     },

@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "none",
       },
       "& .MuiBox-root-207": {
-        width: "max-content",
+        width: "100%",
       },
     },
     paddingBottom: theme.spacing(2),
