@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(4),
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(5),
     },
   },
   imageContainer: {
