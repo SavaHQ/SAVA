@@ -3,7 +3,7 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 
-function InfoBanner({ isTextRight, isBackgroundColor, color, buttonTitleLeft, image }) {
+function InfoBanner({ isTextRight, isBackgroundColor, color, image }) {
   const classes = useStyles();
   return (
     <Box

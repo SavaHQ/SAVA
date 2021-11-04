@@ -3,7 +3,6 @@ import { Box, makeStyles, List, Typography } from "@material-ui/core";
 
 const statsList = [
   { stats: "2800+", subContent: "Community Members" },
-  // { stats: "20M+", subContent: "Active Users on Hostingan Web" },
   { stats: "520+", subContent: "Vetted Sava Creators" },
   { stats: "75+", subContent: "Startups Served" },
 ];
@@ -95,7 +94,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#FFFFFF",
     flex: 1,
-    [theme.breakpoints.down("lg")]: {},
     [theme.breakpoints.down("md")]: {
       display: "block",
       height: "100%",

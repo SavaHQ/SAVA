@@ -81,7 +81,6 @@ function NavBarComponent() {
               />
             </Box>
           </Hidden>
-
           <Hidden xlUp>
             <Box className={classes.menue}>
               <IconButton>

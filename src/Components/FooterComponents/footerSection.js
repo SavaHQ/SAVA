@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  // Hidden,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 
 function Copyright() {
   return (
@@ -111,27 +104,6 @@ const useStyles = makeStyles((theme) => ({
   TextLinks: {
     textAlign: "left",
     color: "#E6E6E6",
-  },
-  buttonContainer: {
-    marginTop: theme.spacing(6),
-  },
-  socialButtons: {
-    marginTop: theme.spacing(1),
-    background: theme.palette.primary.main,
-    marginRight: theme.spacing(2),
-    color: "white",
-    maxHeight: 40,
-    maxWidth: 40,
-    boxShadow: "0px 4px 15px rgba(55, 64, 161, 0.25)",
-    "&:hover": {
-      background: theme.palette.primary.main,
-    },
-  },
-  googlePlay: {
-    cursor: "pointer",
-  },
-  appleStore: {
-    cursor: "pointer",
   },
 }));
 
