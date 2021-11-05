@@ -8,18 +8,17 @@ import {
   Hidden,
   IconButton,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../Constants/routesEndpoints";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 import { FiAlignJustify } from "react-icons/fi";
+import DrawerComponent from "./drawerComponent";
 
 function NavBarComponent() {
   const classes = useStyles();
 
   const pathname = window.location.pathname;
-
-  console.log(pathname);
 
   const navItemsLists = [
     { title: "Home", link: "/home" },
@@ -27,6 +26,18 @@ function NavBarComponent() {
     { title: "Community", link: ROUTES.COMMUNITY },
     { title: "Contact us", link: ROUTES.CONTACTUS },
   ];
+
+  const [state, setState] = useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
 
   return (
     <>
@@ -83,7 +94,7 @@ function NavBarComponent() {
           </Hidden>
           <Hidden xlUp>
             <Box className={classes.menue}>
-              <IconButton>
+              <IconButton onClick={toggleDrawer("right", true)}>
                 <FiAlignJustify />
               </IconButton>
             </Box>
@@ -91,6 +102,12 @@ function NavBarComponent() {
         </Toolbar>
       </AppBar>
       <div className={classes.offset} />
+      <DrawerComponent
+        onClick={toggleDrawer("right", false)}
+        anchor="right"
+        state={state.right}
+        onClose={toggleDrawer("right", false)}
+      />
     </>
   );
 }

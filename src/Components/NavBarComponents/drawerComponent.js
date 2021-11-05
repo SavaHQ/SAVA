@@ -1,31 +1,61 @@
-import { ListItemText, MenuList } from "@material-ui/core";
-import { Drawer, MenuItem } from "material-ui";
+import { ListItemText, Box, List, ListItem, makeStyles, Typography } from "@material-ui/core";
+import { Drawer } from "@mui/material";
+import * as ROUTES from "../../Constants/routesEndpoints";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
-function DrawerComponent({ open, closeDrawer, onOpen }) {
+function DrawerComponent({ state, anchor, onClose, onClick }) {
+  const classes = useStyles();
+
+  const navItemsLists = [
+    { title: "Home", link: "/home" },
+    { title: "For Startups", link: ROUTES.FORSTARTUP },
+    { title: "Community", link: ROUTES.COMMUNITY },
+    { title: "Contact us", link: ROUTES.CONTACTUS },
+  ];
+
   return (
-    <Drawer open={open} onClose={closeDrawer(false)} onClick={onOpen()}>
-      <div
-        //   className={classes.fullList}
+    <Drawer anchor={anchor} open={state} onClose={onClick}>
+      <Box
+        sx={{ width: "50vw", height: "100vh" }}
         role="presentation"
-        onClick={closeDrawer(false)}
-        onKeyDown={closeDrawer(false)}
+        onClick={onClose}
+        className={classes.container}
       >
-        <MenuList>
-          {[1, 2, 3].map((prop, key) => {
-            return (
-              <NavLink to={prop.path} style={{ textDecoration: "none" }} key={key}>
-                <MenuItem>
-                  <ListItemText primary={prop.sidebarName} />
-                </MenuItem>
-              </NavLink>
-            );
-          })}
-        </MenuList>
-      </div>
+        <List className={classes.list}>
+          {navItemsLists.map((item, index) => (
+            <Link smooth key={item} to={item.link}>
+              <ListItem buttonclassName={classes.listItem}>
+                <ListItemText
+                  primary={<Typography variant="h6">{item.title}</Typography>}
+                  className={classes.title}
+                />
+              </ListItem>
+            </Link>
+          ))}
+        </List>
+      </Box>
     </Drawer>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    background: "#666E78",
+  },
+  listItem: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "#ffffff",
+
+    "&:hover": {
+      color: "black",
+    },
+  },
+  title: {},
+}));
 
 export default DrawerComponent;
