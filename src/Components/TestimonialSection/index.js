@@ -23,12 +23,6 @@ const TestimonialList = [
       "SAVA seems to have unique access to talented students who are genuinely excited to learn the ropes of work and are looking to contribute meaningfully. The interns that we are working with have high work ethic and creativity. Look forward to tapping into their community for more!",
     designation: "Directors of Marketing, AIcrowd",
   },
-  {
-    name: "Vrushank Vyas",
-    description:
-      "SAVA seems to have unique access to talented students who are genuinely excited to learn the ropes of work and are looking to contribute meaningfully. The interns that we are working with have high work ethic and creativity. Look forward to tapping into their community for more!",
-    designation: "Directors of Marketing, AIcrowd",
-  },
 ];
 
 function TestimonialSection() {
