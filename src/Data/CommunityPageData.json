@@ -6,14 +6,17 @@
     "buttonTitleRight": "Learn More",
     "infoBannerOne": {
         "titleText": "Join the Club 🎟",
-        "contentText": "The Sava Community is filled with micro-influencers, graphics afficianados and content ninjas. Learn from the best."
+        "contentText": "The Sava Community is filled with micro-influencers, graphics afficianados and content ninjas. Learn from the best.",
+        "image": "assests/images/community-1.jpg"
     },
     "infoBannerTwo": {
         "titleText": "Why should you join us? 👋",
-        "contentText": "From weekly giveaways and challenges to resume roasts and linkedin reviews. This community is filled with surprises and chances for you to learn. People here look out for each other and cheirish the collective growth."
+        "contentText": "From weekly giveaways and challenges to resume roasts and linkedin reviews. This community is filled with surprises and chances for you to learn. People here look out for each other and cheirish the collective growth.",
+        "image": "assests/images/community-2.jpg"
     },
     "infoBannerThree": {
         "titleText": "What’s in it for you? 👀",
-        "contentText": "We expect you to come down here and show you’ve been working on. It could be anything, from a sample article to a UFO prototype. We love personal projects and would like to use this communty as a platform to push for them.We believe that in the future, your projects would be your proof of work. Not your experience or your degree."
+        "contentText": "We expect you to come down here and show you’ve been working on. It could be anything, from a sample article to a UFO prototype. We love personal projects and would like to use this communty as a platform to push for them.We believe that in the future, your projects would be your proof of work. Not your experience or your degree.",
+        "image": "assests/images/community-3.jpg"
     }
 }

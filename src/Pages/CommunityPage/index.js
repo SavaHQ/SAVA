@@ -19,6 +19,7 @@ function CommunityPage() {
         isBackgroundColor="#ffffff"
         paddingRight="20%"
         paddingLeft="0px"
+        image={objectData.infoBannerOne.image}
         titleText={objectData.infoBannerOne.titleText}
         contentText={objectData.infoBannerOne.contentText}
       />
@@ -28,6 +29,7 @@ function CommunityPage() {
         color="#ffffff"
         paddingLeft="20%"
         paddingRight="0px"
+        image={objectData.infoBannerTwo.image}
         titleText={objectData.infoBannerTwo.titleText}
         contentText={objectData.infoBannerTwo.contentText}
       />
@@ -35,6 +37,7 @@ function CommunityPage() {
         isBackgroundColor="#ffffff"
         paddingRight="20%"
         paddingLeft="0px"
+        image={objectData.infoBannerThree.image}
         titleText={objectData.infoBannerThree.titleText}
         contentText={objectData.infoBannerThree.contentText}
       />

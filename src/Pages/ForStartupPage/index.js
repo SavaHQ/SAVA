@@ -30,7 +30,7 @@ function ForStartupPage() {
         color="#ffffff"
         paddingLeft="20%"
         paddingRight="0px"
-        image={objectData.infoBannerOne.image}
+        image={objectData.infoBannerTwo.image}
         titleText={objectData.infoBannerTwo.titleText}
         contentText={objectData.infoBannerTwo.contentText}
       />
@@ -38,7 +38,7 @@ function ForStartupPage() {
         isBackgroundColor="#ffffff"
         paddingRight="20%"
         paddingLeft="0px"
-        image={objectData.infoBannerOne.image}
+        image={objectData.infoBannerThree.image}
         titleText={objectData.infoBannerThree.titleText}
         contentText={objectData.infoBannerThree.contentText}
       />
