@@ -11,94 +11,34 @@ function Stats() {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Box className={classes.wrapper}>
-        <Box className={classes.stats}>
-          <Box className={classes.statsSection}>
-            {statsList.map((item, index) => {
-              return (
-                <List key={index}>
-                  <Typography variant="h1" className={classes.statsBox}>
-                    {item.stats}
-                  </Typography>
-                  <Typography variant="subtitle2" className={classes.statsText}>
-                    {item.subContent}
-                  </Typography>
-                </List>
-              );
-            })}
-          </Box>
-        </Box>
-      </Box>
+      {statsList.map((item, index) => {
+        return (
+          <List key={index} className={classes.container}>
+            <Typography variant="h1" className={classes.statsBox}>
+              {item.stats}
+            </Typography>
+            <Typography variant="subtitle2" className={classes.statsText}>
+              {item.subContent}
+            </Typography>
+          </List>
+        );
+      })}
     </Box>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
+  root: {
     background: "#666E78",
+    display: "flex",
+    justifyContent: "center",
+    color: "#ffffff",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
+  },
+  container: {
     padding: "50px",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "row",
-      height: "100%",
-      margin: "0",
-    },
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "row",
-      height: "100%",
-      margin: "0",
-    },
-  },
-  statsSection: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "row",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
-    },
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-    },
-  },
-  stats: {
-    margin: "auto",
-  },
-  statsBox: {
-    textAlign: "center",
-    color: "#FFFFFF",
-    flex: 4,
-    display: "flex",
-    paddingRight: "50px",
-    paddingLeft: "50px",
-    [theme.breakpoints.down("lg")]: {
-      display: "block",
-      height: "100%",
-    },
-    [theme.breakpoints.down("md")]: {
-      display: "block",
-      height: "100%",
-      paddingRight: "0px",
-      paddingLeft: "0px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(4),
-      marginBottom: "22px",
-      marginTop: theme.spacing(6),
-    },
-  },
-  statsText: {
-    textAlign: "center",
-    color: "#FFFFFF",
-    flex: 1,
-    [theme.breakpoints.down("md")]: {
-      display: "block",
-      height: "100%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      margin: "22px",
-    },
   },
 }));
 
