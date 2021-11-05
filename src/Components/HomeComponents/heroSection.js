@@ -1,8 +1,14 @@
 import { makeStyles, Box, Typography } from "@material-ui/core";
 import React from "react";
+import { useHistory } from "react-router";
 import CustomButton from "../CustomButtonComponents/CustomButton";
+import * as ROUTES from "../../Constants/routesEndpoints";
+
 function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight, subtitle }) {
   const classes = useStyles();
+
+  const history = useHistory();
+
   return (
     <Box className={classes.container}>
       <Box className={classes.infoContainer}>
@@ -20,7 +26,7 @@ function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight,
             name={buttonTitleLeft}
             color="#ffffff"
             background="#666E78"
-            onButtonClick={() => console.log("Join Us")}
+            onButtonClick={() => history.push(ROUTES.FORSTARTUP)}
             borderRadius={5}
             isRadius={true}
             width="148px"
