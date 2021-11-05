@@ -3,7 +3,7 @@ import React from "react";
 import { useHistory } from "react-router";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 import * as ROUTES from "../../Constants/routesEndpoints";
-
+import { Link } from "react-router-dom";
 function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight, subtitle }) {
   const classes = useStyles();
 
@@ -32,17 +32,23 @@ function heroSection({ title, content, image, buttonTitleLeft, buttonTitleRight,
             width="148px"
             height="44px"
           />
-          <CustomButton
-            name={buttonTitleRight}
-            color="#666E78"
-            background="#FFFFFF"
-            onButtonClick={() => console.log("Learn More")}
-            border=" 1px solid #666E78"
-            borderRadius={5}
-            isRadius={true}
-            width="148px"
-            height="44px"
-          />
+          <Link
+            className={classes.link}
+            to={{ pathname: "https://discord.gg/JPXv2KPPTE" }}
+            target="_parent"
+          >
+            <CustomButton
+              name={buttonTitleRight}
+              color="#666E78"
+              background="#FFFFFF"
+              onButtonClick={() => console.log("Learn More")}
+              border=" 1px solid #666E78"
+              borderRadius={5}
+              isRadius={true}
+              width="148px"
+              height="44px"
+            />
+          </Link>
         </Box>
       </Box>
       <Box className={classes.imageContainer}>
@@ -138,6 +144,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     lineHeight: theme.spacing(0.2),
     fontSize: "16px",
+  },
+  link: {
+    textDecoration: "none",
   },
 }));
 

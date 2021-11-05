@@ -42,7 +42,7 @@ function DrawerComponent({ state, anchor, onClose, onClick }) {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    background: "#666E78",
+    background: "#ffffff",
   },
   listItem: {
     display: "flex",

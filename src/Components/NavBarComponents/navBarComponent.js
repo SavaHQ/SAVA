@@ -73,15 +73,21 @@ function NavBarComponent() {
           <Box flexGrow={1} />
           <Hidden mdDown>
             <Box className={classes.button}>
-              <CustomButton
-                name="Crypto"
-                color="#ffffff"
-                background="#666E78"
-                onButtonClick={() => console.log("Sign In")}
-                borderRadius={5}
-                isRadius={true}
-              />
               <Link
+                className={classes.link}
+                to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
+                target="_parent"
+              >
+                <CustomButton
+                  name="Schedule a Call"
+                  color="#ffffff"
+                  background="#666E78"
+                  onButtonClick={() => console.log("Call")}
+                  borderRadius={5}
+                  isRadius={true}
+                />
+              </Link>
+              {/* <Link
                 className={classes.link}
                 to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
                 target="_parent"
@@ -94,7 +100,7 @@ function NavBarComponent() {
                   borderRadius={5}
                   isRadius={true}
                 />
-              </Link>
+              </Link> */}
             </Box>
           </Hidden>
           <Hidden xlUp>

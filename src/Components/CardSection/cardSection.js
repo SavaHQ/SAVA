@@ -28,7 +28,7 @@ function HeroSection() {
             image="assests/images/cardTwo.gif"
             title="What's the catch for Startups?"
             content="Sava sources these brilliant Content Creators to startups who are looking for Creative Talent as interns."
-            buttonTitle="Learn More"
+            buttonTitle="Schedule a Call"
           />
         </Box>
       </Container>

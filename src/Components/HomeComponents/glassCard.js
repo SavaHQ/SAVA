@@ -1,6 +1,7 @@
 import { Box, Typography, makeStyles } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
+import { Link } from "react-router-dom";
 
 function GlassCard() {
   const classes = useStyles();
@@ -17,15 +18,21 @@ function GlassCard() {
               atleast ₹10k/month 😄
             </Typography>
             <Box className={classes.buttonWrapper}>
-              <CustomButton
-                name="Schedule a Call"
-                color="#ffffff"
-                width="188px"
-                background="#666E78"
-                onButtonClick={() => console.log()}
-                borderRadius={5}
-                isRadius={true}
-              />
+              <Link
+                className={classes.link}
+                to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
+                target="_parent"
+              >
+                <CustomButton
+                  name="Schedule a Call"
+                  color="#ffffff"
+                  width="188px"
+                  background="#666E78"
+                  onButtonClick={() => console.log()}
+                  borderRadius={5}
+                  isRadius={true}
+                />
+              </Link>
             </Box>
           </Box>
           <Box className={classes.rightContainer}>
@@ -125,6 +132,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+  },
+  link: {
+    textDecoration: "none",
   },
 }));
 
