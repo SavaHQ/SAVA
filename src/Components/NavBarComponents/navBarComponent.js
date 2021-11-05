@@ -84,7 +84,7 @@ function NavBarComponent() {
               <Link
                 className={classes.link}
                 to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
-                target="_blank"
+                target="_parent"
               >
                 <CustomButton
                   name="Schedule a Call"
