@@ -10,12 +10,11 @@ function GlassCard() {
         <Box className={classes.mainContainer}>
           <Box className={classes.leftContainer}>
             <Typography variant="h5" className={classes.title}>
-              Are you looking to hire creative interns?
+              Are you a content creator looking for an internship?
             </Typography>
             <Typography variant="h5" className={classes.subContent}>
-              The process is simple, you share with us your requirements and we vet them, post them
-              on our job board, and the community gets notified. Why don’t we continue this
-              conversation over a call?
+              The members of the Sava Community get an unrestricted access to internships that pay
+              atleast ₹10k/month 😄
             </Typography>
             <Box className={classes.buttonWrapper}>
               <CustomButton
