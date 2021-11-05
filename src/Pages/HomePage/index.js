@@ -5,9 +5,9 @@ import CompanyWrapper from "../../Components/CompaniesDisplayComponents/CompanyW
 import CardSection from "../../Components/CardSection/cardSection";
 import Stats from "../../Components/StatsComponent/stats";
 import GlassCard from "../../Components/HomeComponents/glassCard";
-// import InfoBanner from "../../Components/InfoBanner/infoBanner";
 import sampleData from "../../Data/sampleData.json";
 import ConnectBanner from "../../Components/ConnectBannerComponent/connectBanner";
+import TestimonialSection from "../../Components/TestimonialSection/index.js";
 function HomePage() {
   const classes = useStyles();
   const objectData = sampleData;
@@ -26,6 +26,7 @@ function HomePage() {
       <CardSection />
       <Stats />
       <GlassCard />
+      <TestimonialSection />
       <ConnectBanner />
     </Box>
   );
