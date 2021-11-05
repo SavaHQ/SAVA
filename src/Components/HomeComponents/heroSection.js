@@ -102,6 +102,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     flex: 6,
+    [theme.breakpoints.down("lg")]: {
+      display: "none",
+    },
   },
   image: {
     height: "80%",

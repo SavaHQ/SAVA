@@ -25,13 +25,6 @@ function HomePage() {
       <CompanyWrapper />
       <CardSection />
       <Stats />
-      {/* <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
-      <InfoBanner
-        isTextRight={true}
-        isBackgroundColor="F7FAFE"
-        paddingLeft="20%"
-        paddingRight="0px"
-      /> */}
       <GlassCard />
       <ConnectBanner />
     </Box>
