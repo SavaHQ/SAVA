@@ -37,10 +37,9 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     flexDirection: "column",
-    height: "220px",
-    margin: "0px 150px 0px 150px",
+    height: "100%",
     background: "#666E78",
-    borderRadius: "16px",
+    padding: "50px",
     [theme.breakpoints.down("md")]: {
       flexDirection: "row",
       height: "100%",
@@ -71,7 +70,6 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     flex: 4,
     display: "flex",
-    fontSize: "64px",
     paddingRight: "50px",
     paddingLeft: "50px",
     [theme.breakpoints.down("lg")]: {
@@ -100,7 +98,6 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: "22px",
-      fontSize: "18px",
     },
   },
 }));
