@@ -3,7 +3,7 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 
-function InfoBanner({ isTextRight, isBackgroundColor, color, image }) {
+function InfoBanner({ isTextRight, isBackgroundColor, color, image, titleText, contentText }) {
   const classes = useStyles();
   return (
     <Box
@@ -18,15 +18,10 @@ function InfoBanner({ isTextRight, isBackgroundColor, color, image }) {
     >
       <Box className={classes.infoContainer}>
         <Typography gutterBottom variant="h1" className={classes.title}>
-          Extra Website Security
+          {titleText}
         </Typography>
         <Typography gutterBottom variant="h5" component="p" className={classes.paragraph}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque sit viverra turpis eu.
-          Pellentesque scelerisque nec enim tempus netus mi proin viverra eu. Auctor neque, amet,
-          eget elit. Libero nascetur porttitor mattis urna et consectetur. Placerat vulputate eget
-          nam habitasse. Faucibus tristique nisl, libero quis cursus eu faucibus vel. Lobortis est,
-          vel rutrum dictumst sagittis, rhoncus egestas quis orci. Ultricies scelerisque donec
-          sagittis ante tristique cursus elementum.
+          {contentText}
         </Typography>
         <Box className={classes.buttonContainer}>
           <CustomButton

@@ -15,13 +15,28 @@ function CommunityPage() {
         buttonTitleRight={objectData.buttonTitleRight}
       />
 
-      <InfoBanner isBackgroundColor="#ffffff" paddingRight="20%" paddingLeft="0px" />
+      <InfoBanner
+        isBackgroundColor="#ffffff"
+        paddingRight="20%"
+        paddingLeft="0px"
+        titleText={objectData.infoBannerOne.titleText}
+        contentText={objectData.infoBannerOne.contentText}
+      />
       <InfoBanner
         isTextRight={true}
         isBackgroundColor="#222222"
         color="#ffffff"
         paddingLeft="20%"
         paddingRight="0px"
+        titleText={objectData.infoBannerTwo.titleText}
+        contentText={objectData.infoBannerTwo.contentText}
+      />
+      <InfoBanner
+        isBackgroundColor="#ffffff"
+        paddingRight="20%"
+        paddingLeft="0px"
+        titleText={objectData.infoBannerThree.titleText}
+        contentText={objectData.infoBannerThree.contentText}
       />
     </>
   );

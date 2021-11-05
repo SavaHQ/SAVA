@@ -3,5 +3,17 @@
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor",
     "image": "assests/images/heroImage.png",
     "buttonTitleLeft": "About us",
-    "buttonTitleRight": "Learn More"
+    "buttonTitleRight": "Learn More",
+    "infoBannerOne": {
+        "titleText": "SAVA",
+        "contentText": "sample text"
+    },
+    "infoBannerTwo": {
+        "titleText": "SAVA",
+        "contentText": "sample text"
+    },
+    "infoBannerThree": {
+        "titleText": "SAVA",
+        "contentText": "sample text"
+    }
 }

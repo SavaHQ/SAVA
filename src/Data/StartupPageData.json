@@ -3,5 +3,17 @@
     "content": "Over 70 startups have put our trust in us for helping them hire the most creative talent in the industry. Should you too?",
     "image": "assests/images/heroImage.png",
     "buttonTitleLeft": "About us",
-    "buttonTitleRight": "Learn More"
+    "buttonTitleRight": "Learn More",
+    "infoBannerOne": {
+        "titleText": "SAVA",
+        "contentText": "sample text"
+    },
+    "infoBannerTwo": {
+        "titleText": "SAVA",
+        "contentText": "sample text"
+    },
+    "infoBannerThree": {
+        "titleText": "SAVA",
+        "contentText": "sample text"
+    }
 }
