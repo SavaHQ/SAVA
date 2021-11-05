@@ -20,8 +20,8 @@ function HeroSection() {
           <Box className={classes.leftContainer}>
             <CardComponent
               image="assests/images/cardOne.gif"
-              title="Should you join our community?"
-              content="Sava is not just about highly paid internships that we offer. It’s about a movement against unpaid work and also tons of challenges + giveaways + upskill banter."
+              title="What are we trying to do?"
+              content="Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt overtime"
               buttonTitle="Join our Community"
             />
           </Box>
@@ -29,7 +29,7 @@ function HeroSection() {
             <CardComponent
               image="assests/images/cardTwo.gif"
               title="What's the catch for Startups?"
-              content="Having a massive niche-oriented talent pool ensures a quick response to your needs. We don’t throw a gazillion resumes at your face. We share our top three picks."
+              content="Sava sources these brilliant Content Creators to startups who are looking for Creative Talent as interns."
               buttonTitle="Learn More"
             />
           </Box>

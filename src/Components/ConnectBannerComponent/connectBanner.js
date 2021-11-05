@@ -8,7 +8,7 @@ function ConnectBanner() {
     <Box className={classes.root}>
       <Box pb={2}>
         <Typography variant="h1" classes={classes.title} gutterBottom>
-          Start the success of your website with us
+          Schedule a call with us today 🙌
         </Typography>
       </Box>
       <CustomButton
