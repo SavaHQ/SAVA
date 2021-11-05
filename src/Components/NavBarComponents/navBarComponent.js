@@ -74,7 +74,7 @@ function NavBarComponent() {
           <Hidden mdDown>
             <Box className={classes.button}>
               <CustomButton
-                name="Sign In"
+                name="Crypto"
                 color="#ffffff"
                 background="#666E78"
                 onButtonClick={() => console.log("Sign In")}
@@ -82,7 +82,7 @@ function NavBarComponent() {
                 isRadius={true}
               />
               <CustomButton
-                name="Login"
+                name="Schedule a Call"
                 color="#666E78"
                 background="#FFFFFF"
                 onButtonClick={() => console.log("Login")}

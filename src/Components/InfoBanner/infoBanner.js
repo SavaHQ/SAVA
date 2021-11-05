@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.2,
     fontSize: "2.3565rem",
     paddingBottom: "10px",
-    color: "#252B42",
     lineHeight: 1.4,
     overflowWrap: "break-word",
     [theme.breakpoints.down("sm")]: {

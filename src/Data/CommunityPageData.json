@@ -1,19 +1,19 @@
 {
     "title": "FOR COMMUNITY",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor",
+    "content": "The Sava Community is group of individuals pushing their limits to learn the ins and outs of industry 4.0We believe in pushing for fair wages and proof of work. The internships that the community gets access to, start at ₹10k/month. Come, join us to be part of this movement.",
     "image": "assests/images/heroImage.png",
     "buttonTitleLeft": "About us",
     "buttonTitleRight": "Learn More",
     "infoBannerOne": {
-        "titleText": "SAVA",
-        "contentText": "sample text"
+        "titleText": "Join the Club 🎟",
+        "contentText": "The Sava Community is filled with micro-influencers, graphics afficianados and content ninjas. Learn from the best."
     },
     "infoBannerTwo": {
-        "titleText": "SAVA",
-        "contentText": "sample text"
+        "titleText": "Why should you join us? 👋",
+        "contentText": "From weekly giveaways and challenges to resume roasts and linkedin reviews. This community is filled with surprises and chances for you to learn. People here look out for each other and cheirish the collective growth."
     },
     "infoBannerThree": {
-        "titleText": "SAVA",
-        "contentText": "sample text"
+        "titleText": "What’s in it for you? 👀",
+        "contentText": "We expect you to come down here and show you’ve been working on. It could be anything, from a sample article to a UFO prototype. We love personal projects and would like to use this communty as a platform to push for them.We believe that in the future, your projects would be your proof of work. Not your experience or your degree."
     }
 }
