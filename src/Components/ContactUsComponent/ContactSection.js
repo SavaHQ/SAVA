@@ -1,6 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
+import { Link } from "react-router-dom";
 
 function ContactSection() {
   const classes = useStyle();
@@ -11,14 +12,20 @@ function ContactSection() {
           If You Have Any Question?
         </Typography>
       </Box>
-      <CustomButton
-        name="Contact Us"
-        color="#ffffff"
-        background="#54759E"
-        onButtonClick={() => console.log("Sign In")}
-        borderRadius={5}
-        isRadius={true}
-      />
+      <Link
+        className={classes.link}
+        to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
+        target="_parent"
+      >
+        <CustomButton
+          name="Contact Us"
+          color="#ffffff"
+          background="#54759E"
+          onButtonClick={() => console.log("Sign In")}
+          borderRadius={5}
+          isRadius={true}
+        />
+      </Link>
       <img src="assests/images/vector_svg.png" className={classes.img} />
     </Box>
   );
@@ -46,6 +53,9 @@ const useStyle = makeStyles((theme) => ({
     top: 0,
     height: "100%",
     width: "100%",
+  },
+  link: {
+    textDecoration: "none",
   },
 }));
 export default ContactSection;
