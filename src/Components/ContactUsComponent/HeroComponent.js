@@ -16,7 +16,10 @@ function HeroComponent() {
           porttitor
         </Typography>
       </Box>
-      <Box className={classes.container}></Box>
+      <Box className={classes.container}>
+        {" "}
+        <img src="" className={classes.image} />
+      </Box>
     </Box>
   );
 }
@@ -50,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     height: "300px",
     width: "100%",
-    background: "black",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       marginTop: "40px",
