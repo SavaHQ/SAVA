@@ -7,18 +7,16 @@ function HeroComponent() {
     <Box className={classes.root}>
       <Box className={classes.infoBox}>
         <Box pb={5}>
-          <Typography variant="h1">What We Can Help you?</Typography>
+          <Typography variant="h1">Looking to hire? Let’s chat!</Typography>
         </Box>
         <Typography className={classes.paragraph} variant="subtitle1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-          venenatis, lectus magna fringilla urna, porttitor Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,
-          porttitor
+          Feel free to use any of the channels given below to contact us and if we don’t respond in
+          under 30 minutes, pizza’s on us.
         </Typography>
       </Box>
       <Box className={classes.container}>
         {" "}
-        <img src="" className={classes.image} />
+        <img src="assests/images/contact.jpg" className={classes.image} />
       </Box>
     </Box>
   );
