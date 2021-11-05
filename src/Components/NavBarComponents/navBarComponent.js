@@ -81,15 +81,20 @@ function NavBarComponent() {
                 borderRadius={5}
                 isRadius={true}
               />
-              <CustomButton
-                name="Schedule a Call"
-                color="#666E78"
-                background="#FFFFFF"
-                onButtonClick={() => console.log("Login")}
-                border=" 1px solid #666E78"
-                borderRadius={5}
-                isRadius={true}
-              />
+              <Link
+                className={classes.link}
+                to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
+                target="_blank"
+              >
+                <CustomButton
+                  name="Schedule a Call"
+                  color="#666E78"
+                  background="#FFFFFF"
+                  border=" 1px solid #666E78"
+                  borderRadius={5}
+                  isRadius={true}
+                />
+              </Link>
             </Box>
           </Hidden>
           <Hidden xlUp>
@@ -125,6 +130,9 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: "20px",
       paddingRight: "20px",
     },
+  },
+  link: {
+    textDecoration: "none",
   },
   logo: {
     paddingTop: "15px",

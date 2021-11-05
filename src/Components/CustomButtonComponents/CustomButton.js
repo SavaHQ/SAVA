@@ -43,6 +43,7 @@ const useStyles = makeStyles({
     width: 150,
     height: 39,
     top: 3,
+    textDecoration: "none",
   },
 });
 
