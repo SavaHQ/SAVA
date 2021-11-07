@@ -81,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "250%",
     animation: "$slideshow 140s linear infinite",
+    display: "flex",
   },
   gridScroll: {
     flexWrap: "nowrap",
