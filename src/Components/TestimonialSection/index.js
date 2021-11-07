@@ -57,7 +57,7 @@ function TestimonialSection() {
 }
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: 650,
+    minHeight: 450,
   },
   titleContainer: {
     textAlign: "center",
@@ -78,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     top: 0,
     overflow: "hidden",
+    display: "flex",
     width: "250%",
     animation: "$slideshow 140s linear infinite",
   },
