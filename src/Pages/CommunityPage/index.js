@@ -2,9 +2,11 @@ import React from "react";
 import HeroSection from "../../Components/HomeComponents/heroSection";
 import CommunityPageData from "../../Data/CommunityPageData.json";
 import InfoBanner from "../../Components/InfoBanner/infoBanner";
-
+import { useHistory } from "react-router";
+import * as ROUTES from "../../Constants/routesEndpoints";
 function CommunityPage() {
   const objectData = CommunityPageData;
+  const history = useHistory();
   return (
     <>
       <HeroSection
@@ -13,6 +15,8 @@ function CommunityPage() {
         image={objectData.image}
         buttonTitleLeft={objectData.buttonTitleLeft}
         buttonTitleRight={objectData.buttonTitleRight}
+        onButtonClickLeft={() => history.push(ROUTES.FORSTARTUP)}
+        onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
 
       <InfoBanner

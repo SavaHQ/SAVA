@@ -8,10 +8,12 @@ import GlassCard from "../../Components/HomeComponents/glassCard";
 import sampleData from "../../Data/sampleData.json";
 import ConnectBanner from "../../Components/ConnectBannerComponent/connectBanner";
 import TestimonialSection from "../../Components/TestimonialSection/index.js";
+import { useHistory } from "react-router";
+import * as ROUTES from "../../Constants/routesEndpoints";
 function HomePage() {
   const classes = useStyles();
   const objectData = sampleData;
-
+  const history = useHistory();
   return (
     <Box className={classes.root}>
       <HeroSection
@@ -21,6 +23,8 @@ function HomePage() {
         image={objectData.image}
         buttonTitleLeft={objectData.buttonTitleLeft}
         buttonTitleRight={objectData.buttonTitleRight}
+        onButtonClickLeft={() => history.push(ROUTES.FORSTARTUP)}
+        onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
       <CompanyWrapper />
       <CardSection />

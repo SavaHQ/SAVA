@@ -3,10 +3,13 @@ import React from "react";
 import HeroSection from "../../Components/HomeComponents/heroSection";
 import StartPageData from "../../Data/StartupPageData.json";
 import InfoBanner from "../../Components/InfoBanner/infoBanner";
+import { useHistory } from "react-router";
+import * as ROUTES from "../../Constants/routesEndpoints";
 
 function ForStartupPage() {
   // const classes = useStyles();
   const objectData = StartPageData;
+  const history = useHistory();
   return (
     <>
       <HeroSection
@@ -15,6 +18,10 @@ function ForStartupPage() {
         image={objectData.image}
         buttonTitleLeft={objectData.buttonTitleLeft}
         buttonTitleRight={objectData.buttonTitleRight}
+        onButtonClickLeft={() => history.push(ROUTES.HOME)}
+        onButtonClickRight={() =>
+          window.open("https://calendly.com/vyomfromsava/networking-call", "_self")
+        }
       />
       <InfoBanner
         isBackgroundColor="#ffffff"

@@ -1,7 +1,7 @@
 import { makeStyles, Box, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 function heroSection({
   title,
   content,
@@ -37,23 +37,18 @@ function heroSection({
             width="148px"
             height="44px"
           />
-          <Link
-            className={classes.link}
-            to={{ pathname: "https://discord.gg/JPXv2KPPTE" }}
-            target="_parent"
-          >
-            <CustomButton
-              name={buttonTitleRight}
-              color="#666E78"
-              background="#FFFFFF"
-              onButtonClick={onButtonClickRight}
-              border=" 1px solid #666E78"
-              borderRadius={5}
-              isRadius={true}
-              width="148px"
-              height="44px"
-            />
-          </Link>
+          <CustomButton
+            name={buttonTitleRight}
+            color="#666E78"
+            background="#FFFFFF"
+            onButtonClick={onButtonClickRight}
+            border=" 1px solid #666E78"
+            borderRadius={5}
+            isRadius={true}
+            width="178px"
+            height="44px"
+            className="btn"
+          />
         </Box>
       </Box>
       <Box className={classes.imageContainer}>
@@ -152,6 +147,11 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
+  },
+  btn: {
+    [theme.breakpoints.down("sm")]: {
+      width: 160,
+    },
   },
 }));
 

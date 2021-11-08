@@ -12,16 +12,16 @@ const TestimonialList = [
     designation: "Directors of Marketing, AIcrowd",
   },
   {
-    name: "Vrushank Vyas",
+    name: "Nikita Vasvani",
     description:
-      "SAVA seems to have unique access to talented students who are genuinely excited to learn the ropes of work and are looking to contribute meaningfully. The interns that we are working with have high work ethic and creativity. Look forward to tapping into their community for more!",
-    designation: "Directors of Marketing, AIcrowd",
+      "We were one of the first users SavaHire had in the space of Crypto. At that time we were looking to source a Solidity Intern to whom we could offer a PPO. The SavaHire team connected with us and got to work on the same day. Powered with state-of-the-art scouting tech and a community they helped us save a ton of save time. I've already referred several of my counterparts to them. Their services are worth the shot.",
+    designation: "HR @ Wowlabz",
   },
   {
-    name: "Vrushank Vyas",
+    name: "Akankshu Argh Jain",
     description:
-      "SAVA seems to have unique access to talented students who are genuinely excited to learn the ropes of work and are looking to contribute meaningfully. The interns that we are working with have high work ethic and creativity. Look forward to tapping into their community for more!",
-    designation: "Directors of Marketing, AIcrowd",
+      "The SavaHire team helped us expand at an inflexion point in our startup. I like how the actual niche they specialise in isn't just Blockchain Development but rather immediate joiners who are hungry to make use of their skills. Would definitely recommend them, 10/10.",
+    designation: "Co-founder @ BrahmaFi",
   },
 ];
 

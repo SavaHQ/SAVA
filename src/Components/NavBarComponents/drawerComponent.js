@@ -50,12 +50,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     color: "#ffffff",
+    textDecoration: "none",
 
     "&:hover": {
       color: "black",
     },
   },
-  title: {},
+  title: {
+    color: "black",
+  },
 }));
 
 export default DrawerComponent;

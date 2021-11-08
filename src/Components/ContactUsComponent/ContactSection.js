@@ -15,7 +15,7 @@ function ContactSection() {
       <Link
         className={classes.link}
         to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
-        target="_parent"
+        target="_blank"
       >
         <CustomButton
           name="Contact Us"
