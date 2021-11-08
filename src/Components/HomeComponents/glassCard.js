@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    [theme.breakpoints.down("sm")]: {
+      minHeight: "0vh",
+    },
   },
   title: {
     fontSize: "2.3565rem",

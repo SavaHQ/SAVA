@@ -1,7 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 
 import React from "react";
-import CustomButton from "../CustomButtonComponents/CustomButton";
+// import CustomButton from "../CustomButtonComponents/CustomButton";
 
 function InfoBanner({ isTextRight, isBackgroundColor, color, image, titleText, contentText }) {
   const classes = useStyles();
@@ -23,7 +23,7 @@ function InfoBanner({ isTextRight, isBackgroundColor, color, image, titleText, c
         <Typography gutterBottom variant="h5" component="p" className={classes.paragraph}>
           {contentText}
         </Typography>
-        <Box className={classes.buttonContainer}>
+        {/* <Box className={classes.buttonContainer}>
           <CustomButton
             name="Learn More"
             color="#ffffff"
@@ -32,7 +32,7 @@ function InfoBanner({ isTextRight, isBackgroundColor, color, image, titleText, c
             borderRadius={5}
             isRadius={true}
           />
-        </Box>
+        </Box> */}
       </Box>
       <Box className={classes.imageContainer}>
         <img src={image} className={classes.image} />
