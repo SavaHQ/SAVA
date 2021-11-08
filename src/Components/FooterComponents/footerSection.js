@@ -21,9 +21,9 @@ function FooterSection() {
                 <img src="assests/images/SAVA.png" />
               </Typography>
               <Typography variant="h5" className={classes.description}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer
-                took a galley of type and scrambled it to make a type specimen book.
+                We source Content Creators as Interns to Startups. Sava is a platform that allows
+                startups to hire Interns Fast. Crazy Fast. We have recently helped companies like
+                Angel Broking, GoMechanic and D2C in hiring Interns
               </Typography>
             </Box>
           </Grid>
@@ -32,9 +32,8 @@ function FooterSection() {
               <Typography variant="h4">Explore</Typography>
               <Box mt={3} className={classes.TextLinks}>
                 <Typography gutterBottom>Home</Typography>
-                <Typography gutterBottom>Courses</Typography>
-                <Typography gutterBottom>Special Offers</Typography>
-                <Typography>Events & Hackathons</Typography>
+                <Typography gutterBottom>For Startups</Typography>
+                <Typography gutterBottom>Community</Typography>
               </Box>
             </Box>
           </Grid>
@@ -54,7 +53,6 @@ function FooterSection() {
               <Typography variant="h4">Community</Typography>
               <Box mt={3} className={classes.TextLinks}>
                 <Typography gutterBottom>Refer a Friend </Typography>
-                <Typography>Scholarship</Typography>
               </Box>
             </Box>
           </Grid>

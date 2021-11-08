@@ -29,7 +29,7 @@ function ContactSection() {
 
 const useStyle = makeStyles((theme) => ({
   containergroup: {
-    maxWidth: "1300px",
+    maxWidth: "1400px",
     margin: "auto",
   },
   root: {
