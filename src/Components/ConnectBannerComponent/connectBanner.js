@@ -1,7 +1,6 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
-import { Link } from "react-router-dom";
 
 function ConnectBanner() {
   const classes = useStyle();
@@ -12,21 +11,14 @@ function ConnectBanner() {
           Schedule a call with us today 🙌
         </Typography>
       </Box>
-      <Link
-        className={classes.link}
-        to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
-        target="_parent"
-      >
-        <CustomButton
-          name="Contact Us"
-          color="#ffffff"
-          background="#54759E"
-          onButtonClick={() => console.log("Sign In")}
-          borderRadius={5}
-          isRadius={true}
-        />
-      </Link>
-      <img src="assests/images/vector_svg.png" className={classes.img} />
+      <CustomButton
+        name="Contact Us"
+        color="#ffffff"
+        background="#54759E"
+        onButtonClick={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
+        borderRadius={5}
+        isRadius={true}
+      />
     </Box>
   );
 }
@@ -36,7 +28,7 @@ const useStyle = makeStyles((theme) => ({
     position: "relative",
     padding: "100px",
     height: "100%",
-    background: "#F7FAFE",
+    backgroundImage: "url(assests/images/vector_svg.png)",
     [theme.breakpoints.down("sm")]: {
       padding: "50px",
     },
