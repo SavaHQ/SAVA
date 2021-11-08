@@ -80,7 +80,10 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     display: "flex",
     width: "250%",
-    animation: "$slideshow 140s linear infinite",
+    animation: "$slideshow 100s linear infinite",
+    [theme.breakpoints.down("sm")]: {
+      animation: "$slideshow 10s linear infinite",
+    },
   },
   gridScroll: {
     flexWrap: "nowrap",
