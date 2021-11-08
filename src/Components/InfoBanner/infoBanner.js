@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       height: "350px",
-      width: "100%",
+      width: "95%",
     },
   },
   buttonContainer: {
