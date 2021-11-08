@@ -3,6 +3,7 @@ import { Drawer } from "@mui/material";
 import * as ROUTES from "../../Constants/routesEndpoints";
 import React from "react";
 import { Link } from "react-router-dom";
+import CustomButton from "../CustomButtonComponents/CustomButton";
 // import { NavLink } from "react-router-dom";
 
 function DrawerComponent({ state, anchor, onClose, onClick }) {
@@ -35,6 +36,22 @@ function DrawerComponent({ state, anchor, onClose, onClick }) {
             </Link>
           ))}
         </List>
+        <Box className={classes.contain}>
+          <Link
+            className={classes.link}
+            to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
+            target="_parent"
+          >
+            <CustomButton
+              name="Schedule a Call"
+              color="#ffffff"
+              background="#666E78"
+              onButtonClick={() => console.log("Call")}
+              borderRadius={5}
+              isRadius={true}
+            />
+          </Link>
+        </Box>
       </Box>
     </Drawer>
   );
@@ -43,6 +60,9 @@ function DrawerComponent({ state, anchor, onClose, onClick }) {
 const useStyles = makeStyles((theme) => ({
   container: {
     background: "#ffffff",
+  },
+  contain: {
+    marginLeft: 5,
   },
   listItem: {
     display: "flex",
