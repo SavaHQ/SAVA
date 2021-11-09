@@ -20,11 +20,11 @@ function GlassCard() {
             <Box className={classes.buttonWrapper}>
               <Link
                 className={classes.link}
-                to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
+                to={{ pathname: "https://discord.gg/JPXv2KPPTE" }}
                 target="_parent"
               >
                 <CustomButton
-                  name="Schedule a Call"
+                  name="Join Us"
                   color="#ffffff"
                   width="188px"
                   background="#666E78"

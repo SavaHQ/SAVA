@@ -79,10 +79,10 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     overflow: "hidden",
     display: "flex",
-    width: "250%",
+    width: "340%",
     animation: "$slideshow 100s linear infinite",
     [theme.breakpoints.down("sm")]: {
-      animation: "$slideshow 10s linear infinite",
+      animation: "$slideshow 25s linear infinite",
     },
   },
   gridScroll: {

@@ -17,9 +17,9 @@ function heroSection({
   return (
     <Box className={classes.container}>
       <Box className={classes.infoContainer}>
-        <Typography gutterBottom variant="h1" className={classes.subtitle}>
+        {/* <Typography gutterBottom variant="h1" className={classes.subtitle}>
           {subtitle}
-        </Typography>
+        </Typography> */}
         <Typography gutterBottom variant="h1" className={classes.title}>
           {title}
         </Typography>
