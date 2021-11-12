@@ -1,22 +1,22 @@
 {
     "title": "FOR STARTUPS",
     "content": "Over 70 startups have put our trust in us for helping them hire the most creative talent in the industry. Should you too?",
-    "image": "assests/images/startup.png",
+    "image": "assests/images/startup.gif",
     "buttonTitleLeft": "About us",
     "buttonTitleRight": "Schedule a Call",
     "infoBannerOne": {
         "titleText": "Hungry, Creative, Talent",
         "contentText": "With a pan-india talent pool, we promise to help you find a hungry creator looking for a canvas. From Graphics Desginers to Content Writers to Growth Marketers. If it has to do with content, you’d find a hungry creator in our community.",
-        "image": "assests/images/startup-1.png"
+        "image": "assests/images/startup-1.gif"
     },
     "infoBannerTwo": {
         "titleText": "Free Replacement Policy",
         "contentText": "We understand that hiring is a tough and crucial decision for any startup. We also understand that not every match we make is going to be perfect. That is why we’d like to offer your startup a free replacement for an intern incase of a mismatch.",
-        "image": "assests/images/startup-2.png"
+        "image": "assests/images/startup-2.gif"
     },
     "infoBannerThree": {
         "titleText": "A Hand-Glove Service",
         "contentText": "We expect you to lay back and drink a nice cup of Chai ☕ once we have the details in place. We don’t throw a million resumes at you, we share with you the top match and streamline the process for everyone.",
-        "image": "assests/images/startup-3.png"
+        "image": "assests/images/startup-3.gif"
     }
 }
