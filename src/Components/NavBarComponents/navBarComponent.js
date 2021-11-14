@@ -142,7 +142,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   midSection: {
-    flex: 3,
+    flex: 6,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
