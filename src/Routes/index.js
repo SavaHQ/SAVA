@@ -7,6 +7,7 @@ import ContactUs from "../Pages/ContactUs";
 import CryptoPage from "../Pages/Cryptopage";
 import ForStartupPage from "../Pages/ForStartupPage";
 import HomePage from "../Pages/HomePage";
+import LoginPage from "../Pages/LoginPage";
 import OpeningsPage from "../Pages/OpeningsPage";
 
 function Routes() {
@@ -49,6 +50,11 @@ function Routes() {
           <CryptoPage />
         </MainLayout>
       </Route>
+
+      <Route path={ROUTES.LOGIN} exact>
+        <LoginPage />
+      </Route>
+
       {/* <Route component={PageNotFound} /> */}
     </Switch>
   );

@@ -83,11 +83,7 @@ function NavBarComponent() {
                 isRadius={true}
               />
 
-              <Link
-                className={classes.link}
-                to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
-                target="_parent"
-              >
+              <Link className={classes.link} to={{ pathname: "/login" }}>
                 <CustomButton
                   name="Login"
                   color="#666E78"
