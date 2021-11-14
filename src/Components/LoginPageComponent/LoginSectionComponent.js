@@ -44,11 +44,11 @@ function LoginSectionComponent() {
       toast(error.message);
     }
 
-    // setEmail("");
-    // setPassword("");
-    // setName("");
-    // setRole("");
-    // setPhone("");
+    setEmail("");
+    setPassword("");
+    setName("");
+    setRole("");
+    setPhone("");
   };
 
   return (
