@@ -1,28 +1,20 @@
 import React from "react";
 
-import {
-  Box,
-  Button,
-  Grid,
-  TextField,
-  Typography,
-  Link,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  // OutlinedInput,
-} from "@material-ui/core";
+import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 function LoginSectionComponent() {
   const dispatch = useDispatch();
 
-  const [role, setrole] = React.useState("Startup");
+  const [role, setRole] = React.useState("");
+
+  const [login, setLogin] = React.useState(false);
 
   const handleChange = (event) => {
-    setrole(event.target.value);
+    setRole(event.value);
   };
 
   const handleLoginAction = () => {
@@ -33,45 +25,81 @@ function LoginSectionComponent() {
     }
   };
 
-  const roles = ["Student", "Startup"];
+  const option = ["Student", "Startup"];
 
   const classes = useStyles();
 
   return (
     <>
-      <Box my={12}>
+      <Box my={16}>
         <Typography variant="subtitle2" color="textPrimary" className={classes.subtitle}>
           Start Learning
         </Typography>
         <Typography color="textPrimary" className={classes.title}>
           Create an account
         </Typography>
-        <Grid>
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Student / Company name"
-            variant="outlined"
-            size="small"
-          />
 
-          <FormControl fullWidth size="small">
-            <InputLabel>
-              <Box pl={2}>Roles</Box>
-            </InputLabel>
-            <Select value={role} onChange={handleChange} variant="outlined">
-              {roles.map((role) => (
-                <MenuItem key={role} value={role}>
-                  {role}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid>
+        <Box className={classes.signUpContainer} pt={4}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                autoComplete="given-name"
+                name="firstName"
+                required
+                fullWidth
+                id="firstName"
+                variant="outlined"
+                label="Student / Company"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Dropdown
+                className={classes.dropDown}
+                options={option}
+                onChange={(e) => handleChange(e)}
+                value={role}
+                placeholder="Select Role"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                variant="outlined"
+                type="password"
+                id="password"
+              />
+            </Grid>
 
-        <TextField fullWidth margin="normal" label="Email" variant="outlined" size="small" />
-        <TextField fullWidth margin="normal" label="Password" variant="outlined" size="small" />
-        <TextField fullWidth margin="normal" label="Phone Number" variant="outlined" size="small" />
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                name="phoneNumber"
+                label="PhoneNumber"
+                variant="outlined"
+                type="number"
+                id="phoneNumber"
+              />
+            </Grid>
+          </Grid>
+          {/* 
+          
+       */}
+        </Box>
+
         <Button fullWidth className={classes.signupButton} onClick={() => handleLoginAction()}>
           <Typography variant="body2">Sign up</Typography>
         </Button>
@@ -79,13 +107,9 @@ function LoginSectionComponent() {
           <img className={classes.googleIcon} src="assets/icon/social icons/google_icon.svg" />
           <Typography variant="body2"> Sign up with google</Typography>
         </Button> */}
-        <Box my={6}>
-          <Grid container justify="center">
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Already have an account? Log In"}
-              </Link>
-            </Grid>
+        <Box my={6} style={{ cursor: "pointer" }}>
+          <Grid container justify="center" onClick={() => setLogin(!login)}>
+            <Grid item>{"Already have an account? Log In"}</Grid>
           </Grid>
         </Box>
       </Box>
@@ -99,6 +123,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     cursor: "pointer",
   },
+  dropDown: {},
   subtitle: {
     textTransform: "uppercase",
   },
