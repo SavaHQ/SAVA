@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     backgroundColor: "#ffffff",
     paddingLeft: "120px",
-    paddingRight: "120px",
+    paddingRight: "50px",
     justifyContent: "center",
     alignItems: "center",
 
@@ -142,7 +142,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   midSection: {
-    flex: 6,
+    flex: 4,
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
