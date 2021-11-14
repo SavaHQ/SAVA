@@ -12,7 +12,11 @@
     "infoBannerTwo": {
         "titleText": "Free Replacement Policy",
         "contentText": "We understand that hiring is a tough and crucial decision for any startup. We also understand that not every match we make is going to be perfect. That is why we’d like to offer your startup a free replacement for an intern incase of a mismatch.",
+<<<<<<< HEAD
         "image": "assests/images/startup.gif"
+=======
+        "image": "assests/images/startup-2.png"
+>>>>>>> 996e20ed251e0d668b54107eda2ed2297c589f3c
     },
     "infoBannerThree": {
         "titleText": "A Hand-Glove Service",
