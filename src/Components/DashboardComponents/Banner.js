@@ -1,33 +1,35 @@
 import React from "react";
 import { Box, makeStyles, Typography } from "@material-ui/core";
 
-function HeroBanner({ loginUserEmail }) {
+function HeroBanner() {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
-      <Typography variant="h1" className={classes.container}>
-        Dashboard
-      </Typography>
-      <Typography variant="subtitle2" className={classes.statsText}>
-        {loginUserEmail}
-      </Typography>
-      );
-    </Box>
+    <>
+      <Box className={classes.root}>
+        <Box className={classes.textWrapper}>
+          <Typography variant="h1" className={classes.title}>
+            Dashboard
+          </Typography>
+          <Typography variant="h7" className={classes.subtitle2}>
+            Email
+          </Typography>
+        </Box>
+      </Box>
+    </>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: "#0000",
-    display: "flex",
-    justifyContent: "center",
+    background: "#000",
     color: "#ffffff",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-    },
+    padding: "100px",
   },
-  container: {
-    padding: "50px",
+  textWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "center",
   },
 }));
 
