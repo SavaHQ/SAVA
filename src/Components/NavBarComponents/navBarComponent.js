@@ -83,7 +83,7 @@ function NavBarComponent() {
                 isRadius={true}
               />
 
-              <Link className={classes.link} to={{ pathname: "/login" }}>
+              <Link className={classes.link} to={"/login"}>
                 <CustomButton
                   name="Login"
                   color="#666E78"
