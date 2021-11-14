@@ -33,7 +33,7 @@ function LoginSectionComponent() {
     <>
       <Box my={16}>
         <Typography variant="subtitle2" color="textPrimary" className={classes.subtitle}>
-          Start Learning
+          Start your journy
         </Typography>
         <Typography color="textPrimary" className={classes.title}>
           {!login ? "Login to SAVA" : "Create an account"}
