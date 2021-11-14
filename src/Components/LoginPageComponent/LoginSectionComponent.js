@@ -36,32 +36,50 @@ function LoginSectionComponent() {
           Start Learning
         </Typography>
         <Typography color="textPrimary" className={classes.title}>
-          Create an account
+          {!login ? "Login to SAVA" : "Create an account"}
         </Typography>
 
         <Box className={classes.signUpContainer} pt={4}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="given-name"
-                name="firstName"
-                required
-                fullWidth
-                id="firstName"
-                variant="outlined"
-                label="Student / Company"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Dropdown
-                className={classes.dropDown}
-                options={option}
-                onChange={(e) => handleChange(e)}
-                value={role}
-                placeholder="Select Role"
-              />
-            </Grid>
+            {login ? (
+              <>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    autoComplete="given-name"
+                    name="firstName"
+                    required
+                    fullWidth
+                    id="firstName"
+                    variant="outlined"
+                    label="Student / Company"
+                    autoFocus
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Dropdown
+                    className={classes.dropDown}
+                    options={option}
+                    onChange={(e) => handleChange(e)}
+                    value={role}
+                    placeholder="Select Role"
+                  />
+                </Grid>
+
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    name="phoneNumber"
+                    label="PhoneNumber"
+                    variant="outlined"
+                    type="number"
+                    id="phoneNumber"
+                  />
+                </Grid>
+              </>
+            ) : (
+              <Box />
+            )}
+
             <Grid item xs={12}>
               <TextField
                 required
@@ -83,17 +101,6 @@ function LoginSectionComponent() {
                 id="password"
               />
             </Grid>
-
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                name="phoneNumber"
-                label="PhoneNumber"
-                variant="outlined"
-                type="number"
-                id="phoneNumber"
-              />
-            </Grid>
           </Grid>
           {/* 
           
@@ -101,7 +108,7 @@ function LoginSectionComponent() {
         </Box>
 
         <Button fullWidth className={classes.signupButton} onClick={() => handleLoginAction()}>
-          <Typography variant="body2">Sign up</Typography>
+          <Typography variant="body2">{login ? "Sign up " : "Login"}</Typography>
         </Button>
         {/* <Button fullWidth className={classes.googleSignup} onClick={() => handleLoginAction()}>
           <img className={classes.googleIcon} src="assets/icon/social icons/google_icon.svg" />
@@ -109,7 +116,9 @@ function LoginSectionComponent() {
         </Button> */}
         <Box my={6} style={{ cursor: "pointer" }}>
           <Grid container justify="center" onClick={() => setLogin(!login)}>
-            <Grid item>{"Already have an account? Log In"}</Grid>
+            <Grid item>
+              {!login ? "Dont't have an account ? Signup" : "Already have an account ?   Login"}
+            </Grid>
           </Grid>
         </Box>
       </Box>
