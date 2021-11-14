@@ -49,10 +49,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  // container: {
-  //   maxWidth: "80%",
-  // },
-
   title: {
     padding: "20px",
     paddingTop: "110px",

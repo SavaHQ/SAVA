@@ -5,6 +5,7 @@ import MainLayout from "../Layouts/MainLayouts";
 import CommunityPage from "../Pages/CommunityPage/index";
 import ContactUs from "../Pages/ContactUs";
 import CryptoPage from "../Pages/Cryptopage";
+import DashboardPage from "../Pages/DashboardPage";
 import ForStartupPage from "../Pages/ForStartupPage";
 import HomePage from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
@@ -43,6 +44,11 @@ function Routes() {
       <Route path={ROUTES.CONTACTUS} exact>
         <MainLayout>
           <ContactUs />
+        </MainLayout>
+      </Route>
+      <Route path={ROUTES.DASHBOARD} exact>
+        <MainLayout>
+          <DashboardPage />
         </MainLayout>
       </Route>
       <Route path={ROUTES.CRYPTO} exact>
