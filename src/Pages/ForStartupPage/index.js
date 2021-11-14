@@ -1,5 +1,5 @@
 import React from "react";
-// import { makeStyles } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import HeroSection from "../../Components/HomeComponents/heroSection";
 import StartPageData from "../../Data/StartupPageData.json";
 import InfoBanner from "../../Components/InfoBanner/infoBanner";
@@ -7,11 +7,11 @@ import { useHistory } from "react-router";
 import * as ROUTES from "../../Constants/routesEndpoints";
 
 function ForStartupPage() {
-  // const classes = useStyles();
+  const classes = useStyles();
   const objectData = StartPageData;
   const history = useHistory();
   return (
-    <>
+    <Box className={classes.root}>
       <HeroSection
         title={objectData.title}
         content={objectData.content}
@@ -49,12 +49,14 @@ function ForStartupPage() {
         titleText={objectData.infoBannerThree.titleText}
         contentText={objectData.infoBannerThree.contentText}
       />
-    </>
+    </Box>
   );
 }
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {},
-// }));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "white",
+  },
+}));
 
 export default ForStartupPage;

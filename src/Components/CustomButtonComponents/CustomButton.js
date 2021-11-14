@@ -40,7 +40,7 @@ function CustomButton({
 const useStyles = makeStyles({
   button: {
     marginRight: 11,
-    width: 160,
+    width: 146,
     height: 39,
     top: 3,
     textDecoration: "none",

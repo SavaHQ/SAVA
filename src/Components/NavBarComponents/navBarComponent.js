@@ -14,10 +14,10 @@ import * as ROUTES from "../../Constants/routesEndpoints";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 import { FiAlignJustify } from "react-icons/fi";
 import DrawerComponent from "./drawerComponent";
-
+import { useHistory } from "react-router";
 function NavBarComponent() {
   const classes = useStyles();
-
+  const history = useHistory();
   const pathname = window.location.pathname;
 
   const navItemsLists = [
@@ -74,21 +74,16 @@ function NavBarComponent() {
           <Box flexGrow={1} />
           <Hidden mdDown>
             <Box className={classes.button}>
+              <CustomButton
+                name="Crypto"
+                color="#ffffff"
+                background="#666E78"
+                onButtonClick={() => history.push(ROUTES.CRYPTO)}
+                borderRadius={5}
+                isRadius={true}
+              />
+
               <Link
-                className={classes.link}
-                to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
-                target="_parent"
-              >
-                <CustomButton
-                  name="Schedule a Call"
-                  color="#ffffff"
-                  background="#666E78"
-                  onButtonClick={() => console.log("Call")}
-                  borderRadius={5}
-                  isRadius={true}
-                />
-              </Link>
-              {/* <Link
                 className={classes.link}
                 to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
                 target="_parent"
@@ -101,7 +96,7 @@ function NavBarComponent() {
                   borderRadius={5}
                   isRadius={true}
                 />
-              </Link> */}
+              </Link>
             </Box>
           </Hidden>
           <Hidden xlUp>

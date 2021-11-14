@@ -36,7 +36,7 @@ function GlassCard() {
             </Box>
           </Box>
           <Box className={classes.rightContainer}>
-            <img src="assests/images/glassSectionImage.png" alt="glassSectionImage" />
+            <img src="assests/images/glassnew.gif" alt="glassSectionImage"/>
           </Box>
         </Box>
       </Box>
@@ -125,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   rightContainer: {
-    width: "50%",
+    width: "58%",
     height: "500px",
     borderRadius: "8px",
     marginLeft: "-75px",
@@ -139,6 +139,10 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
   },
+  image: {
+    width: "220%",
+    height: "120%",
+  }
 }));
 
 export default GlassCard;

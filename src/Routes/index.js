@@ -4,6 +4,7 @@ import * as ROUTES from "../Constants/routesEndpoints";
 import MainLayout from "../Layouts/MainLayouts";
 import CommunityPage from "../Pages/CommunityPage/index";
 import ContactUs from "../Pages/ContactUs";
+import CryptoPage from "../Pages/Cryptopage";
 import ForStartupPage from "../Pages/ForStartupPage";
 import HomePage from "../Pages/HomePage";
 import OpeningsPage from "../Pages/OpeningsPage";
@@ -41,6 +42,11 @@ function Routes() {
       <Route path={ROUTES.CONTACTUS} exact>
         <MainLayout>
           <ContactUs />
+        </MainLayout>
+      </Route>
+      <Route path={ROUTES.CRYPTO} exact>
+        <MainLayout>
+          <CryptoPage />
         </MainLayout>
       </Route>
       {/* <Route component={PageNotFound} /> */}
