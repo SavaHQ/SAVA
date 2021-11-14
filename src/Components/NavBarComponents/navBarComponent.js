@@ -89,7 +89,7 @@ function NavBarComponent() {
                 target="_parent"
               >
                 <CustomButton
-                  name="Schedule a Call"
+                  name="Login"
                   color="#666E78"
                   background="#FFFFFF"
                   border=" 1px solid #666E78"
@@ -127,6 +127,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "50px",
     justifyContent: "center",
     alignItems: "center",
+    flexWrap: "nowrap",
 
     [theme.breakpoints.down("md")]: {
       paddingLeft: "20px",
@@ -145,6 +146,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 4,
     justifyContent: "space-between",
     display: "flex",
+    flexWrap: "nowrap",
     flexDirection: "row",
   },
   textStyle: {
@@ -152,6 +154,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     display: "flex",
+    flexWrap: "nowrap",
 
     flexDirection: "row",
   },
