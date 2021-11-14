@@ -3,14 +3,12 @@ import "firebase/auth";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCfKydelfz0r1CaMUY082Go-IHCsd4aW64",
-  authDomain: "sava-website-74608.firebaseapp.com",
-  databaseURL: "https://sava-website-74608-default-rtdb.firebaseio.com",
-  projectId: "sava-website-74608",
-  storageBucket: "sava-website-74608.appspot.com",
-  messagingSenderId: "681175771890",
-  appId: "1:681175771890:web:f12efc7a298e984ed97e6b",
-  measurementId: "G-C5MBQBGXS2",
+  apiKey: "AIzaSyCU_18qpwXEmYAVB_TBQKhM8kcFFAnjbHE",
+  authDomain: "sava-react.firebaseapp.com",
+  projectId: "sava-react",
+  storageBucket: "sava-react.appspot.com",
+  messagingSenderId: "239915742873",
+  appId: "1:239915742873:web:3d803dd09e1ee2103d6a08",
 };
 
 firebase.initializeApp(firebaseConfig);
