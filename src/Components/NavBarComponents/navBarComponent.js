@@ -146,6 +146,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 4,
     justifyContent: "space-between",
     display: "flex",
+    flexWrap: "nowrap",
     flexDirection: "row",
   },
   textStyle: {
@@ -153,6 +154,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     display: "flex",
+    flexWrap: "nowrap",
 
     flexDirection: "row",
   },
