@@ -2,32 +2,54 @@ import React from "react";
 
 import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { useDispatch } from "react-redux";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import { firebaseAuth, generateUserDocument } from "../../firebase";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import AlertWarning from "material-ui/svg-icons/alert/warning";
 
 function LoginSectionComponent() {
-  const dispatch = useDispatch();
-
   const [role, setRole] = React.useState("");
 
   const [login, setLogin] = React.useState(false);
+
+  const [name, setName] = React.useState("");
+
+  const [email, setEmail] = React.useState("");
+
+  const [password, setPassword] = React.useState("");
+
+  const [phone, setPhone] = React.useState("");
 
   const handleChange = (event) => {
     setRole(event.value);
   };
 
   const handleLoginAction = () => {
-    try {
-      dispatch();
-    } catch (err) {
-      console.log(err);
-    }
+    createUserWithEmailAndPasswordHandler();
   };
 
   const option = ["Student", "Startup"];
 
   const classes = useStyles();
+
+  const createUserWithEmailAndPasswordHandler = async () => {
+    try {
+      // const resumeURL = await upload(file.path);
+      const { user } = await firebaseAuth.createUserWithEmailAndPassword(email, password);
+      generateUserDocument(user, role, { name, email, phone, role });
+      setLogin(!login);
+    } catch (error) {
+      toast(error.message);
+    }
+
+    setEmail("");
+    setPassword("");
+    setName("");
+    setRole("");
+    setPhone("");
+  };
 
   return (
     <>
@@ -53,6 +75,8 @@ function LoginSectionComponent() {
                     variant="outlined"
                     label="Student / Company"
                     autoFocus
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -72,6 +96,8 @@ function LoginSectionComponent() {
                     label="PhoneNumber"
                     variant="outlined"
                     type="number"
+                    value={phone}
+                    onChange={(event) => setPhone(event.target.value)}
                     id="phoneNumber"
                   />
                 </Grid>
@@ -88,6 +114,8 @@ function LoginSectionComponent() {
                 label="Email Address"
                 name="email"
                 variant="outlined"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -99,6 +127,8 @@ function LoginSectionComponent() {
                 variant="outlined"
                 type="password"
                 id="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
               />
             </Grid>
           </Grid>
@@ -121,6 +151,7 @@ function LoginSectionComponent() {
             </Grid>
           </Grid>
         </Box>
+        <ToastContainer type={AlertWarning} theme="dark" />
       </Box>
     </>
   );

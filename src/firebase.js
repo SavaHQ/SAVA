@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/storage";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCU_18qpwXEmYAVB_TBQKhM8kcFFAnjbHE",
@@ -17,30 +18,26 @@ export const firebaseAuth = firebase.auth();
 export const storage = firebase.storage();
 export const firestore = firebase.firestore();
 
-export const generateUserDocument = async (user, additionalData, role) => {
+export const generateUserDocument = async (user, role, additionalData) => {
   if (!user) return;
-  const userRef = firestore.doc(`student/${user.uid}`);
+  const userRef = firestore.doc(`${role}/${user.uid}`);
   const snapshot = await userRef.get();
   if (!snapshot.exists) {
-    const { email, displayName, photoURL } = user;
     try {
       await userRef.set({
-        displayName,
-        email,
-        photoURL,
         ...additionalData,
       });
     } catch (error) {
       console.error("Error creating user document", error);
     }
   }
-  return getUserDocument(user.uid);
+  return getUserDocument(user.uid, role);
 };
 
-const getUserDocument = async (uid) => {
+const getUserDocument = async (uid, role) => {
   if (!uid) return null;
   try {
-    const userDocument = await firestore.doc(`student/${uid}`).get();
+    const userDocument = await firestore.doc(`${role}/${uid}`).get();
     return {
       uid,
       ...userDocument.data(),
