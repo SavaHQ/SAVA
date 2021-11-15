@@ -4,10 +4,11 @@ import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import { firebaseAuth, generateUserDocument } from "../../firebase";
+import { firebaseAuth, generateUserDocument, storage } from "../../firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AlertWarning from "material-ui/svg-icons/alert/warning";
+import DescriptionIcon from "@mui/icons-material/Description";
 
 function LoginSectionComponent() {
   const [role, setRole] = React.useState("");
@@ -22,11 +23,19 @@ function LoginSectionComponent() {
 
   const [phone, setPhone] = React.useState("");
 
+  const [resume, setResume] = React.useState();
+
   const handleChange = (event) => {
     setRole(event.value);
   };
 
-  const handleLoginAction = () => {
+  const handleResume = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      setResume(event.target.files[0]);
+    }
+  };
+
+  const handleLoginAction = async () => {
     createUserWithEmailAndPasswordHandler();
   };
 
@@ -36,10 +45,37 @@ function LoginSectionComponent() {
 
   const createUserWithEmailAndPasswordHandler = async () => {
     try {
-      // const resumeURL = await upload(file.path);
+      toast.loading("Please wait !!");
+
       const { user } = await firebaseAuth.createUserWithEmailAndPassword(email, password);
-      generateUserDocument(user, role, { name, email, phone, role });
-      setLogin(!login);
+      const uploadTask = storage.ref(`/resume/${resume.name}`).put(resume);
+
+      return uploadTask.on(
+        "state_changed",
+        (snapShot) => {
+          console.log(snapShot);
+        },
+        (err) => {
+          console.log(err);
+        },
+        () => {
+          storage
+            .ref("resume")
+            .child(resume.name)
+            .getDownloadURL()
+            .then((resumeUrl) => {
+              toast.dismiss();
+              generateUserDocument(user, role, { name, email, phone, role, resumeUrl });
+              toast("Successfull register :) ");
+              setLogin(!login);
+              setEmail("");
+              setPassword("");
+              setName("");
+              setRole("");
+              setPhone("");
+            });
+        }
+      );
     } catch (error) {
       toast(error.message);
     }
@@ -131,6 +167,32 @@ function LoginSectionComponent() {
                 onChange={(event) => setPassword(event.target.value)}
               />
             </Grid>
+            {role === "Student" ? (
+              <Grid item xs={12}>
+                <Box className={classes.resumeContainer}>
+                  <input
+                    accept=".pdf"
+                    className={classes.input}
+                    id="icon-button-file"
+                    type="file"
+                    onChange={handleResume}
+                  />
+                  <label htmlFor="icon-button-file">
+                    <Button component="span" className={classes.iconButton}>
+                      <Typography variant="subtitle2">Select your resume</Typography>
+                      <DescriptionIcon className={classes.icon} />
+                    </Button>
+                  </label>
+                  <Box pl={4}>
+                    <Typography variant="body1">
+                      {resume?.name ? "Selected" : "Not Selected"}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            ) : (
+              <Box />
+            )}
           </Grid>
           {/* 
           
@@ -144,7 +206,7 @@ function LoginSectionComponent() {
           <img className={classes.googleIcon} src="assets/icon/social icons/google_icon.svg" />
           <Typography variant="body2"> Sign up with google</Typography>
         </Button> */}
-        <Box my={6} style={{ cursor: "pointer" }}>
+        <Box my={2} style={{ cursor: "pointer" }}>
           <Grid container justify="center" onClick={() => setLogin(!login)}>
             <Grid item>
               {!login ? "Dont't have an account ? Signup" : "Already have an account ?   Login"}
@@ -166,6 +228,24 @@ const useStyles = makeStyles((theme) => ({
   dropDown: {},
   subtitle: {
     textTransform: "uppercase",
+  },
+  input: {
+    display: "none",
+  },
+  resumeContainer: {
+    display: "flex",
+  },
+  iconButton: {
+    height: 30,
+    width: "auto",
+    background: "#333",
+    color: "#fff",
+    "&:hover": {
+      background: "#333",
+    },
+  },
+  icon: {
+    padding: 5,
   },
   signupButton: {
     background: "#666E78",
