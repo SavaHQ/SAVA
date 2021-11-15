@@ -45,7 +45,6 @@ function GlassCard(backgroundColor) {
 }
 
 const useStyles = makeStyles((theme) => ({
-
   wrapper: {
     minHeight: "100vh",
     width: "100%",

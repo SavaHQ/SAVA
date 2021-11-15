@@ -29,11 +29,12 @@ function CryptoPage() {
         onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
       <CompanyWrapper />
-      <CardSection />
+      <CardSection backgroundColor="#222222" />
       <Stats backgroundColor="#000000" />
       <TestimonialSection />
       <InfoBanner
-        isBackgroundColor="#ffffff"
+        isBackgroundColor="#222222"
+        color="#ffffff"
         paddingRight="20%"
         paddingLeft="0px"
         image={objectData.infoBannerOne.image}

@@ -12,11 +12,12 @@ function HeroSection({
   contentCardTwo,
   contentCardOne,
   buttonCardOne,
+  backgroundcolor,
   buttonCardTwo,
 }) {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} style={{ background: backgroundcolor }}>
       <Box className={classes.textWrapper}>
         <Typography variant="h1" className={classes.title}>
           {title}
@@ -47,9 +48,6 @@ function HeroSection({
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    background: "#F7FAFE",
-  },
   wrapper: {
     display: "flex",
     height: "100%",
