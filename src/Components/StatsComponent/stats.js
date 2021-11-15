@@ -7,10 +7,10 @@ const statsList = [
   { stats: "75+", subContent: "Startups Served" },
 ];
 
-function Stats() {
+function Stats({ backgroundColor }) {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} style={{ background: backgroundColor }}>
       {statsList.map((item, index) => {
         return (
           <List key={index} className={classes.container}>
@@ -29,7 +29,6 @@ function Stats() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: "#666E78",
     display: "flex",
     justifyContent: "center",
     color: "#ffffff",

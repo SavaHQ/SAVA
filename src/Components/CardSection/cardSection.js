@@ -2,33 +2,43 @@ import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CardComponent from "../CardComponents/cardComponent";
 
-function HeroSection() {
+function HeroSection({
+  title,
+  content,
+  imageOne,
+  imageTwo,
+  titleCardOne,
+  titleCardTwo,
+  contentCardTwo,
+  contentCardOne,
+  buttonCardOne,
+  buttonCardTwo,
+}) {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
       <Box className={classes.textWrapper}>
         <Typography variant="h1" className={classes.title}>
-          What we are upto?
+          {title}
         </Typography>
         <Typography variant="h7" className={classes.subtitle2}>
-          We are not just a crazy fast end-to-end hiring service, we are also a community. We are a
-          pro-labour movement and believe that stipends must start at ₹10k/month.
+          {content}
         </Typography>
       </Box>
       <Container className={classes.container}>
         <Box className={classes.wrapper} pt={10} pb={10}>
           <CardComponent
-            image="assests/images/cardOne.gif"
-            title="What are we trying to do?"
-            content="Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt overtime"
-            buttonTitle="Join our Community"
+            image={imageOne}
+            title={titleCardOne}
+            content={contentCardOne}
+            buttonTitle={buttonCardOne}
           />
 
           <CardComponent
-            image="assests/images/cardTwo.gif"
-            title="What's the catch for Startups?"
-            content="Sava sources these brilliant Content Creators to startups who are looking for Creative Talent as interns."
-            buttonTitle="Schedule a Call"
+            image={imageTwo}
+            title={titleCardTwo}
+            content={contentCardTwo}
+            buttonTitle={buttonCardTwo}
           />
         </Box>
       </Container>

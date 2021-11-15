@@ -8,28 +8,22 @@ const companiesList = [
   { imageSrc: "assests/images/rippl.png", companyName: "Rippl" },
 ];
 
-function CompanyWrapper() {
+function CompanyWrapper(backgroundColor) {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
-      <Box className={classes.wrapper}>
-        <Typography variant="h5" className={classes.title}>
-          Some of our users…
-        </Typography>
-        <Box className={classes.company}>
-          <Box className={classes.companiesSection}>
-            {companiesList.map((item, index) => {
-              return (
-                <List key={index}>
-                  <img
-                    src={item.imageSrc}
-                    alt={item.companyName}
-                    className={classes.companyImage}
-                  />
-                </List>
-              );
-            })}
-          </Box>
+    <Box className={classes.wrapper} style={{ background: backgroundColor }}>
+      <Typography variant="h5" className={classes.title}>
+        Some of our users…
+      </Typography>
+      <Box className={classes.company}>
+        <Box className={classes.companiesSection}>
+          {companiesList.map((item, index) => {
+            return (
+              <List key={index}>
+                <img src={item.imageSrc} alt={item.companyName} className={classes.companyImage} />
+              </List>
+            );
+          })}
         </Box>
       </Box>
     </Box>
@@ -40,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     flexDirection: "column",
-    background: " #F7FAFE",
     width: "100%",
     height: "220px",
     [theme.breakpoints.down("lg")]: {},

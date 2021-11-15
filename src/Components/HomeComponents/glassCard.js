@@ -3,10 +3,10 @@ import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 import { Link } from "react-router-dom";
 
-function GlassCard() {
+function GlassCard(backgroundColor) {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} style={{ background: backgroundColor }}>
       <Box className={classes.wrapper}>
         <Box className={classes.mainContainer}>
           <Box className={classes.leftContainer}>
@@ -45,9 +45,7 @@ function GlassCard() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    background: "#ffffff",
-  },
+
   wrapper: {
     minHeight: "100vh",
     width: "100%",

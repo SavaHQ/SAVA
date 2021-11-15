@@ -26,9 +26,9 @@ function HomePage() {
         onButtonClickLeft={() => history.push(ROUTES.FORSTARTUP)}
         onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
-      <CompanyWrapper />
+      <CompanyWrapper backgroundColor="000000" />
       <CardSection />
-      <Stats />
+      <Stats backgroundColor="#666E78" />
       <GlassCard />
       <TestimonialSection />
       <ConnectBanner />
