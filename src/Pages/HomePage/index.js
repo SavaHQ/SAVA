@@ -10,6 +10,7 @@ import ConnectBanner from "../../Components/ConnectBannerComponent/connectBanner
 import TestimonialSection from "../../Components/TestimonialSection/index.js";
 import { useHistory } from "react-router";
 import * as ROUTES from "../../Constants/routesEndpoints";
+
 function HomePage() {
   const classes = useStyles();
   const objectData = sampleData;
