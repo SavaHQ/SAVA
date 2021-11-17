@@ -10,6 +10,7 @@ function HeroBanner({ user }) {
   const { email, name, role } = user;
 
   const dispatch = useDispatch();
+
   const history = useHistory();
 
   const loggedOut = () => {
