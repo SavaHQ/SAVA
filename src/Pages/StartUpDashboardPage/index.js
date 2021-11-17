@@ -1,9 +1,10 @@
 import React from "react";
+
 import Calendar from "react-calendar";
 import { useSelector } from "react-redux";
 import HeroBanner from "../../Components/DashboardComponents/Banner";
 
-function DashboardPage() {
+function StartUpDashboardPage() {
   const user = useSelector((state) => state.firebase.user);
 
   return (
@@ -14,4 +15,4 @@ function DashboardPage() {
   );
 }
 
-export default DashboardPage;
+export default StartUpDashboardPage;

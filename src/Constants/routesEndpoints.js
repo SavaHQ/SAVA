@@ -6,3 +6,8 @@ export const CONTACTUS = "/contactus";
 export const CRYPTO = "/eth";
 export const LOGIN = "/login";
 export const DASHBOARD = "/dashboard";
+export const STARTUPDASHBOARD = "/startupDashboard";
+
+// ************************************************************
+export const STUDENT = "Student";
+export const STARTUP = "Startup";

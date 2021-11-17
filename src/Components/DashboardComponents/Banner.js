@@ -1,18 +1,37 @@
 import React from "react";
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, Button, makeStyles, Typography } from "@material-ui/core";
+import { removeSession, firebaseAuth } from "../../firebase";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../Store/reduxSlice/firebaseSlice";
+import { useHistory } from "react-router";
 
-function HeroBanner() {
+function HeroBanner({ user }) {
   const classes = useStyles();
+  const { email, name, role } = user;
+
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const loggedOut = () => {
+    firebaseAuth.signOut();
+    removeSession();
+    dispatch(setUser(null));
+    history.push("/home");
+  };
+
   return (
     <>
       <Box className={classes.root}>
         <Box className={classes.textWrapper}>
           <Typography variant="h1" className={classes.title}>
-            Dashboard
+            Hi {name}
           </Typography>
           <Typography variant="h7" className={classes.subtitle2}>
-            Email
+            {email} ({role})
           </Typography>
+          <Button style={{ color: "white", background: "#676E78" }} onClick={() => loggedOut()}>
+            Logout
+          </Button>
         </Box>
       </Box>
     </>

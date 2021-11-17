@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AlertWarning from "material-ui/svg-icons/alert/warning";
 import DescriptionIcon from "@mui/icons-material/Description";
 import { useDispatch } from "react-redux";
+import { STARTUP, STUDENT } from "../../Constants/routesEndpoints";
 
 function LoginSectionComponent() {
   const dispatch = useDispatch();
@@ -39,46 +40,51 @@ function LoginSectionComponent() {
   };
 
   const handleLoginAction = async () => {
-    createUserWithEmailAndPasswordHandler();
+    createStudentWithResume();
   };
 
-  const option = ["Student", "Startup"];
+  const option = [STUDENT, STARTUP];
 
   const classes = useStyles();
 
-  const createUserWithEmailAndPasswordHandler = async () => {
+  const createStudentWithResume = async () => {
     try {
       toast.loading("Please wait !!");
 
       const { user } = await firebaseAuth.createUserWithEmailAndPassword(email, password);
-      const uploadTask = storage.ref(`/resume/${resume.name}`).put(resume);
+      if (resume && role === STUDENT) {
+        const uploadTask = storage.ref(`/resume/${resume.name}`).put(resume);
 
-      return uploadTask.on(
-        "state_changed",
-        (snapShot) => {
-          console.log(snapShot);
-        },
-        (err) => {
-          console.log(err);
-        },
-        () => {
-          storage
-            .ref("resume")
-            .child(resume.name)
-            .getDownloadURL()
-            .then((resumeUrl) => {
-              toast.dismiss();
-              dispatch(generateUserDocument(user, role, { name, email, phone, role, resumeUrl }));
-              toast("Successfull register :) ");
-              // setLogin(!login);
-              setEmail("");
-              setPassword("");
-              setName("");
-              setRole("");
-              setPhone("");
-            });
-        }
-      );
+        return uploadTask.on(
+          "state_changed",
+          (snapShot) => {
+            console.log(snapShot);
+          },
+          (err) => {
+            console.log(err);
+          },
+          () => {
+            storage
+              .ref("resume")
+              .child(resume.name)
+              .getDownloadURL()
+              .then((resumeUrl) => {
+                toast.dismiss();
+                dispatch(generateUserDocument(user, role, { name, email, phone, role, resumeUrl }));
+                toast("Successfull register :) ");
+                // setLogin(!login);
+                setEmail("");
+                setPassword("");
+                setName("");
+                setRole("");
+                setPhone("");
+              });
+          }
+        );
+      } else {
+        dispatch(generateUserDocument(user, role, { name, email, phone, role }));
+        toast("Successfull register :) ");
+      }
     } catch (error) {
       toast.dismiss();
       toast(error.message);
@@ -102,7 +108,8 @@ function LoginSectionComponent() {
       .then((user) => {
         if (user) {
           toast.dismiss();
-          getUserDocument(user.user.uid);
+          dispatch(getUserDocument(user.user.uid));
+          toast("Logged In ");
         }
       });
   };

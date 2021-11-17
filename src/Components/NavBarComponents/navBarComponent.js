@@ -15,9 +15,13 @@ import CustomButton from "../CustomButtonComponents/CustomButton";
 import { FiAlignJustify } from "react-icons/fi";
 import DrawerComponent from "./drawerComponent";
 import { useHistory } from "react-router";
+import { useSelector } from "react-redux";
 function NavBarComponent() {
   const classes = useStyles();
   const history = useHistory();
+
+  const user = useSelector((state) => state.firebase.user);
+
   const pathname = window.location.pathname;
 
   const navItemsLists = [
@@ -83,16 +87,32 @@ function NavBarComponent() {
                 isRadius={true}
               />
 
-              <Link className={classes.link} to={"/login"}>
-                <CustomButton
-                  name="Login"
-                  color="#666E78"
-                  background="#FFFFFF"
-                  border=" 1px solid #666E78"
-                  borderRadius={5}
-                  isRadius={true}
-                />
-              </Link>
+              {user ? (
+                <Link
+                  className={classes.link}
+                  to={user.role === ROUTES.STUDENT ? "/dashboard" : "/startupDashboard"}
+                >
+                  <CustomButton
+                    name="Dashboard"
+                    color="#666E78"
+                    background="#FFFFFF"
+                    border=" 1px solid #666E78"
+                    borderRadius={5}
+                    isRadius={true}
+                  />
+                </Link>
+              ) : (
+                <Link className={classes.link} to={"/login"}>
+                  <CustomButton
+                    name="Login"
+                    color="#666E78"
+                    background="#FFFFFF"
+                    border=" 1px solid #666E78"
+                    borderRadius={5}
+                    isRadius={true}
+                  />
+                </Link>
+              )}
             </Box>
           </Hidden>
           <Hidden xlUp>
