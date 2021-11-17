@@ -21,6 +21,7 @@ function CryptoPage() {
       <HeroSection
         title={objectData.title}
         subtitle={objectData.subtitle}
+        titleColor="white"
         content={objectData.content}
         image={objectData.image}
         buttonTitleLeft={objectData.buttonTitleLeft}
@@ -30,7 +31,7 @@ function CryptoPage() {
       />
       <CompanyWrapper />
       <CardSection backgroundColor="#222222" />
-      <Stats backgroundColor="#000000" />
+      <Stats backgroundColor="#222222" />
       <TestimonialSection />
       <InfoBanner
         isBackgroundColor="#222222"
@@ -52,7 +53,7 @@ function CryptoPage() {
         contentText={objectData.infoBannerTwo.contentText}
       />
       <GlassCard />
-      <ConnectBanner />
+      <ConnectBanner contentColor="white" />
     </Box>
   );
 }

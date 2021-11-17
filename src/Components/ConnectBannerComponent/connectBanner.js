@@ -2,13 +2,18 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 
-function ConnectBanner() {
+function ConnectBanner({ contentColor }) {
   const classes = useStyle();
   return (
     <Box className={classes.containergroup}>
       <Box className={classes.root}>
         <Box pb={2}>
-          <Typography variant="h1" classes={classes.title} gutterBottom>
+          <Typography
+            variant="h1"
+            classes={classes.title}
+            gutterBottom
+            style={{ color: contentColor }}
+          >
             Schedule a call with us today 🙌
           </Typography>
         </Box>

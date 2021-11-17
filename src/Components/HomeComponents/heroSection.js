@@ -11,6 +11,7 @@ function heroSection({
   subtitle,
   onButtonClickRight,
   onButtonClickLeft,
+  titleColor,
 }) {
   const classes = useStyles();
 
@@ -20,10 +21,21 @@ function heroSection({
         {/* <Typography gutterBottom variant="h1" className={classes.subtitle}>
           {subtitle}
         </Typography> */}
-        <Typography gutterBottom variant="h1" className={classes.title}>
+        <Typography
+          gutterBottom
+          variant="h1"
+          className={classes.title}
+          style={{ color: titleColor }}
+        >
           {title}
         </Typography>
-        <Typography gutterBottom variant="h5" component="p" className={classes.paragraph}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="p"
+          className={classes.paragraph}
+          style={{ color: titleColor }}
+        >
           {content}
         </Typography>
         <Box className={classes.buttonContainer}>
