@@ -14,6 +14,4 @@ export const firebaseSlice = createSlice({
 
 export const { setUser } = firebaseSlice.actions;
 
-export const selectUser = (state) => state.firebase.user;
-
 export default firebaseSlice.reducer;

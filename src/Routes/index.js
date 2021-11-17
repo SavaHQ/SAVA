@@ -10,6 +10,7 @@ import ForStartupPage from "../Pages/ForStartupPage";
 import HomePage from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
 import OpeningsPage from "../Pages/OpeningsPage";
+import AuthRoute from "../Auth/index";
 
 function Routes() {
   return (
@@ -17,14 +18,13 @@ function Routes() {
       <Route path="/" exact>
         <Redirect to={ROUTES.HOME} />
       </Route>
-      {/* 
-      <AuthRoute exact path={ROUTES.HOME}> */}
+
       <Route path={ROUTES.HOME} exact>
         <MainLayout>
           <HomePage />
         </MainLayout>
       </Route>
-      {/* </AuthRoute> */}
+
       <Route path={ROUTES.FORSTARTUP} exact>
         <MainLayout>
           <ForStartupPage />
@@ -35,11 +35,11 @@ function Routes() {
           <CommunityPage />
         </MainLayout>
       </Route>
-      <Route path={ROUTES.OPENINGS} exact>
+      <AuthRoute exact path={ROUTES.OPENINGS} type="private">
         <MainLayout>
           <OpeningsPage />
         </MainLayout>
-      </Route>
+      </AuthRoute>
 
       <Route path={ROUTES.CONTACTUS} exact>
         <MainLayout>
@@ -57,9 +57,9 @@ function Routes() {
         </MainLayout>
       </Route>
 
-      <Route path={ROUTES.LOGIN} exact>
+      <AuthRoute exact path={ROUTES.LOGIN} type="guest">
         <LoginPage />
-      </Route>
+      </AuthRoute>
 
       {/* <Route component={PageNotFound} /> */}
     </Switch>

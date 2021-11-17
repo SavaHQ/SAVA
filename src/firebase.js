@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/storage";
 import "firebase/firestore";
+import { setUser } from "./Store/reduxSlice/firebaseSlice";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCU_18qpwXEmYAVB_TBQKhM8kcFFAnjbHE",
@@ -18,31 +19,55 @@ export const firebaseAuth = firebase.auth();
 export const storage = firebase.storage();
 export const firestore = firebase.firestore();
 
-export const generateUserDocument = async (user, role, additionalData) => {
-  if (!user) return;
-  const userRef = firestore.doc(`${role}/${user.uid}`);
-  const snapshot = await userRef.get();
-  if (!snapshot.exists) {
-    try {
-      await userRef.set({
-        ...additionalData,
-      });
-    } catch (error) {
-      console.error("Error creating user document", error);
+export const generateUserDocument = (user, role, additionalData) => {
+  return async (dispatch) => {
+    if (!user) return;
+    const individualUserRecord = firestore.doc(`${role}/${user.uid}`);
+    const combineDatabase = firestore.doc(`Authusers/${user.uid}`);
+    const snapshot = await individualUserRecord.get();
+    if (!snapshot.exists) {
+      try {
+        await individualUserRecord.set({
+          ...additionalData,
+        });
+        await combineDatabase.set({
+          ...additionalData,
+        });
+      } catch (error) {
+        console.error("Error creating user document", error);
+      }
     }
-  }
-  return getUserDocument(user.uid, role);
+    return dispatch(getUserDocument(user.uid));
+  };
 };
 
-const getUserDocument = async (uid, role) => {
-  if (!uid) return null;
-  try {
-    const userDocument = await firestore.doc(`${role}/${uid}`).get();
-    return {
-      uid,
-      ...userDocument.data(),
-    };
-  } catch (error) {
-    console.error("Error fetching user", error);
-  }
+export const getUserDocument = (uid) => {
+  return async (dispatch) => {
+    if (!uid) return null;
+    try {
+      const userDocument = await firestore.doc(`Authusers/${uid}`).get();
+      setuserData(uid, userDocument);
+      dispatch(
+        setUser({
+          uid,
+          ...userDocument.data(),
+        })
+      );
+    } catch (error) {
+      console.error("Error fetching user", error);
+    }
+  };
+};
+
+export const removeSession = () => {
+  localStorage.removeItem("user");
+};
+
+export const setuserData = (uid, userDocument) => {
+  localStorage.setItem("user", JSON.stringify({ uid, ...userDocument.data() }));
+};
+
+export const getUserData = () => {
+  const data = localStorage.getItem("user");
+  return JSON.parse(data);
 };

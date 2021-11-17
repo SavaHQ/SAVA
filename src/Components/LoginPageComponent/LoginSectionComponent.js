@@ -4,13 +4,16 @@ import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import { firebaseAuth, generateUserDocument, storage } from "../../firebase";
+import { firebaseAuth, generateUserDocument, storage, getUserDocument } from "../../firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AlertWarning from "material-ui/svg-icons/alert/warning";
 import DescriptionIcon from "@mui/icons-material/Description";
+import { useDispatch } from "react-redux";
 
 function LoginSectionComponent() {
+  const dispatch = useDispatch();
+
   const [role, setRole] = React.useState("");
 
   const [login, setLogin] = React.useState(false);
@@ -65,9 +68,9 @@ function LoginSectionComponent() {
             .getDownloadURL()
             .then((resumeUrl) => {
               toast.dismiss();
-              generateUserDocument(user, role, { name, email, phone, role, resumeUrl });
+              dispatch(generateUserDocument(user, role, { name, email, phone, role, resumeUrl }));
               toast("Successfull register :) ");
-              setLogin(!login);
+              // setLogin(!login);
               setEmail("");
               setPassword("");
               setName("");
@@ -77,6 +80,7 @@ function LoginSectionComponent() {
         }
       );
     } catch (error) {
+      toast.dismiss();
       toast(error.message);
     }
 
@@ -85,6 +89,22 @@ function LoginSectionComponent() {
     setName("");
     setRole("");
     setPhone("");
+  };
+
+  const signInWithEmailAndPasswordHandler = async () => {
+    toast.loading("Please wait !!");
+    await firebaseAuth
+      .signInWithEmailAndPassword(email, password)
+      .catch((error) => {
+        toast.dismiss();
+        toast(error.message);
+      })
+      .then((user) => {
+        if (user) {
+          toast.dismiss();
+          getUserDocument(user.user.uid);
+        }
+      });
   };
 
   return (
@@ -199,7 +219,11 @@ function LoginSectionComponent() {
        */}
         </Box>
 
-        <Button fullWidth className={classes.signupButton} onClick={() => handleLoginAction()}>
+        <Button
+          fullWidth
+          className={classes.signupButton}
+          onClick={() => (login ? handleLoginAction() : signInWithEmailAndPasswordHandler())}
+        >
           <Typography variant="body2">{login ? "Sign up " : "Login"}</Typography>
         </Button>
         {/* <Button fullWidth className={classes.googleSignup} onClick={() => handleLoginAction()}>
