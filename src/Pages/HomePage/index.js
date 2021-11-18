@@ -28,7 +28,18 @@ function HomePage() {
         onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
       <CompanyWrapper backgroundColor="000000" />
-      <CardSection />
+      <CardSection
+        title={objectData.cardSection.title}
+        content={objectData.cardSection.content}
+        imageOne={objectData.cardSection.imageOne}
+        imageTwo={objectData.cardSection.imageTwo}
+        titleCardOne={objectData.cardSection.titleCardOne}
+        titleCardTwo={objectData.cardSection.titleCardTwo}
+        contentCardTwo={objectData.cardSection.contentCardTwo}
+        contentCardOne={objectData.cardSection.contentCardOne}
+        buttonCardOne={objectData.cardSection.buttonCardOne}
+        buttonCardTwo={objectData.cardSection.buttonCardTwo}
+      />
       <Stats backgroundColor="#666E78" />
       <GlassCard />
       <TestimonialSection />

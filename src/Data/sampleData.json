@@ -5,7 +5,16 @@
     "image": "assests/images/home.png",
     "buttonTitleLeft": "For Startups",
     "buttonTitleRight": "Join Us",
-    "infoBanner": {
-        "title": "SAVA"
+    "cardSection": {
+        "title": "Hungry, Creative, Talent",
+        "content": "With a pan-india talent pool, we promise to help you find a hungry creator looking for a canvas. From Graphics Desginers to Content Writers to Growth Marketers. If it has to do with content, you’d find a hungry creator in our community.",
+        "imageOne": "",
+        "imageTwo": "",
+        "titleCardOne": "What are we trying to do?",
+        "titleCardTwo": "What's the catch for Startups?",
+        "contentCardOne": "Sava is an invite-only community of content creators looking to empower themselves by sharing what they’ve learnt overtime ",
+        "contentCardTwo": "Sava sources these brilliant Content Creators to startups who are looking for Creative Talent as interns",
+        "buttonCardOne": "Find Out More",
+        "buttonCardTwo": "Get in Touch"
     }
 }
