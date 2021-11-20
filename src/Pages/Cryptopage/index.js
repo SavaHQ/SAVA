@@ -30,7 +30,19 @@ function CryptoPage() {
         onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
       <CompanyWrapper />
-      <CardSection backgroundColor="#222222" />
+      <CardSection
+        title={objectData.cardSection.title}
+        content={objectData.cardSection.content}
+        imageOne={objectData.cardSection.imageOne}
+        imageTwo={objectData.cardSection.imageTwo}
+        titleCardOne={objectData.cardSection.titleCardOne}
+        titleCardTwo={objectData.cardSection.titleCardTwo}
+        contentCardTwo={objectData.cardSection.contentCardTwo}
+        contentCardOne={objectData.cardSection.contentCardOne}
+        buttonCardOne={objectData.cardSection.buttonCardOne}
+        buttonCardTwo={objectData.cardSection.buttonCardTwo}
+        backgroundColor="#222222"
+      />
       <Stats backgroundColor="#222222" />
       <TestimonialSection />
       <InfoBanner
