@@ -45,18 +45,23 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     height: "100%",
-    padding: "100px",
+    paddingLeft: "100px",
+    paddingRight: "100px",
+    paddingTop: "60px",
+    paddingBottom: "60px",
     flexDirection: "row",
     justifyContent: "space-between",
     [theme.breakpoints.down("md")]: {
       display: "block",
       padding: "10px",
+      paddingTop: "5px",
       height: "0",
     },
     [theme.breakpoints.down("lg")]: {
       display: "block",
       height: "100%",
       padding: "0",
+      paddingTop: "3px",
     },
   },
   title: {

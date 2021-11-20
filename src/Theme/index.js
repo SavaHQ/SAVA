@@ -85,7 +85,7 @@ const createThemes = () => {
       direction: "ltr",
       mixins: {
         denseToolbar: {
-          minHeight: 80,
+          minHeight: 20,
         },
       },
       breakpoints: {

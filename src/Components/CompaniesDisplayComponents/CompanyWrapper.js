@@ -8,11 +8,11 @@ const companiesList = [
   { imageSrc: "assests/images/rippl.png", companyName: "Rippl" },
 ];
 
-function CompanyWrapper(backgroundColor) {
+function CompanyWrapper({ backgroundColor, titleColor }) {
   const classes = useStyles();
   return (
     <Box className={classes.wrapper} style={{ background: backgroundColor }}>
-      <Typography variant="h5" className={classes.title}>
+      <Typography variant="h5" className={classes.title} style={{ color: titleColor }}>
         Some of our users…
       </Typography>
       <Box className={classes.company}>

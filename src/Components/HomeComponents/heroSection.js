@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingTop: "80px",
     [theme.breakpoints.down("md")]: {
       display: "block",
       height: "100%",

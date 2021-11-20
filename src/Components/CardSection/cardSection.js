@@ -14,15 +14,16 @@ function HeroSection({
   buttonCardOne,
   backgroundcolor,
   buttonCardTwo,
+  titleColor,
 }) {
   const classes = useStyles();
   return (
     <Box className={classes.root} style={{ background: backgroundcolor }}>
       <Box className={classes.textWrapper}>
-        <Typography variant="h1" className={classes.title}>
+        <Typography variant="h1" className={classes.title} style={{ color: titleColor }}>
           {title}
         </Typography>
-        <Typography variant="h7" className={classes.subtitle2}>
+        <Typography variant="h7" className={classes.subtitle2} style={{ color: titleColor }}>
           {content}
         </Typography>
       </Box>

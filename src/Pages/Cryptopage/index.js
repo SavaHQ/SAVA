@@ -26,10 +26,10 @@ function CryptoPage() {
         image={objectData.image}
         buttonTitleLeft={objectData.buttonTitleLeft}
         buttonTitleRight={objectData.buttonTitleRight}
-        onButtonClickLeft={() => history.push(ROUTES.FORSTARTUP)}
+        onButtonClickLeft={() => history.push(ROUTES.HOME)}
         onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
       />
-      <CompanyWrapper />
+      <CompanyWrapper titleColor="white" />
       <CardSection
         title={objectData.cardSection.title}
         content={objectData.cardSection.content}
@@ -42,9 +42,10 @@ function CryptoPage() {
         buttonCardOne={objectData.cardSection.buttonCardOne}
         buttonCardTwo={objectData.cardSection.buttonCardTwo}
         backgroundColor="#222222"
+        titleColor="white"
       />
       <Stats backgroundColor="#222222" />
-      <TestimonialSection />
+      <TestimonialSection titleColor="white" />
       <InfoBanner
         isBackgroundColor="#222222"
         color="#ffffff"

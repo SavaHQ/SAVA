@@ -4,7 +4,7 @@ import React from "react";
 import LoginPageRightBanner from "../../Components/LoginPageComponent/LoginPageRightBanner";
 import LoginSectionComponent from "../../Components/LoginPageComponent/LoginSectionComponent";
 import { useHistory } from "react-router";
-
+import { Link } from "react-router-dom";
 function LoginPage() {
   const classes = useStyles();
 
@@ -17,7 +17,9 @@ function LoginPage() {
           <AppBar className={classes.appBar} elevation={0}>
             <Toolbar className={classes.toolbar}>
               <Container className={classes.wrapper} disableGutters>
-                <img src="assests/images/SAVA.svg" alt="sava logo" />
+                <Link to="/home">
+                  <img src="assests/images/SAVA.svg" alt="sava logo" />
+                </Link>
                 <Box flexGrow={1} />
                 <Button
                   outline

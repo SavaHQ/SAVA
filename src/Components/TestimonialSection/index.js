@@ -25,14 +25,19 @@ const TestimonialList = [
   },
 ];
 
-function TestimonialSection() {
+function TestimonialSection({ titleColor }) {
   const classes = useStyles();
 
   return (
     <Box className={classes.root}>
       <FadeReveal>
         <Container className={classes.titleContainer}>
-          <Typography variant="h1" color="textprimary" component="span">
+          <Typography
+            variant="h1"
+            color="textprimary"
+            component="span"
+            style={{ color: titleColor }}
+          >
             Hear what our user&apos;s have to say
           </Typography>
         </Container>
