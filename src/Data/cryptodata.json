@@ -24,8 +24,8 @@
     "cardSection": {
         "title": "We scout future Vitalik Buterins 👦",
         "content": "We use sophisticated scouting automations to scout future Rajnikants of the Blockchain space. We source them to high-growth startups before Big Tech is gets it’s hands on them.",
-        "imageOne": "",
-        "imageTwo": "",
+        "imageOne": "assests/images/cardOne.gif",
+        "imageTwo": "assests/images/cardTwo.gif",
         "titleCardOne": "We help Blockchain Startups Hire!",
         "titleCardTwo": "How can we help you?",
         "contentCardOne": "We take pride in helping startups close their job requirements in upto 4 days.By leveraging the power of community, we at SavaHire have built enormous talent pools for your to hire from.",
