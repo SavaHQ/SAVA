@@ -8,11 +8,14 @@
     "infoBannerOne": {
         "titleText": "Join the Club 🎟",
         "contentText": "The Sava Community is filled with micro-influencers, graphics afficianados and content ninjas. Learn from the best.",
-        "image": "assests/images/community-1.gif"
+        "image": "assests/images/crypto-1.gif"
     },
     "infoBannerTwo": {
         "titleText": "Why should you join us? 👋",
         "contentText": "From weekly giveaways and challenges to resume roasts and linkedin reviews. This community is filled with surprises and chances for you to learn. People here look out for each other and cheirish the collective growth.",
-        "image": "assests/images/community-2.gif"
+        "image": "assests/images/crypto-2.gif"
+    },
+    "glasssection": {
+        "image": "assests/images/crypto-glass.gif"
     }
 }

@@ -33,7 +33,7 @@ function TestimonialSection() {
       <FadeReveal>
         <Container className={classes.titleContainer}>
           <Typography variant="h1" color="textprimary" component="span">
-            What our client&apos;s say
+            Hear what our user&apos;s have to say
           </Typography>
         </Container>
       </FadeReveal>

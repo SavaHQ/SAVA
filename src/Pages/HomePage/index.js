@@ -30,7 +30,7 @@ function HomePage() {
       <CompanyWrapper backgroundColor="000000" />
       <CardSection />
       <Stats backgroundColor="#666E78" />
-      <GlassCard />
+      <GlassCard image={objectData.glasssection.image} />
       <TestimonialSection />
       <ConnectBanner />
     </Box>

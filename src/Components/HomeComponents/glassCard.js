@@ -3,7 +3,7 @@ import React from "react";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 import { Link } from "react-router-dom";
 
-function GlassCard(backgroundColor) {
+function GlassCard({ backgroundColor, image }) {
   const classes = useStyles();
   return (
     <Box className={classes.root} style={{ background: backgroundColor }}>
@@ -36,7 +36,7 @@ function GlassCard(backgroundColor) {
             </Box>
           </Box>
           <Box className={classes.rightContainer}>
-            <img src="assests/images/glasssection.gif" alt="glassSectionImage" />
+            <img src={image} />
           </Box>
         </Box>
       </Box>

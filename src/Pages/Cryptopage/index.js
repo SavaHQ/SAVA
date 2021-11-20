@@ -52,7 +52,7 @@ function CryptoPage() {
         titleText={objectData.infoBannerTwo.titleText}
         contentText={objectData.infoBannerTwo.contentText}
       />
-      <GlassCard />
+      <GlassCard image={objectData.glasssection.image} />
       <ConnectBanner contentColor="white" />
     </Box>
   );
