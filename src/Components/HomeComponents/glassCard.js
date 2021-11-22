@@ -20,7 +20,7 @@ function GlassCard({ backgroundColor, image }) {
             <Box className={classes.buttonWrapper}>
               <Link
                 className={classes.link}
-                to={{ pathname: "https://discord.gg/JPXv2KPPTE" }}
+                to={{ pathname: "https://bit.ly/joinsava" }}
                 target="_parent"
               >
                 <CustomButton

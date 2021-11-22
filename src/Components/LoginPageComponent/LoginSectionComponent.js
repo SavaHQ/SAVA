@@ -11,6 +11,7 @@ import AlertWarning from "material-ui/svg-icons/alert/warning";
 import DescriptionIcon from "@mui/icons-material/Description";
 import { useDispatch } from "react-redux";
 import { STARTUP, STUDENT } from "../../Constants/routesEndpoints";
+// import validator from "validator";
 
 function LoginSectionComponent() {
   const dispatch = useDispatch();
@@ -28,6 +29,17 @@ function LoginSectionComponent() {
   const [phone, setPhone] = React.useState("");
 
   const [resume, setResume] = React.useState();
+
+  // const [emailError, setEmailError] = React.useState("");
+  // const validateEmail = (event) => {
+  //   const email = event.target.value;
+
+  //   if (validator.isEmail(email)) {
+  //     setEmailError("Valid Email :)");
+  //   } else {
+  //     setEmailError("Enter valid Email!");
+  //   }
+  // };
 
   const handleChange = (event) => {
     setRole(event.value);
@@ -118,7 +130,7 @@ function LoginSectionComponent() {
     <>
       <Box my={16}>
         <Typography variant="subtitle2" color="textPrimary" className={classes.subtitle}>
-          Start your journy
+          Start your journey
         </Typography>
         <Typography color="textPrimary" className={classes.title}>
           {!login ? "Login to SAVA" : "Create an account"}
@@ -130,9 +142,9 @@ function LoginSectionComponent() {
               <>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    required
                     autoComplete="given-name"
                     name="firstName"
-                    required
                     fullWidth
                     id="firstName"
                     variant="outlined"
@@ -144,6 +156,7 @@ function LoginSectionComponent() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <Dropdown
+                    required
                     className={classes.dropDown}
                     options={option}
                     onChange={(e) => handleChange(e)}
@@ -178,8 +191,10 @@ function LoginSectionComponent() {
                 name="email"
                 variant="outlined"
                 value={email}
+                // onChange={(event) => validateEmail(event.target.value)}
                 onChange={(event) => setEmail(event.target.value)}
               />
+              {/* {emailError} */}
             </Grid>
             <Grid item xs={12}>
               <TextField
@@ -244,7 +259,7 @@ function LoginSectionComponent() {
             </Grid>
           </Grid>
         </Box>
-        <ToastContainer type={AlertWarning} theme="dark" />
+        <ToastContainer type={AlertWarning} theme="dark" position="top-left" />
       </Box>
     </>
   );

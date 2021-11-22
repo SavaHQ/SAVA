@@ -7,6 +7,7 @@ export const CRYPTO = "/eth";
 export const LOGIN = "/login";
 export const DASHBOARD = "/dashboard";
 export const STARTUPDASHBOARD = "/startupDashboard";
+export const JOINUS = "/joinus";
 
 // ************************************************************
 export const STUDENT = "Student";

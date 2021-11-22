@@ -12,6 +12,7 @@ import LoginPage from "../Pages/LoginPage";
 import OpeningsPage from "../Pages/OpeningsPage";
 import AuthRoute from "../Auth/index";
 import StartUpDashboardPage from "../Pages/StartUpDashboardPage";
+import { Route } from "react-router";
 
 function Routes() {
   return (
@@ -70,6 +71,9 @@ function Routes() {
         <LoginPage />
       </AuthRoute>
 
+      <Route exact path={ROUTES.JOINUS}>
+        <Redirect to="https://airtable.com/shrJCaq5FBhymGQP0" />
+      </Route>
       {/* <Route component={PageNotFound} /> */}
     </Switch>
   );

@@ -16,7 +16,7 @@ function CommunityPage() {
         buttonTitleLeft={objectData.buttonTitleLeft}
         buttonTitleRight={objectData.buttonTitleRight}
         onButtonClickLeft={() => history.push(ROUTES.FORSTARTUP)}
-        onButtonClickRight={() => window.open("https://discord.gg/JPXv2KPPTE", "_self")}
+        onButtonClickRight={() => window.open("https://bit.ly/joinsava", "_self")}
       />
 
       <InfoBanner
