@@ -7,7 +7,7 @@ import { useHistory } from "react-router";
 
 function HeroBanner({ user }) {
   const classes = useStyles();
-  const { email, name, role } = user;
+  const { name } = user;
 
   const dispatch = useDispatch();
 
@@ -27,10 +27,13 @@ function HeroBanner({ user }) {
           <Typography variant="h1" className={classes.title}>
             Hi {name}
           </Typography>
-          <Typography variant="h7" className={classes.subtitle2}>
+          {/* <Typography variant="h7" className={classes.subtitle2}>
             {email} ({role})
-          </Typography>
-          <Button style={{ color: "white", background: "#676E78" }} onClick={() => loggedOut()}>
+          </Typography> */}
+          <Button
+            style={{ color: "white", background: "#676E78", marginTop: "20px" }}
+            onClick={() => loggedOut()}
+          >
             Logout
           </Button>
         </Box>
@@ -50,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "center",
+  },
+  subtitle2: {
+    textAlign: "left",
   },
 }));
 

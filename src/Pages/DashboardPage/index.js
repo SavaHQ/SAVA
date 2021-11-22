@@ -1,6 +1,7 @@
 import React from "react";
-import Calendar from "react-calendar";
+
 import { useSelector } from "react-redux";
+import Commingsoon from "../../Components/ComingSoonComponent/commingSoon";
 import HeroBanner from "../../Components/DashboardComponents/Banner";
 
 function DashboardPage() {
@@ -9,7 +10,7 @@ function DashboardPage() {
   return (
     <div>
       <HeroBanner user={user} />
-      <Calendar />
+      <Commingsoon />
     </div>
   );
 }

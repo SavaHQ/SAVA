@@ -14,6 +14,7 @@ function CustomButton({
   top,
   height,
   left,
+  marginBottom
 }) {
   const classes = useStyles();
 
@@ -29,6 +30,7 @@ function CustomButton({
         top: top,
         height: height,
         left: left,
+        marginBottom: marginBottom,
       }}
       className={classes.button}
     >

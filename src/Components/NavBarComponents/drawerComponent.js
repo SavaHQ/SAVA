@@ -5,10 +5,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CustomButton from "../CustomButtonComponents/CustomButton";
 // import { NavLink } from "react-router-dom";
-
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 function DrawerComponent({ state, anchor, onClose, onClick }) {
   const classes = useStyles();
-
+  const history = useHistory();
+  const user = useSelector((state) => state.firebase.user);
   const navItemsLists = [
     { title: "Home", link: "/home" },
     { title: "For Startups", link: ROUTES.FORSTARTUP },
@@ -37,21 +39,46 @@ function DrawerComponent({ state, anchor, onClose, onClick }) {
             </Link>
           ))}
         </List>
-        <Box className={classes.contain}>
-          <Link
-            className={classes.link}
-            to={{ pathname: "https://calendly.com/vyomfromsava/networking-call" }}
-            target="_parent"
-          >
+        <Box>
+          <Box className={classes.button}>
             <CustomButton
-              name="Schedule a Call"
+              name="Crypto"
+              className="dasboard"
               color="#ffffff"
               background="#666E78"
-              onButtonClick={() => console.log("Call")}
+              onButtonClick={() => history.push(ROUTES.CRYPTO)}
               borderRadius={5}
               isRadius={true}
+              marginBottom="15px"
             />
-          </Link>
+
+            {user ? (
+              <Link
+                className={classes.link}
+                to={user.role === ROUTES.STUDENT ? "/dashboard" : "/startupDashboard"}
+              >
+                <CustomButton
+                  name="Dashboard"
+                  color="#666E78"
+                  background="#FFFFFF"
+                  border=" 1px solid #666E78"
+                  borderRadius={5}
+                  isRadius={true}
+                />
+              </Link>
+            ) : (
+              <Link className={classes.link} to={"/login"}>
+                <CustomButton
+                  name="Login"
+                  color="#666E78"
+                  background="#FFFFFF"
+                  border=" 1px solid #666E78"
+                  borderRadius={5}
+                  isRadius={true}
+                />
+              </Link>
+            )}
+          </Box>
         </Box>
       </Box>
     </Drawer>
@@ -80,6 +107,24 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "black",
   },
+  link: {
+    textDecoration: "none",
+  },
+  textStyle: {
+    textDecoration: "none",
+  },
+  button: {
+    display: "flex",
+    flexWrap: "nowrap",
+    margin: "10px",
+    paddinBottom: "10px",
+    justifyContent: "space-between",
+    flexDirection: "column",
+  },
+  dasboard: {
+    marginBottom: "20px",
+  },
+  offset: theme.mixins.denseToolbar,
 }));
 
 export default DrawerComponent;
