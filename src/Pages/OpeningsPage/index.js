@@ -7,7 +7,7 @@ function OpeningsPage() {
   return (
     <>
       <Box className={classes.iframe}>
-        <Loader type="Puff" color="#222222" height={600} width={100} timeout={1000} />
+        <Loader type="Puff" color="#222222" height={600} width={100} timeout={3000} />
         <Iframe
           url="https://airtable.com/embed/shr8up3EecypZWnat?backgroundColor=teal&viewControls=on"
           width="100%"
