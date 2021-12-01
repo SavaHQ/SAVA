@@ -5,12 +5,7 @@ import "firebase/firestore";
 import { setUser } from "./Store/reduxSlice/firebaseSlice";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCU_18qpwXEmYAVB_TBQKhM8kcFFAnjbHE",
-  authDomain: "sava-react.firebaseapp.com",
-  projectId: "sava-react",
-  storageBucket: "sava-react.appspot.com",
-  messagingSenderId: "239915742873",
-  appId: "1:239915742873:web:3d803dd09e1ee2103d6a08",
+  // add your firebase credentials here
 };
 
 firebase.initializeApp(firebaseConfig);
