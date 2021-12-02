@@ -22,9 +22,6 @@ How are we able to achieve that?
 <br>
 <img align="right" src="public\assests\images\github-2.gif" width = "400" height = "380">
 
-<br>
-<br>
-
 ## Quick Start
 
 - Fork this repo
