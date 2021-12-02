@@ -19,4 +19,31 @@ How are we able to achieve that?
 2. In the case of helping hire Blockchain Developers, it's more or less a similar scenario. Another niche, another community. One thing we can guarantee is: helping you hire a developer in under 4 days.
 
 
-Website link :- https://savahire.com
+### Deployed Website link :- https://savahire.com
+
+
+## Quick Start
+
+- Fork this repo
+
+- Clone this repository
+
+      git clone https://github.com/{your-username}/SAVA.git
+
+- Change directory
+
+      cd SAVA
+
+      
+- Install Node Packages
+
+      npm i
+
+- Add your firebase credentials
+
+      cd src/firebase.js
+      Add your credentials where you see commented line to add credentials
+
+- Start the project
+
+      npm start
