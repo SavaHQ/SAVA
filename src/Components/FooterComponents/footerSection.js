@@ -28,7 +28,7 @@ function FooterSection() {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box className={classes.redusespace} align="left" mt={12}>
+            <Box className={classes.reduseSpace} align="left" mt={12}>
               <Typography variant="h4">Explore</Typography>
               <Box mt={3} className={classes.TextLinks}>
                 <Typography gutterBottom>Home</Typography>
@@ -38,7 +38,7 @@ function FooterSection() {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box className={classes.redusespace} align="left" mt={12}>
+            <Box className={classes.reduseSpace} align="left" mt={12}>
               <Typography variant="h4">About</Typography>
               <Box mt={3} className={classes.TextLinks}>
                 <Typography gutterBottom>Privacy & Policy</Typography>
@@ -49,7 +49,7 @@ function FooterSection() {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box className={classes.redusespace} align="left" mt={12}>
+            <Box className={classes.reduseSpace} align="left" mt={12}>
               <Typography variant="h4">Community</Typography>
               <Box mt={3} className={classes.TextLinks}>
                 <Typography gutterBottom>Refer a Friend </Typography>
@@ -57,7 +57,7 @@ function FooterSection() {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Box className={classes.redusespace} align="left" mt={12}>
+            <Box className={classes.reduseSpace} align="left" mt={12}>
               <Typography variant="h4">Help</Typography>
               <Box mt={3} className={classes.TextLinks}>
                 <Typography gutterBottom>FAQ </Typography>
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     color: "#E6E6E6",
   },
-  redusespace: {
+  reduseSpace: {
     [theme.breakpoints.down("sm")]: {
       marginTop: "0",
     },
