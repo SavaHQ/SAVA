@@ -19,7 +19,7 @@ How are we able to achieve that?
 2. In the case of helping hire Blockchain Developers, it's more or less a similar scenario. Another niche, another community. One thing we can guarantee is: helping you hire a developer in under 4 days.
 
 
-<img align="right" src="public\assests\images\github-1.gif" width = "380" height = "340">
+<img align="right" src="public\assests\images\github-2.gif" width = "400" height = "380">
 
 
 ## Quick Start
