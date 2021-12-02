@@ -19,9 +19,6 @@ How are we able to achieve that?
 2. In the case of helping hire Blockchain Developers, it's more or less a similar scenario. Another niche, another community. One thing we can guarantee is: helping you hire a developer in under 4 days.
 
 
-### Deployed Website link :- https://savahire.com
-
-
 ## Quick Start
 
 - Fork this repo
@@ -47,3 +44,6 @@ How are we able to achieve that?
 - Start the project
 
       npm start
+
+
+### Deployed Website link :- https://savahire.com
