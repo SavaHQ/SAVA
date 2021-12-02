@@ -50,3 +50,33 @@ How are we able to achieve that?
 
 
 ### Deployed Website link :- https://savahire.com
+<br>
+
+<img align="right" src="public\assests\images\github-3.gif">
+
+## Contributing to this website!!
+
+- Find open issues in issue tab or raise a one if you find any on website
+
+- Fork this repository
+
+- Clone the Repository
+
+- Create a new branch and switch to it.
+
+      git checkout -b <branch-name>
+
+- Add upstream 
+
+      git remote add upstream https://github.com/SavaHQ/SAVA.git
+      git remote -v, to check upstream successfully added
+
+- Add your files or make changes in files
+
+- Add Changes    ` git add .`
+
+- Commit Changes   ` git commit -m "your message here" `
+
+- Push changes     ` git push origin <branch-name>`
+
+- Make Pull Request
