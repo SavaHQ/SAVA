@@ -52,7 +52,7 @@ How are we able to achieve that?
 ### Deployed Website link :- https://savahire.com
 <br>
 
-<img align="right" src="public\assests\images\github-3.gif" width = "380" height = "280">
+<img align="right" src="public\assests\images\github-3.gif" width = "400" height = "380">
 
 ## Contributing to this website!!
 
