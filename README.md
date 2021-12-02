@@ -87,6 +87,6 @@ How are we able to achieve that?
 **Our Project Maintainers👨‍🏫:**
                
 <p align="left">
-<a href="https://github.com/Aayush-hub" style="border-radius:50%"><img width=20% src="https://avatars.githubusercontent.com/u/65889104?v=4"></a>&ensp;&ensp;&ensp;
-<a href="https://github.com/Abhijay007" style="border-radius:50%"><img width=20% src="https://avatars.githubusercontent.com/u/64387054?v=4"></a>
+<a href="https://github.com/Aayush-hub" style="border-radius:50%"><img width=10% src="https://avatars.githubusercontent.com/u/65889104?v=4"></a>&ensp;&ensp;&ensp;
+<a href="https://github.com/Abhijay007" style="border-radius:50%"><img width=10% src="https://avatars.githubusercontent.com/u/64387054?v=4"></a>
 </p>
