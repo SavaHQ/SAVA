@@ -4,7 +4,22 @@
 <img src="public\assests\images\github-1.gif" align= "center"/>
 </p>
 
-### We source Content Creators as Interns to Startups.
+<br>
+
+<div align="center">
+
+![Forks tag](https://img.shields.io/github/forks/SavaHQ/SAVA)
+![GitHub Repo stars](https://img.shields.io/github/stars/SavaHQ/SAVA?style=social) 
+![Issues tag](https://img.shields.io/github/issues/SavaHQ/SAVA)
+![No. of startup](https://img.shields.io/badge/no.%20of%20startups-75%2B-yellow)
+![No. of community members](https://img.shields.io/badge/no.%20of%20community%20members-2900%2B-orange) 
+![No. of creators](https://img.shields.io/badge/no.%20of%20creators-520%2B-blue)
+[![Discord](https://img.shields.io/discord/717102560909197493.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/JPXv2KPPTE)
+![Licence](https://img.shields.io/github/license/SavaHQ/SAVA)
+
+</div>
+
+ ### We source Content Creators as Interns to Startups.
 
 Sava is a platform that allows startups to hire Interns. Fast. Crazy Fast.
 
@@ -21,8 +36,15 @@ How are we able to achieve that?
 <br>
 <div align="center">
 <h3>Join official <a href="https://discord.gg/JPXv2KPPTE">Discord Channel</a> for discussion.</h3>
+ 
+## Connect with us
+<a href="https://www.linkedin.com/company/savahire/">
+<img height="32" width="32" src="https://image.flaticon.com/icons/png/512/174/174857.png" />
+</a>
 </div>
 <br>
+
+
 <img align="right" src="public\assests\images\github-2.gif" width = "400" height = "380">
 
 ## Quick Start
@@ -56,6 +78,7 @@ How are we able to achieve that?
 <br>
 
 <img align="right" src="public\assests\images\github-3.gif" width = "400" height = "380">
+
 
 ## Contributing to this website!!
 
