@@ -12,7 +12,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/SavaHQ/SAVA?style=social) 
 ![Issues tag](https://img.shields.io/github/issues/SavaHQ/SAVA)
 ![No. of startup](https://img.shields.io/badge/no.%20of%20startups-75%2B-yellow)
-![No. of community members](https://img.shields.io/badge/no.%20of%20community%20members-2900%2B-orange) 
+![No. of community members](https://img.shields.io/badge/no.%20of%20community%20members-3300%2B-orange) 
 ![No. of creators](https://img.shields.io/badge/no.%20of%20creators-520%2B-blue)
 [![Discord](https://img.shields.io/discord/717102560909197493.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/JPXv2KPPTE)
 ![Licence](https://img.shields.io/github/license/SavaHQ/SAVA)
