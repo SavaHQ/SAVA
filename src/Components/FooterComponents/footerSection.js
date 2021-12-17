@@ -1,8 +1,11 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import * as ROUTES from "../../Constants/routesEndpoints";
 
 function Copyright() {
+  const classes = useStyles();
   return (
-    <Typography variant="body1" align="left">
+    <Typography variant="body1" className={classes.copyrightText}>
       Copyright &#169; {new Date().getFullYear()} SAVA
     </Typography>
   );
@@ -27,46 +30,86 @@ function FooterSection() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Box className={classes.reduseSpace} align="left" mt={12}>
+          <Grid item xs={12} md={3} lg={2}>
+            <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">Explore</Typography>
-              <Box mt={3} className={classes.TextLinks}>
-                <Typography gutterBottom>Home</Typography>
-                <Typography gutterBottom>For Startups</Typography>
-                <Typography gutterBottom>Community</Typography>
+              <Box mt={3}>
+                <Typography gutterBottom>
+                  <Link to={ROUTES.HOME} className={classes.TextLinks}>
+                    Home
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to={ROUTES.FORSTARTUP} className={classes.TextLinks}>
+                    For Startups
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to={ROUTES.COMMUNITY} className={classes.TextLinks}>
+                    Community
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Box className={classes.reduseSpace} align="left" mt={12}>
+          <Grid item xs={12} md={3} lg={2}>
+            <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">About</Typography>
-              <Box mt={3} className={classes.TextLinks}>
-                <Typography gutterBottom>Privacy & Policy</Typography>
-                <Typography gutterBottom>Terms & Conditions</Typography>
-                <Typography gutterBottom>Support</Typography>
-                <Typography>Career</Typography>
+              <Box mt={3}>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Career
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Privacy & Policy
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Terms & Conditions
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Box className={classes.reduseSpace} align="left" mt={12}>
+          <Grid item xs={12} md={3} lg={2}>
+            <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">Community</Typography>
-              <Box mt={3} className={classes.TextLinks}>
-                <Typography gutterBottom>Refer a Friend </Typography>
+              <Box mt={3}>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Join Us
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Refer a Friend
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Box className={classes.reduseSpace} align="left" mt={12}>
+          <Grid item xs={12} md={3} lg={2}>
+            <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">Help</Typography>
-              <Box mt={3} className={classes.TextLinks}>
-                <Typography gutterBottom>FAQ </Typography>
-                <Typography>Support</Typography>
+              <Box mt={3}>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    FAQ
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Support
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
         </Grid>
-        <Box mt={6} align="left">
+        <Box mt={15}>
           <Copyright className={classes.Copyright} />
         </Box>
       </Container>
@@ -107,6 +150,11 @@ const useStyles = makeStyles((theme) => ({
   TextLinks: {
     textAlign: "left",
     color: "#E6E6E6",
+    textDecoration: "none",
+    whiteSpace: "nowrap",
+  },
+  copyrightText: {
+    color: "#768390",
   },
 }));
 
