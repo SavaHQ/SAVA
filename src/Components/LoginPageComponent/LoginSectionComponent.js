@@ -51,9 +51,21 @@ function LoginSectionComponent() {
     }
   };
 
-  const handleLoginAction = async () => {
+  const handleSignupAction = async () => {
+    if (email === "" || password === "" || phone === "" || name === "" || role === "") {
+      toast("No text field can be left empty!");
+      return;
+    }
     createStudentWithResume();
   };
+
+  const handleLoginAction = async () => {
+    if (email === "" || password === "") {
+      toast("No text field can be left empty!");
+      return;
+    }
+    signInWithEmailAndPasswordHandler();
+  }
 
   const option = [STUDENT, STARTUP];
 
@@ -244,11 +256,11 @@ function LoginSectionComponent() {
         <Button
           fullWidth
           className={classes.signupButton}
-          onClick={() => (login ? handleLoginAction() : signInWithEmailAndPasswordHandler())}
+          onClick={() => (login ? handleSignupAction() : handleLoginAction())}
         >
           <Typography variant="body2">{login ? "Sign up " : "Login"}</Typography>
         </Button>
-        {/* <Button fullWidth className={classes.googleSignup} onClick={() => handleLoginAction()}>
+        {/* <Button fullWidth className={classes.googleSignup} onClick={() => handleSignupAction()}>
           <img className={classes.googleIcon} src="assets/icon/social icons/google_icon.svg" />
           <Typography variant="body2"> Sign up with google</Typography>
         </Button> */}
