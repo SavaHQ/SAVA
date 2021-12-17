@@ -34,29 +34,21 @@ function FooterSection() {
             <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">Explore</Typography>
               <Box mt={3}>
-                <Grid container item spacing={2}>
-                  <Grid item xs={3} md={12}>
-                    <Typography>
-                      <Link to={ROUTES.HOME} className={classes.TextLinks}>
-                        Home
-                      </Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4} md={12}>
-                    <Typography>
-                      <Link to={ROUTES.FORSTARTUP} className={classes.TextLinks}>
-                        For Startups
-                      </Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs md={12}>
-                    <Typography>
-                      <Link to={ROUTES.COMMUNITY} className={classes.TextLinks}>
-                        Community
-                      </Link>
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography gutterBottom>
+                  <Link to={ROUTES.HOME} className={classes.TextLinks}>
+                    Home
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to={ROUTES.FORSTARTUP} className={classes.TextLinks}>
+                    For Startups
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to={ROUTES.COMMUNITY} className={classes.TextLinks}>
+                    Community
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
@@ -64,29 +56,21 @@ function FooterSection() {
             <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">About</Typography>
               <Box mt={3}>
-                <Grid container item spacing={2}>
-                  <Grid item xs={3} md={12}>
-                    <Typography>
-                      <Link to="/#" className={classes.TextLinks}>
-                        Career
-                      </Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4} md={12}>
-                    <Typography>
-                      <Link to="/#" className={classes.TextLinks}>
-                        Privacy & Policy
-                      </Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs md={12}>
-                    <Typography>
-                      <Link to="/#" className={classes.TextLinks}>
-                        Terms & Conditions
-                      </Link>
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Career
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Privacy & Policy
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Terms & Conditions
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
@@ -94,22 +78,16 @@ function FooterSection() {
             <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">Community</Typography>
               <Box mt={3}>
-                <Grid container item spacing={2}>
-                  <Grid item xs={3} md={12}>
-                    <Typography>
-                      <Link to="/#" className={classes.TextLinks}>
-                        Join Us
-                      </Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4} md={12}>
-                    <Typography>
-                      <Link to="/#" className={classes.TextLinks}>
-                        Refer a Friend
-                      </Link>
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Join Us
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Refer a Friend
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
@@ -117,22 +95,16 @@ function FooterSection() {
             <Box className={classes.reduseSpace} align="left" sx={{ mt: { xs: 8, lg: 12 } }}>
               <Typography variant="h4">Help</Typography>
               <Box mt={3}>
-                <Grid container item spacing={2}>
-                  <Grid item xs={3} md={12}>
-                    <Typography gutterBottom>
-                      <Link to="/#" className={classes.TextLinks}>
-                        FAQ
-                      </Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4} md={12}>
-                    <Typography gutterBottom>
-                      <Link to="/#" className={classes.TextLinks}>
-                        Support
-                      </Link>
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    FAQ
+                  </Link>
+                </Typography>
+                <Typography gutterBottom>
+                  <Link to="/#" className={classes.TextLinks}>
+                    Support
+                  </Link>
+                </Typography>
               </Box>
             </Box>
           </Grid>
