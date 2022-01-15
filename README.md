@@ -114,6 +114,8 @@ How are we able to achieve that?
 <a href="https://github.com/Abhijay007" style="border-radius:50%"><img width=10% src="https://avatars.githubusercontent.com/u/64387054?v=4"></a>
 </p>
 
+## Contributors
+
 <a href="https://github.com/SavaHQ/SAVA/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=SavaHQ/SAVA" />
 </a>
