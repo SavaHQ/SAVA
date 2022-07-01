@@ -1,6 +1,6 @@
 {
   "homepage": "https://SavaHQ.github.io/SAVA",
-  "name": "SAVA",
+  "name": "sava",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

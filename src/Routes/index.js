@@ -20,6 +20,9 @@ function Routes() {
       <AuthRoute path="/" exact>
         <Redirect to={ROUTES.HOME} />
       </AuthRoute>
+      <AuthRoute path="/SAVA" exact>
+        <Redirect to={ROUTES.HOME} />
+      </AuthRoute>
 
       <AuthRoute path={ROUTES.HOME} exact>
         <MainLayout>

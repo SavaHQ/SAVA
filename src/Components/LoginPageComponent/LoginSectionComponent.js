@@ -65,7 +65,7 @@ function LoginSectionComponent() {
       return;
     }
     signInWithEmailAndPasswordHandler();
-  }
+  };
 
   const option = [STUDENT, STARTUP];
 
