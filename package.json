@@ -1,5 +1,6 @@
 {
-  "name": "sava",
+  "homepage": "https://SavaHQ.github.io/SAVA",
+  "name": "SAVA",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,6 +45,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -76,6 +79,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.22.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
   }
