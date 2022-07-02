@@ -74,7 +74,7 @@ How are we able to achieve that?
       npm start
 
 
-### Deployed Website link :- https://savahire.com
+### Deployed Website link :- https://62c045b8c5898440b96e23ca--fanciful-kangaroo-add5f0.netlify.app/home
 <br>
 
 <img align="right" src="public\assests\images\github-3.gif" width = "400" height = "380">
